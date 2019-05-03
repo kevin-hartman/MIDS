@@ -16,11 +16,14 @@ Required readings:
   * and [here](./The%20geeks%20must%20quash%20the%20believers%20in%20gut%20instinct%20%7C%20Financial%20Times.pdf)
 * *Davenport, Thomas H. “Competing on Analytics.” Harvard Business Review (January 2006).
   * [here](./COMPETING%20ON%20ANALYTICS.pdf)
+  * and [here](./Competing_on_Analytics.pdf)
 * *Martin, Roger. “Beyond the Numbers: Building Your Qualitative Intelligence.” Rotman School of Management, 2010.
   * [On Roger's site](https://rogerlmartin.com/docs/default-source/Articles/business-design/rotman_spring_10_beyond_the_numbers)
   * and [here](./rotman_spring_10_beyond_the_numbers.pdf)
+  * and [here](./Beyond_the_Numbers__Building_Your_Qualitative_Intelligence.pdf)
 * *Salsburg, David. The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century. Holt Paperbacks, 2002, chapter 2.
   * [here](https://books.google.com/books?id=i6caLgqCyYEC&pg=PA9&dq=isbn:0716741067&source=gbs_toc_r&cad=4#v=onepage&q&f=false)
+  * and [here](./Salsburg_D._2002._The_Lady_Tasting_Tea__How_Statistics_Revolutionized_Science_in_the_Twentieth_Century._Chapter_2__The_Skew_Distributions.pdf)
 
 Optional readings:
 * DataHack Radio #11: Decision Intelligence with Google Cloud’s Chief Decision Scientist, Cassie Kozyrkov. October 2018
