@@ -17,6 +17,8 @@ Assignments and Session Policies, Summer 2019
 Study.net
 * http://www.study.net/r_mat.asp?crs_id=30140272
 
+<b>Readings</b>
+* [Week 1](./Week1/README.MD)
 
 <b>My Coursework</b>
 
