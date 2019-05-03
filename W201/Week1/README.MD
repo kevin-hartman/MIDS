@@ -10,7 +10,7 @@ Required readings:
 * Le Grand, Julian, and Zack Cooper. “The Geeks Must Quash the Believers in Gut Instinct.” Financial Times (February 21, 2012). https://www.ft.com/content/5a996db2-5c93-11e1-8f1f-00144feabdc0
 * *Davenport, Thomas H. “Competing on Analytics.” Harvard Business Review (January 2006). 
 * *Martin, Roger. “Beyond the Numbers: Building Your Qualitative Intelligence.” Rotman School of Management, 2010. https://rogerlmartin.com/docs/default-source/Articles/business-design/rotman_spring_10_beyond_the_numbers
-* *Salsburg, David. The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century. Holt Paperbacks, 2002, chapter 2.
+* *Salsburg, David. The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century. Holt Paperbacks, 2002, chapter 2. https://books.google.com/books?id=i6caLgqCyYEC&pg=PA9&dq=isbn:0716741067&source=gbs_toc_r&cad=4#v=onepage&q&f=false
 
 Optional readings:
 * DataHack Radio #11: Decision Intelligence with Google Cloud’s Chief Decision Scientist, Cassie Kozyrkov. October 2018 https://www.analyticsvidhya.com/blog/2018/10/datahack-radio-decision-intelligence-google-cloud-cassie-kozyrkov/
