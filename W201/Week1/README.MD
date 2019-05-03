@@ -20,7 +20,7 @@ Required readings:
   * [downloaded from study.net](./Competing_on_Analytics.pdf)
 * *Martin, Roger. “Beyond the Numbers: Building Your Qualitative Intelligence.” Rotman School of Management, 2010.
   * [on Roger's site](https://rogerlmartin.com/docs/default-source/Articles/business-design/rotman_spring_10_beyond_the_numbers)
-  * [downloaded from Roger's site]](./rotman_spring_10_beyond_the_numbers.pdf)
+  * [downloaded from Roger's site](./rotman_spring_10_beyond_the_numbers.pdf)
   * [on study.net](https://www.study.net/materials/view_mat_2.asp?mat_id=50157727&crs_id=30140272&acs_id=38550494&matOrd=9)
   * [downloaded from study.net](./Beyond_the_Numbers__Building_Your_Qualitative_Intelligence.pdf)
 * *Salsburg, David. The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century. Holt Paperbacks, 2002, chapter 2.
