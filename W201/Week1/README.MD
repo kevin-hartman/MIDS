@@ -20,7 +20,7 @@ Required readings:
   * https://rogerlmartin.com/docs/default-source/Articles/business-design/rotman_spring_10_beyond_the_numbers
   * and [here](./rotman_spring_10_beyond_the_numbers.pdf)
 * *Salsburg, David. The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century. Holt Paperbacks, 2002, chapter 2.
-  * https://books.google.com/books?id=i6caLgqCyYEC&pg=PA9&dq=isbn:0716741067&source=gbs_toc_r&cad=4#v=onepage&q&f=false
+  * [here](https://books.google.com/books?id=i6caLgqCyYEC&pg=PA9&dq=isbn:0716741067&source=gbs_toc_r&cad=4#v=onepage&q&f=false)
 
 Optional readings:
 * DataHack Radio #11: Decision Intelligence with Google Cloud’s Chief Decision Scientist, Cassie Kozyrkov. October 2018
