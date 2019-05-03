@@ -3,6 +3,7 @@
 Course material for W201
 
 W201 Syllabus, Summer 2019
+
 https://docs.google.com/document/d/1-1Wuytlq26ulC8vvbXVu0iTlo6O4VO3DFxwCmUUDLzE/edit
 
 Additional Async Info, Summer 2019
