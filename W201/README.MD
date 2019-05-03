@@ -17,7 +17,10 @@ Assignments and Session Policies, Summer 2019
 Study.net
 * http://www.study.net/r_mat.asp?crs_id=30140272
 
-My Student Portfolio
+
+<b>My Coursework</b>
+
+Student Portfolio
 * https://docs.google.com/document/d/1T4sP0vYzj5ea1jb2XIMC9Pf2hiYFqcq2wm9AKvuvgl4/edit
 
 Presentation Template
