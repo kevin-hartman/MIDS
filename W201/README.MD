@@ -5,6 +5,9 @@
 Syllabus, Summer 2019
 * https://docs.google.com/document/d/1-1Wuytlq26ulC8vvbXVu0iTlo6O4VO3DFxwCmUUDLzE/edit
 
+Async Sessions, Summer 2019
+* https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/915389b8-6f54-4183-96a8-fb9608bf43a3
+
 Additional Async Info, Summer 2019
 * https://docs.google.com/document/d/1QtBIItl5jF6I4Umjy0O_iBq6vhdoJWwlKrBhH-0-dVA/edit#
 
