@@ -17,7 +17,7 @@ Required readings:
 * *Davenport, Thomas H. “Competing on Analytics.” Harvard Business Review (January 2006).
   * [here](./COMPETING%20ON%20ANALYTICS.pdf)
 * *Martin, Roger. “Beyond the Numbers: Building Your Qualitative Intelligence.” Rotman School of Management, 2010.
-  * https://rogerlmartin.com/docs/default-source/Articles/business-design/rotman_spring_10_beyond_the_numbers
+  * [out there](https://rogerlmartin.com/docs/default-source/Articles/business-design/rotman_spring_10_beyond_the_numbers)
   * and [here](./rotman_spring_10_beyond_the_numbers.pdf)
 * *Salsburg, David. The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century. Holt Paperbacks, 2002, chapter 2.
   * [here](https://books.google.com/books?id=i6caLgqCyYEC&pg=PA9&dq=isbn:0716741067&source=gbs_toc_r&cad=4#v=onepage&q&f=false)
