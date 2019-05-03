@@ -17,8 +17,15 @@ Assignments and Session Policies, Summer 2019
 Study.net
 * http://www.study.net/r_mat.asp?crs_id=30140272
 
+Books
+* [Invisible Ink: A Practical Guide to Building Stories that Resonate](https://smile.amazon.com/gp/product/0998534471/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
+* [Essence of Decision: Explaining the Cuban Missile Crisis (2nd Edition)](https://smile.amazon.com/gp/product/0321013492/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
+* [Thinking, Fast and Slow](https://smile.amazon.com/gp/product/0374533555/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
+* [How to Lie with Statistics](https://smile.amazon.com/gp/product/0393310728/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
+* [Storytelling with Data: A Data Visualization Guide for Business Professionals](https://smile.amazon.com/gp/product/1119002257/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 
-<b>Reading List</b>
+
+<b>Weekly Reading List</b>
 * [Week 1](./Week1/README.MD)
 
 
