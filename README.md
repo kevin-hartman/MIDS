@@ -6,6 +6,7 @@ General Info
 * [2U Dashboard](https://learn.datascience.berkeley.edu/ap/dashboard)
 * [My Google Drive](https://drive.google.com/drive/u/0/my-drive)
 * http://www.lib.berkeley.edu
+* [Quick Python Cheatsheet](https://www.stavros.io/tutorials/python/)
 
 Summer 2019
 
