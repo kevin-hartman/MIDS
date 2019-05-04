@@ -26,7 +26,7 @@ Required readings:
 * *Salsburg, David. The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century. Holt Paperbacks, 2002, chapter 2.
   * [on Google books](https://books.google.com/books?id=i6caLgqCyYEC&pg=PA9&dq=isbn:0716741067&source=gbs_toc_r&cad=4#v=onepage&q&f=false)
   * [on study.net](https://www.study.net/materials/view_mat_2.asp?mat_id=50222963&crs_id=30140272&acs_id=38550495&matOrd=10)
-  * [downloaded from study.net](./../Study.net/Salsburg_D._2002._The_Lady_Tasting_Tea__How_Statistics_Revolutionized_Science_in_the_Twentieth_Century._Chapter_2__The_Skew_Distributions.pdf)
+  * [downloaded from study.net](./../Study.net/Salsburg__D__2002__The_Lady_Tasting_Tea__How_Statistics_Revolutionized_Science_in_the_Twen___.pdf)
 
 Optional readings:
 * DataHack Radio #11: Decision Intelligence with Google Cloud’s Chief Decision Scientist, Cassie Kozyrkov. October 2018
