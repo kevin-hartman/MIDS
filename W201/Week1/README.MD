@@ -17,16 +17,16 @@ Required readings:
 * *Davenport, Thomas H. “Competing on Analytics.” Harvard Business Review (January 2006).
   * [downloaded from the library](./COMPETING%20ON%20ANALYTICS.pdf)
   * [on study.net](https://www.study.net/materials/view_mat_2.asp?mat_id=50043065&crs_id=30140272&acs_id=38550493&matOrd=6)
-  * [downloaded from study.net](./../../Competing_on_Analytics.pdf)
+  * [downloaded from study.net](./../Study.net/Competing_on_Analytics.pdf)
 * *Martin, Roger. “Beyond the Numbers: Building Your Qualitative Intelligence.” Rotman School of Management, 2010.
   * [on Roger's site](https://rogerlmartin.com/docs/default-source/Articles/business-design/rotman_spring_10_beyond_the_numbers)
   * [downloaded from Roger's site](./rotman_spring_10_beyond_the_numbers.pdf)
   * [on study.net](https://www.study.net/materials/view_mat_2.asp?mat_id=50157727&crs_id=30140272&acs_id=38550494&matOrd=9)
-  * [downloaded from study.net](./../../Beyond_the_Numbers__Building_Your_Qualitative_Intelligence.pdf)
+  * [downloaded from study.net](./../Study.net/Beyond_the_Numbers__Building_Your_Qualitative_Intelligence.pdf)
 * *Salsburg, David. The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century. Holt Paperbacks, 2002, chapter 2.
   * [on Google books](https://books.google.com/books?id=i6caLgqCyYEC&pg=PA9&dq=isbn:0716741067&source=gbs_toc_r&cad=4#v=onepage&q&f=false)
   * [on study.net](https://www.study.net/materials/view_mat_2.asp?mat_id=50222963&crs_id=30140272&acs_id=38550495&matOrd=10)
-  * [downloaded from study.net](./../../Salsburg_D._2002._The_Lady_Tasting_Tea__How_Statistics_Revolutionized_Science_in_the_Twentieth_Century._Chapter_2__The_Skew_Distributions.pdf)
+  * [downloaded from study.net](./../Study.net/Salsburg_D._2002._The_Lady_Tasting_Tea__How_Statistics_Revolutionized_Science_in_the_Twentieth_Century._Chapter_2__The_Skew_Distributions.pdf)
 
 Optional readings:
 * DataHack Radio #11: Decision Intelligence with Google Cloud’s Chief Decision Scientist, Cassie Kozyrkov. October 2018
