@@ -48,6 +48,6 @@ Presentation Template
 * 
 
 <b>Other Handy Links</b>
-* [Jupyter Markdown Cheatsheat](https://www.ibm.com/support/knowledgecenter/en/SSGNPV_1.1.3/dsx/markd-jupyter.html)
+* [Jupyter Markdown Cheatsheat from IBM](https://www.ibm.com/support/knowledgecenter/en/SSGNPV_1.1.3/dsx/markd-jupyter.html) and [Read the Docs](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html)
 * [Math Review](./MathReview_v08.pdf)
 * [W203 Unit Summary Cheatsheet](W203%20Cheatsheet%20(Created%20by%20Aaron%20Yuen%20-%20W203%20Summer%20'17).pdf)
