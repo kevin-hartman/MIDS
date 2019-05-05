@@ -27,10 +27,13 @@ Study.net
 Using LaTeX
 * Installing on a Mac
   * https://medium.com/@sorenlind/create-pdf-reports-using-r-r-markdown-latex-and-knitr-on-macos-high-sierra-e7b5705c9fd
-* Using LaTeX for mathematical forumlas Wiki
+* Wiki on using LaTeX to create mathematical forumlas
   * https://en.wikibooks.org/wiki/LaTeX/Mathematics
 * Common Math Notation Tutorial
   * https://www.youtube.com/watch?v=rT5kIQ-JHhw
+* LaTeX markdown in Jupyter notebooks
+  * https://www.math.ubc.ca/~pwalls/math-python/jupyter/latex/
+  * https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html
 
 <b>Weekly Reading List</b>
 * [Week 1](./Week1/README.MD)
@@ -44,4 +47,7 @@ Student Portfolio
 Presentation Template
 * 
 
-
+<b>Other Handy Links</b>
+* [Jupyter Markdown Cheatsheat](https://www.ibm.com/support/knowledgecenter/en/SSGNPV_1.1.3/dsx/markd-jupyter.html)
+* [Math Review](./MathReview_v08.pdf)
+* [W203 Unit Summary Cheatsheet](W203%20Cheatsheet%20(Created%20by%20Aaron%20Yuen%20-%20W203%20Summer%20'17).pdf)
