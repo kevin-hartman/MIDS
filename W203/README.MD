@@ -24,7 +24,13 @@ Books
 Study.net
 * http://www.study.net/r_mat.asp?crs_id=30140273
 
-
+Using LaTeX
+* Installing on a Mac
+  * https://medium.com/@sorenlind/create-pdf-reports-using-r-r-markdown-latex-and-knitr-on-macos-high-sierra-e7b5705c9fd
+* Using LaTeX for mathematical forumlas Wiki
+  * https://en.wikibooks.org/wiki/LaTeX/Mathematics
+* Common Math Notation Tutorial
+  * https://www.youtube.com/watch?v=rT5kIQ-JHhw
 
 <b>Weekly Reading List</b>
 * [Week 1](./Week1/README.MD)
