@@ -35,3 +35,33 @@ Optional readings:
   * http://www.forbes.com/sites/bernardmarr/2016/01/07/big-data-uncovered-what-does-a-data-scientist-really-do/
 * Dutcher, Jenna. “What is Big Data?” Berkeley Data Science Program (September 2014).
   * http://datascience.berkeley.edu/what-is-big-data/
+
+Live Session Notes
+* What is RDADA.
+   * Technical skills must have, but or and, we need people who can step in and parse the entire lifecycle of the product.
+   * Understanding the business problem
+   * Designing the research into the lifecycle. Not a typical research class, not an experimental design class. Design and research end to end. - Asking the right question. A question that is important.
+   * Have the lifecycle in mind as you design the research experiment. 
+
+ * Role of ethics
+   * Mood has changed dramatically in last 18 months. 5 years ago was a permissionless innovation world. Concern from boards of directors. How do I know my data scientists are creating products that will land us in hot water with our customers.
+   * Think about the question ahead of time. Should we do this? Can you live with the answer?
+
+* Breakout Discussion: https://docs.google.com/document/d/1G-yVFT95rD4woDyNHtKniPYZqFOIRz4ZZf_rdnCBvFQ/edit 
+
+* How to make most out of class?
+   * Do it with same focus and intensity as you would as machine learning class. Don’t always have right or wrong answers. Supervised reinforcement learning. Keep trying to tack closer to the goal. Trust the process. Find comfort in a new way of thinking for a while. Read stuff with an open mind. Ask what can I do with this? Where is the value?
+ * Week 3 homework - due 11:59 PST the night before
+   * Grading
+     * Individual assignments and life session assignments are graded
+     * Not going to get graded on the BLT - often times those questions are front and center
+
+ * Tip on Readings - should know main point of the article before you start. Read abstract, all the headings, intro and conclusion.
+
+ * Podcast recs
+   * Hidden brain - how the mind works - asynch info doc - data hack - points to a hidden brain podcast.
+   * Nvisibilia 
+
+ * Takeaways:
+   * Join slack channels: Tech for evil and tech for good
+   * WATCH: Datahack episode #11 - make sure question is framed well otherwise stats is a waste of time. Problem should dictate the analytical approach.
