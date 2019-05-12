@@ -2,6 +2,9 @@ Week 2 | When Big Data Meets Big Decision
 
 History of business intelligence
 
+Async
+* [When Big Data Meets Big Decision](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/3b1102bc-8646-485f-ab3a-c3259394dd2b)
+
 Required readings:
 
 * Voytek, Bradley. “Automated Science, Deep Data, and the Paradox of Information.” O’Reilly Radar (March 30, 2012). http://radar.oreilly.com/2012/03/data-science-deep-data-information-paradox.html
