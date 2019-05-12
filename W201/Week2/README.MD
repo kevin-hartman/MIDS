@@ -20,8 +20,8 @@ Optional readings:
 * Alamar, Benjamin, and Vijay Mehrotra. “Beyond ‘Moneyball’: The Rapidly Evolving World of Sports Analytics, Part I.” Analytics Magazine (September–October 2011). http://analytics-magazine.org/beyond-moneyball-the-rapidly-evolving-world-of-sports-analytics-part-i/
 
 Discussion Questions:
-* Week 2: Tactical and Strategic Decisions (Discussion Question)
-* Identify an organization that could be a client for a future data science project; it can be your current organization or a new one you want to learn about. In this organization, identify two decisions—one tactical, the other strategic—where data science is or can be used to significant effect. Think about the data and the organizational requirements of applying data science in both of those settings (tactical and strategic). What might be some significant roadblocks to success?  
-* Hint: It may help if you decide on a criterion or working definition for “tactical” and “strategic” decisions.
-* Be prepared to share and discuss your thoughts in class. Use the discussion section of your portfolio to write your notes.
+* Tactical and Strategic Decisions 
+  * Identify an organization that could be a client for a future data science project; it can be your current organization or a new one you want to learn about. In this organization, identify two decisions—one tactical, the other strategic—where data science is or can be used to significant effect. Think about the data and the organizational requirements of applying data science in both of those settings (tactical and strategic). What might be some significant roadblocks to success?  
+  * Hint: It may help if you decide on a criterion or working definition for “tactical” and “strategic” decisions.
+  * Be prepared to share and discuss your thoughts in class. Use the discussion section of your portfolio to write your notes.
 
