@@ -3,7 +3,7 @@
 <b>Course material for W203</b>
 
 Syllabus, Summer 2019
-* [here](./w203_syllabus.pdf)
+* [Stastics For Data Science Syllabus](./w203_syllabus.pdf)
 
 Async Sessions, Summer 2019
 * https://learn.datascience.berkeley.edu/ap/courses/267/sections/283e2e3a-e711-41fb-b042-64d28352a50a/coursework/courseModule/ff926364-0104-4d9b-ac9a-2e16bcf71f01
