@@ -35,18 +35,6 @@ Using LaTeX
   * https://www.math.ubc.ca/~pwalls/math-python/jupyter/latex/
   * https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html
 
-<b>Weekly Reading List</b>
-* [Week 1](./Week1/README.MD)
-
-
-<b>My Coursework</b>
-
-Student Portfolio
-* 
-
-Presentation Template
-* 
-
 <b>Other Handy Links</b>
 * [Jupyter Markdown Cheatsheat from IBM](https://www.ibm.com/support/knowledgecenter/en/SSGNPV_1.1.3/dsx/markd-jupyter.html) and [Read the Docs](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html)
 * [Math Review](./MathReview_v08.pdf)
