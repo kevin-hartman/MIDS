@@ -8,9 +8,8 @@ Required readings:
 
 * Shah, Shvetank, Andrew Horne, and Jaime Capellá. “Good Data Won't Guarantee Good Decisions.” Harvard Business Review (April 2012). http://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=73552652&site=eds-live
 
-Additional video
+Additional video:
 * Below you can find a short youtube video that will supplement my overview at the beginning of class. You must be signed into your bmail account to view the video. https://www.youtube.com/watch?v=VVT7oWOhyjk&feature=youtu.be
-
 
 Optional readings:
 * Heuer, Richard J., Jr. “Psychology of Intelligence Analysis.” Center for the Study of Intelligence, 1999, chapter 6.  See left hand side "view in OskiCat" then click link below "link to online version" http://search.ebscohost.com/login.aspx?direct=true&db=cat04202a&AN=ucb.b18541235&site=eds-live 
@@ -19,3 +18,10 @@ Optional readings:
 (see "PDF Full Text" at left)
 * Lewis, Michael. “Beane Counter.” Sports Illustrated (May 12, 2003). https://www.si.com/vault/issue/703333/97
 * Alamar, Benjamin, and Vijay Mehrotra. “Beyond ‘Moneyball’: The Rapidly Evolving World of Sports Analytics, Part I.” Analytics Magazine (September–October 2011). http://analytics-magazine.org/beyond-moneyball-the-rapidly-evolving-world-of-sports-analytics-part-i/
+
+Discussion Questions:
+* Week 2: Tactical and Strategic Decisions (Discussion Question)
+* Identify an organization that could be a client for a future data science project; it can be your current organization or a new one you want to learn about. In this organization, identify two decisions—one tactical, the other strategic—where data science is or can be used to significant effect. Think about the data and the organizational requirements of applying data science in both of those settings (tactical and strategic). What might be some significant roadblocks to success?  
+* Hint: It may help if you decide on a criterion or working definition for “tactical” and “strategic” decisions.
+* Be prepared to share and discuss your thoughts in class. Use the discussion section of your portfolio to write your notes.
+
