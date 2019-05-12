@@ -5,7 +5,12 @@ History of business intelligence
 Required readings:
 
 * Voytek, Bradley. “Automated Science, Deep Data, and the Paradox of Information.” O’Reilly Radar (March 30, 2012). http://radar.oreilly.com/2012/03/data-science-deep-data-information-paradox.html
+
 * Shah, Shvetank, Andrew Horne, and Jaime Capellá. “Good Data Won't Guarantee Good Decisions.” Harvard Business Review (April 2012). http://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=73552652&site=eds-live
+
+Additional video
+* Below you can find a short youtube video that will supplement my overview at the beginning of class. You must be signed into your bmail account to view the video. https://www.youtube.com/watch?v=VVT7oWOhyjk&feature=youtu.be
+
 
 Optional readings:
 * Heuer, Richard J., Jr. “Psychology of Intelligence Analysis.” Center for the Study of Intelligence, 1999, chapter 6.  See left hand side "view in OskiCat" then click link below "link to online version" http://search.ebscohost.com/login.aspx?direct=true&db=cat04202a&AN=ucb.b18541235&site=eds-live 
