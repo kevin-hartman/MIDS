@@ -23,7 +23,7 @@ Discussion Questions:
 * Tactical and Strategic Decisions 
   * Identify an organization that could be a client for a future data science project; it can be your current organization or a new one you want to learn about. In this organization, identify two decisions—one tactical, the other strategic—where data science is or can be used to significant effect. Think about the data and the organizational requirements of applying data science in both of those settings (tactical and strategic). What might be some significant roadblocks to success?  
   * Definitions
-    * Tactical - Short term efforts that work toward achieving a goal; smaller and more focused; activities that can be executed at the micro level.
+    * Tactical - Short term efforts that work toward achieving a goal; smaller and more focused; activities that are executed at the micro level.
     * Strategic - Longer term goals that reflect path and purpose; broader and larger; plans that achieve the vision at a macro level.
   * Be prepared to share and discuss your thoughts in class. Use the discussion section of your portfolio to write your notes.
 
