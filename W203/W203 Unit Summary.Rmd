@@ -1,0 +1,187 @@
+---
+title: "W203 Unit Summary"
+author: "Kevin Hartman"
+date: "5/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Terms and Definitions
+A **population** is a well-defined collection of objects in an area of interest (investigation).
+
+A **census** occurs when desired information is available for all objects in the population.
+
+A **sample** is a subset of the population, selected in some prescribed manner.
+
+A **characteristic** is an attribute of the data, which may be categorical or numerical.
+
+A **variable** is any characteristic whose value may change from one obhject to another in the population.
+
+A **univariate** data set consists of observations on a single variable.
+
+A **multivariate** data set consists of observations on multiple variables.
+
+A **bivariate** data set (a special case of multivariate) is when observations are made on two variables specifically.
+
+**Descriptive Statistics** -- the branch of statistics where an investigator simply wishes to summarize and describe important features of the data.
+
+**Inferential Statistics** -- the branch of statistics where an investigator would like to use the sample information to draw a form of conclusion about the population.
+
+
+## Unit 1: Descriptive Statistics
+
+**Sample Mean**
+<center>$$\bar{x} = \frac{\sum_{i=1}^n x_i}{n}$$</center>
+**Sample Median**
+
+After ordering $n$ observations from smallest to largest,
+<center>$\tilde{x} = \left\{\begin{array}{lr} \left(\frac{n+1}{2} \right)^{th} \text{ordered value, if n is odd} \\ \text{average of } \left(\frac{n}{2}\right)^{th} \text{and} \left(\frac{n}{2} + 1\right)^{th} \text{ordered values, if n is even} \end{array} \right.$</center>
+
+**Trimmed Mean** - a compromise between $\bar{x}$ and $\tilde{x}$ by eliminating a percentage of the smallest and largest portions of the sample and averaging what remains.
+
+**Range** - the difference betwen the largest and smallest sample variables.
+
+**Deviations from the Mean**
+
+For each value $x_i$ in the sample, its deviation from the mean is $x_i-\bar{x}$
+
+**Sample Variance**
+
+Variance, denoted as $s^2$, is the average squared differences from the mean in a sample set.
+
+<center>$s^2=\frac{S_{xx}}{n-1}=\frac{\sum_{i=1}^n(x_i-\bar{x})^2}{n-1}$</center>
+
+It is customary to refer to $s^2$ as being based on ${n-1}$ **degrees of freedom**.
+
+**Sample Standard Deviation**
+
+Standard deviation, denoted as $s$ is the (positive) square root of the variance:
+
+<center>$s = \sqrt{s^2}$</center>
+
+
+Properties:
+
+Let $x_1, x_2, \dots, x_n$ be a sample and $c$ be any nonzero constant.
+
+1. If $y_1 = x_1 + c, y_2 = x_2 + c,\dots, y_n = x_n + c$, then $s_y^2 = s_x^2$ and
+2. If $y_1 = cx_1,\dots,y_n=cx_n$, then $s_y^2=c^2s_x^2$, $s_y=|c|s_x$
+
+where $s_x^2$ is the sample variance of the $x$'s and $s_y^2$ is the sample variance of the $y$'s.
+
+
+**Upper Fourth** - median of the largest half of observations
+
+**Lower Fourth** - median of the smallest half of observations
+
+**Fourth Spread**
+
+<center>$f_s$ = upper fourth - lower fourth</center>
+
+**Outlier** - any observation farther than $1.5f_s$ from the closest fourth (considered mild if less than $3f_s$)
+
+**Extreme Outlier** - an observation farther than $3f_s$ from the nearest fourth
+
+
+**Sample Covariance**
+
+The simplest measure of association between two variables.
+
+<center>$cov(x,y)==\frac{\sum_{i=1}^n(x_i-\bar{x})(y_1-\bar{y})}{n-1}$</center>
+
+
+**Sample Correlation**
+
+Measures the linear relationship betwen to variables
+
+<center>$r_{x,y}=\frac{cov(x,y)}{s_xs_y}$</center>
+
+
+Properties:
+
+1. Adding $c$ to variable $x$ or variable $y$ doesn't change $r_{x,y}$.
+2. Multipling a non-zero $c$ to variable $x$ or variable $y$ doesn't change $r_{x,y}$
+
+
+## Unit 3: Probability Theory
+
+\usepackage[scr=boondoxo,scrscaled=1.05]{mathalfa}
+
+**Sample space** of an expirement, denoted by $\mathscr{S}$ ,is the set of all possible outcomes of that expirement.
+
+**Event space**, denoted by $\mathscr{F}$, is the subset of outcomes from the sample space. It includes  subsets of $\mathscr{S}$, the empty set $\emptyset$ and $\mathscr{S}$ itself.
+
+**Probability Rule** is a function, $P$, from the set of events to the real numbers
+
+**Axioms**
+
+1. $P(A) >= \emptyset$ for any event $A$ in $\mathscr{F}$
+2. $P(\mathscr{S}) = 1$
+3. For any countably infite set of disjoint events $\{{A_1, A_2, \dots}\}$
+
+<center>$P(A_1 \cup A_2 \cup \dots) = \sum_{i=1}^\infty P(A_i)$</center>
+
+**Probability space** is the triple of $(\mathscr{S}, \mathscr{F}, P)$
+
+Properties
+
+1. For any event $A$, $P(A) + P(A^') = 1$, from which $P(A) = 1 - P(A^')$
+2. For any event $A$, $P(A) \leq 1$
+3. Addition Rule: For any two events $A$ and $B$, $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+4. For any three events $A$, $B$, and $C$, $P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)$
+
+**Conditional Probability**
+
+1. For any two events $A$ and $B$ with $P(B) > 0$, the conditional probability of $A$ given that $B$ has occured is defined by $P(A|B) = \frac{P(A \cap B)}{P(B)}$
+2. Multiplication Rule: $P(A \cap B) = P(B) \cdot P(A|B)$
+3. Extending to 3 or more events: $P(A \cap B \cap C) = P(B) \cdot P(A|B) \cdot P(C|A \cap B)$
+
+**Independence**
+
+1. If events $A$ and $B$ are independent from one another, then probability of $A$ given $B$ is the same as the probability of $A$, e.g. $P(A|B) = P(A)$. 
+2. Multiplication Rule: $P(A \cap B) = P(A) \cdot P(B)$
+
+**Bayes' Rule**
+
+<center>$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$</center>
+
+**Law of Total Probability**
+<center>$P(B) = P(B|A) \cdot P(A) + P(B|!A) \cdot P(!A)$</center>
+
+P(X) = 0.0002, P(!X) = 0.9998
+P(Y|X) = 1
+P(Y|!X) = 0.01
+P(Y) = P(Y & X) + P(Y & !X)
+P(Y) = P(Y|X)P(X) + P(Y|!X)P(!X)
+P(Y) = 1 x 0.0002 + 0.01*0.9998
+P(X|Y) = P(Y|X)P(X) / P(Y)
+P(X|Y) = {1 * 0.0002} / {1 * 0.0002 + 0.01*0.9998}
+
+```{r cakc_this, echo = FALSE}
+xy <-{1 * 0.0002} / {1 * 0.0002 + 0.01*0.9998}
+xy
+```
+
+
+
+
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
