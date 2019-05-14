@@ -4,6 +4,7 @@ History of business intelligence
 
 Async
 * [When Big Data Meets Big Decision](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/3b1102bc-8646-485f-ab3a-c3259394dd2b)
+* [Excerpts from the Economist, CIO Magazine and Smart Data Collective](./RDADA2.4.1businessintelligenceanddatascience.pdf) 
 
 Required readings:
 
