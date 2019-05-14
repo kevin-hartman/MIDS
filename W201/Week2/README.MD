@@ -32,5 +32,5 @@ Discussion Questions:
   * Be prepared to share and discuss your thoughts in class. Use the discussion section of your portfolio to write your notes.
 * OEMC dispatch system for 911 call center
   * Strategic decision: Preemptively recognize persons in need of mental health treatment in emergency call situations to avoid accidental deaths. “Predict” which calls need a police officer trained in mental health diversion/deflection to respond.
-  * Tactical decision: Collect OEMC data do some analysis for keywords and outcomes, and build a model. Compare against CFD data set to help validate the model - fire has better flagging of the outcome for mental health tagging.
+  * Tactical decision: Collect OEMC data and do some analysis for keywords and outcomes. Build and train a model. Compare against CFD data set to validate. Determine if we can digitally eaves drop on a live call and flag for CIT dispatch.
 
