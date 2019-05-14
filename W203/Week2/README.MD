@@ -8,7 +8,7 @@ Required readings:
   * Full book [here](./../Books/probability_and_statistics_for_engineering_and_the_sciences.pdf)
 * Patent handout on [An Excercise in Operationalization](./patent_reading.pdf)
 
-Discussion Topics
+Discussion Topics for [An Excercise in Operationalization](./patent_reading.pdf)
 * Terms
   * Operationalize - a process of defining the measurement of a phenomenon that is not directly measurable, though its existence is inferred by other phenomena.
   * Conceptual Definition - A definition in terms of concepts, such as the one found in a dictionary, instead of in terms of the results of measuring procedures.
