@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Statistics for Data Science (DataSci w203)
+% Week 1 homework
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Setup
+\documentclass[12pt,a4paper]{article}
+\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\numberwithin{equation}{subsection}
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\title{Statistics for Data Science \\
+       Unit 3 Homework: Probability Theory}
+%\institute{Institution}
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\begin{enumerate}
+
+\item \textbf{Gas Station Analytics}
+At a certain gas station, 40\% of customers use regular gas (event R), 35\% use mid-grade (event M), and 25\% use premium (event P).  Of the customers that use regular gas, 30\% fill their tanks (Event F).  Of the customers that use mid-grade gas, 60\% fill their tanks, while of those that use premium, 50\% fill their tanks.  Assume that each customer is drawn independently from the entire pool of customers.
+
+\begin{enumerate}
+\item What is the probability that the next customer will request regular gas and fill the tank? 
+\item What is the probability that the next customer will fill the tank?
+\item Given that the next customer fills the tank, what is the conditional probability that they use regular gas?
+\end{enumerate}
+
+\item \textbf{The Toy Bin}
+
+ In a collection of toys, $1/2$ are red, $1/2$ are waterproof, and $1/3$ are cool. $1/4$ are red and waterproof.  $1/6$ are red and cool. $1/6$ are waterproof and cool. $1/6$ are neither red, waterproof, nor cool. Each toy has an equal chance of being selected.
+ 
+ \begin{enumerate}
+\item Draw an area diagram to represent these events.
+\item What is the probability of getting a red, waterproof, cool toy?
+\item You pull out a toy at random and you observe only the color, noting that it is red.  Conditional on just this information, what is the probability that the toy is not cool?
+\item Given that a randomly selected toy is red or waterproof, what is the probability that it is cool?
+\end{enumerate}
+ 
+ 
+\item \textbf{On the Overlap of Two Events}
+
+Suppose for events A and B, $P(A) = 1/2$, $P(B) = 2/3$, but we have no more information about the events.
+ \begin{enumerate}
+\item What are the maximum and minimum possible values for $P(A \cap B)$?
+\item What are the maximum and minimum possible values for $P(A|B)$?
+\end{enumerate}
+
+
+\item \textbf{Can't Please Everyone!}
+Among Berkeley students who have completed w203, $3/4$ like statistics.  Among Berkeley students who have not completed w203, only $1/4$ like statistics.  Assume that only 1 out of 100 Berkeley students completes w203.  Given that a Berkeley student likes statistics, what is the probability that they have completed w203?
+
+
+\end{enumerate}
+
+\end{document}
