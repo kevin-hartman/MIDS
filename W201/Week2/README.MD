@@ -1,4 +1,4 @@
-Week 2 | When Big Data Meets Big Decision
+Hi Week 2 | When Big Data Meets Big Decision
 
 History of business intelligence
 
@@ -30,4 +30,7 @@ Discussion Questions:
     * Tactical - Short term efforts that work toward achieving a goal; smaller and more focused; activities to perform at the micro level.
     * Strategic - Longer term goals that reflect path and purpose; broader and larger; plans to achieve the vision at a macro level.
   * Be prepared to share and discuss your thoughts in class. Use the discussion section of your portfolio to write your notes.
+* OEMC dispatch system for 911 call center
+  * Strategic decision: Preemptively recognize persons in need of mental health treatment in emergency call situations to avoid accidental deaths. “Predict” which calls need a police officer trained in mental health diversion/deflection to respond.
+  * Tactical decision: Collect OEMC data and do some analysis for keywords and outcomes. Build and train a model. Compare against CFD data set to validate. Determine if we can digitally eaves drop on live calls in real time and flag for mental health crisis intervention.
 
