@@ -1,4 +1,4 @@
-Hi Week 3 | High-Pressure Decision Making: People and Organization
+Week 3 | High-Pressure Decision Making: People and Organization
 
 Cuban Missile Crisis case study
 
