@@ -124,7 +124,7 @@ Properties:
 
 1. $P(A) >= \emptyset$ for any event $A$ in $\mathscr{F}$
 2. $P(\mathscr{S}) = 1$
-3. For any countably infite set of disjoint events $\{{A_1, A_2, \dots}\}$
+3. For any countably infite set of disjoint events $\{{A_1, A_2, \dots}\}}$
 
 <center>$P(A_1 \cup A_2 \cup \dots) = \sum_{i=1}^\infty P(A_i)$</center>
 
