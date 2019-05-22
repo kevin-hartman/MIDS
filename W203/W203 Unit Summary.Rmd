@@ -5,9 +5,14 @@ date: "5/12/2019"
 output: html_document
 ---
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
 ```
+
+
+
 ## Terms and Definitions
 A **population** is a well-defined collection of objects in an area of interest (investigation).
 
@@ -51,7 +56,7 @@ For each value $x_i$ in the sample, its deviation from the mean is $x_i-\bar{x}$
 
 Variance, denoted as $s^2$, is the average squared differences from the mean in a sample set.
 
-<center>$s^2=\frac{S_{xx}}{n-1}=\frac{\sum_{i=1}^n(x_i-\bar{x})^2}{n-1}$</center>
+<center>$$s^2=\frac{S_{xx}}{n-1}=\frac{\sum_{i=1}^n(x_i-\bar{x})^2}{n-1}$$</center>
 
 It is customary to refer to $s^2$ as being based on ${n-1}$ **degrees of freedom**.
 
@@ -127,7 +132,7 @@ Properties:
 
 Properties
 
-1. For any event $A$, $P(A) + P(A^') = 1$, from which $P(A) = 1 - P(A^')$
+1. For any event $A$, $P(A) + P(!A) = 1$, from which $P(A) = 1 - P(!A)$
 2. For any event $A$, $P(A) \leq 1$
 3. Addition Rule: For any two events $A$ and $B$, $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
 4. For any three events $A$, $B$, and $C$, $P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)$
@@ -150,23 +155,154 @@ Properties
 **Law of Total Probability**
 <center>$P(B) = P(B|A) \cdot P(A) + P(B|!A) \cdot P(!A)$</center>
 
-P(X) = 0.0002, P(!X) = 0.9998
-P(Y|X) = 1
-P(Y|!X) = 0.01
-P(Y) = P(Y & X) + P(Y & !X)
-P(Y) = P(Y|X)P(X) + P(Y|!X)P(!X)
-P(Y) = 1 x 0.0002 + 0.01*0.9998
-P(X|Y) = P(Y|X)P(X) / P(Y)
-P(X|Y) = {1 * 0.0002} / {1 * 0.0002 + 0.01*0.9998}
+*Quiz:*
+
+X is a rare disease that affects 2 out of 10,000 people.
+
+Let Y be the event of a positive test.
+
+The best test gives the wrong result 1% of the time for healthy people but is always right for affected people.
+
+If a person tests positive, what is the change that he or she has the disease, P(X|Y)?
+
+$P(X) = 0.0002, P(!X) = 0.9998$
+
+$P(Y|X) = 1$
+
+$P(Y|!X) = 0.01$
+
+$P(Y) = P(Y \cap X) + P(Y \cap !X)$
+
+$P(Y) = P(Y|X) \cdot P(X) + P(Y|!X) \cdot P(!X)$
+
+$P(Y) = (1 \cdot 0.0002) + (0.01 \cdot 0.9998)$
+
+$P(X|Y) = P(Y|X) \cdot P(X) / P(Y)$
+
+$P(X|Y) = \frac{1 \cdot 0.0002}{1 \cdot 0.0002 + 0.01 \cdot 0.9998}$
 
 ```{r cakc_this, echo = FALSE}
 xy <-{1 * 0.0002} / {1 * 0.0002 + 0.01*0.9998}
 xy
 ```
 
+## Unit 4: Random Variables
+
+Given a Probability space $(\mathscr{S}, \mathscr{F}, P)$, a **random variable** is a function whose domain is the sample space $\mathscr{S}$ and whose range is the set of real numbers.
+<center>$X:\mathscr{S} \rightarrow \mathbb{R}$</center>
+e.g. $X(\omega) = x$ 
+
+Any random variable whose only possible values are 0 and 1 is called a **Bernoulli random variable**.
+
+A **discrete set** is a set of disconnected points with no continuous intervals. $O = \left \{ {0, 1, 2, \dots } \right \}$. Binary outcomes with values $O = \left \{ {0, 1} \right \}$ where 1 represents success and has probability $p$ is called a **Bernoulli distribution**.
+
+A **Discrete Random Variable** $X$ is described by probability function $f$ in the problem space $(\mathscr{S}, \mathscr{F}, P)$
+<center>$f(x) = P(X=x) = P(\left\{w \in \mathscr{S}:X(\omega)=x \right\})$</center>
+where the outcomes $O_x = \left \{x \in \mathbb{R} : f(x) > 0 \right \}$
+
+A **Continuous Random Variable** $X$ takes on values in a continous interval or set of intervals, but the probability of any one value is zero.
+
+Describing the **Discrete Random Variable** $X$ in terms of a **Cumulative Probability Function**
+<center>$$F(X)=P(X \leq x)=\sum_{y \in O_x : y \leq x}{f(y)} \text{   (the sum of probability masses)}$$</center>
+
+Example of a probability function for a **bernoulli random variable**, $O_x = \left \{ {0, 1} \right \}$
+<center>$$\text{Let } \alpha = P(X=1), f(x)= \left\{\begin{array}{lcl} 1-\alpha &; & \mbox{x=0}; \\ \alpha; &; & \mbox{x=1}; \\ 0 & ; & \mbox{otherwise} \end{array} \right.$$</center>
 
 
+**Expectation of Discrete Random Variables**
 
+Let X be a discrete random variable with outcomes $O = \left \{x_1, x_2, \dots, x_k \right \}$ and probability function $f$
+
+<center>$$\text{Expectation } E(X) = \sum_{j=1}^kx_j \cdot f(x_j)$$</center>
+
+**Expectation of random variables with uniform probability distribution**
+
+Let $X$ be a special case where all outcomes have the same probability, e.g. if $f(x_i)=f(x_j) \forall i,j$
+
+<center>$$\text{Expectation } E(x) = \frac{1}{k}{\sum_j x_j}$$</center>
+
+**Expectation of random variables with binary outcomes**
+
+Let $X$ be Bernoulli random variable that has outcomes 0 and 1, e.g. if $$f(x;\alpha) = \left\{\begin{array}{lcl} 1-\alpha &; & \mbox{x=0}; \\ \alpha; &; & \mbox{x=1}; \\ 0 & ; & \mbox{otherwise} \end{array} \right.$$
+
+<center>Expectation $E(X) = \sum_{x \in {0, 1}}x\cdot f(x) = 0 \cdot (1 - \alpha) + 1 \cdot \alpha = \alpha$</center>
+
+**Expectation of geometric random variables**
+
+Let $X$ be geometric random variable for the number of babies born until the first girl, where $G$ is the event the baby is a girl  $$P(G_i) = g \forall i$$
+
+<center>$$f(1)=P(G_1)=g$$</center>
+<center>$$f(2)=P(!G_1 \cap G_2)=(1-g) \cdot g$$</center>
+<center>$$f(3)=(1-g)^2 \cdot g$$</center>
+<center>$$f(x;g)== \left\{\begin{array}{lcl} (1-g)^{x-1} \cdot g &; & x \in \left \{1, 2, \dots \right \}; \\ 0 & ; & \mbox{otherwise} \end{array} \right.$$</center>
+
+<center>$$\text{Expectation } E(X) = \sum_{x \in \left \{ {1, 2 \dots } \right \}}x \cdot (1-g)^{x-1} \cdot g = \frac{1}{g}$$</center>
+
+**Expectation of functions of random variables**
+
+Let $X$ be a discrete random variable with probability mass function $f$ and $g$ be a function from the real numbers to the real numbers, $g:\mathbb{R} \rightarrow \mathbb{R}$
+
+$g(X)$ is a random variable with probability mass function $f^{'}(x)=P(g(X)=x)=\sum_{y \in O_x, g(y)=x}f(y)$
+
+<center>$$\text{Expectation } E(g(x)) = \sum_{x} g(x)f(x)$$</center>
+
+Short proof sketch:
+
+<center>$$E(g(x))=\sum_{x}y \cdot f^{'}(y) = \sum_{y}\sum_{x \in O_x : g(x)=y}y \cdot f(x) = \sum_{y}\sum_{x:g(x)=y} g(x)f(x) = \sum_{x \in O_x} g(x) f(x)$$</center>
+
+**Expectation of linear functions of random variables**
+
+Let $X$ be a discrete random variable with probability mass function $f$, and let $g$ be a function from the real numbers to the real numbers, $g:\mathbb{R} \rightarrow \mathbb{R}$.
+
+$$\text{With } E(g(x)) = \sum_{x \in O_x} g(x) f(x) \text{, let } g(x) = ax + b$$
+
+<center>$$\text{Expectation } E(g(x)) = \sum_{x \in O_x} (ax+b)f(x) = \sum_x axf(x) + bf(x) = a\sum xf(x) + b\sum f(x) = aE(x)+b = g(E(x))$$</center>
+
+A **Continuous Random Variable** $X$ is described by probability density function $f$ in the problem space $(\mathscr{S}, \mathscr{F}, P)$
+
+<center>$$P(a \leq X \leq b) = \int_{x=a}^b{f(x)dx}$$</center>
+
+The **cumulative probability distribution, $F(x)$, is the area under f from $-\infty$ to $x$:
+
+<center>$$F(x)=\int_{x=-\infty}^x{f(x)dx}$$</center>
+
+$\text{Noting that } \int_{x=-\infty}^\infty{f(x)dx} = 1$
+
+$\text{By the fundamental theorom of calculus, }  f(x)=F^{'}(x) \text{ when } F^{'}(x) \text{ exists }$
+
+
+**Expectation of Continuous Random Variables**
+
+<center>$$\text{Expectation } (x)=\int_{x=-\infty}^\infty x \cdot f(x)dx$$</center>
+
+$\text{if } h:\mathbb{R}\rightarrow \mathbb{R} \text{ then } h(x) \text{ is a random variable and } E(h(x))=\int_{x=-\infty}^\infty h(x)f(x)dx$
+
+$\text{if }h(x) = ax+b \text{ then } E(h(x)) = aE(x)+b$
+
+
+**Uniform Random Variable**
+
+(graph of horizontal line from A to B)
+
+X has a uniform distribution on [A,B] if it has probably density function
+<center>$$f=\left\{\begin{array}{lcl} \frac{1}{B-A} &; & A \leq x \leq B \\ 0 & ; & \mbox{otherwise} \end{array} \right.$$</center>
+
+for $A \leq x \leq B$
+
+<center>$$F(x)=\int_{-\infty}^{x}f(y)dy = \int_{A}^{x}\frac{1}{B-A}dy={\frac{y}{B-A}} \bigg\rvert_{a}^{x}=\frac{x-A}{B-A}$$</center>
+
+
+(graph of sloped line from A to B)
+
+$f(x;\alpha) = \left\{\begin{array}{lcl} 0 &; & \mbox{x<A}; \\ \frac{X-A}{B-A}; &; & {A \leq x \leq B}; \\ 1 & ; & B \leq x \end{array} \right.$
+
+<center>Expectation $E(x) = \int_{-\infty}^{\infty}x \cdot f(x)dx = \int_{A}^{B}x \cdot \frac{x}{B-A}dx = \frac{x^2}{2\cdot(B-A)}\bigg\rvert_{A}^{B}=\frac{B^2-A^2}{2 \cdot(B-A)} = \frac{A+B}{2}$</center>
+
+**Variance Page**
+
+(todo)
+
+## ---
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 

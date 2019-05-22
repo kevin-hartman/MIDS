@@ -398,7 +398,7 @@ $(document).ready(function () {
 <h2>Unit 1: Descriptive Statistics</h2>
 <strong>Sample Mean</strong>
 <center>
-<span class="math inline">\(\bar{x} = \frac{\sum_{i=1}^n x_i}{n}\)</span>
+<span class="math display">\[\bar{x} = \frac{\sum_{i=1}^n x_i}{n}\]</span>
 </center>
 <p><strong>Sample Median</strong></p>
 After ordering <span class="math inline">\(n\)</span> observations from smallest to largest,
@@ -412,7 +412,7 @@ After ordering <span class="math inline">\(n\)</span> observations from smallest
 <p><strong>Sample Variance</strong></p>
 <p>Variance, denoted as <span class="math inline">\(s^2\)</span>, is the average squared differences from the mean in a sample set.</p>
 <center>
-<span class="math inline">\(s^2=\frac{S_{xx}}{n-1}=\frac{\sum_{i=1}^n(x_i-\bar{x})^2}{n-1}\)</span>
+<span class="math display">\[s^2=\frac{S_{xx}}{n-1}=\frac{\sum_{i=1}^n(x_i-\bar{x})^2}{n-1}\]</span>
 </center>
 <p>It is customary to refer to <span class="math inline">\(s^2\)</span> as being based on <span class="math inline">\({n-1}\)</span> <strong>degrees of freedom</strong>.</p>
 <p><strong>Sample Standard Deviation</strong></p>
@@ -454,19 +454,167 @@ After ordering <span class="math inline">\(n\)</span> observations from smallest
 <div id="unit-3-probability-theory" class="section level2">
 <h2>Unit 3: Probability Theory</h2>
 
-<p><strong>Sample space</strong> <span class="math inline">\(\mathscr{S}\)</span> where every element of <span class="math inline">\(\mathscr{S}\)</span> is called an outcome (must be at least 1)</p>
-<p><strong>Event space</strong> the set of events <span class="math inline">\(\mathscr{F}\)</span> which are a subset of <span class="math inline">\(\mathscr{S}\)</span></p>
-<p><strong>Probability Rule</strong> a function, <span class="math inline">\(P\)</span>, from the set of events to the real numbers</p>
+<p><strong>Sample space</strong> of an expirement, denoted by <span class="math inline">\(\mathscr{S}\)</span> ,is the set of all possible outcomes of that expirement.</p>
+<p><strong>Event space</strong>, denoted by <span class="math inline">\(\mathscr{F}\)</span>, is the subset of outcomes from the sample space. It includes subsets of <span class="math inline">\(\mathscr{S}\)</span>, the empty set <span class="math inline">\(\emptyset\)</span> and <span class="math inline">\(\mathscr{S}\)</span> itself.</p>
+<p><strong>Probability Rule</strong> is a function, <span class="math inline">\(P\)</span>, from the set of events to the real numbers</p>
 <p><strong>Axioms</strong></p>
 <ol style="list-style-type: decimal">
-<li>$P(A) &gt;= $ for any event <span class="math inline">\(A\)</span> in <span class="math inline">\(\mathscr{F}\)</span></li>
-<li><span class="math inline">\(P(\mathscr{S}) =1\)</span></li>
-<li>For any countabily infite set of disjoint events <span class="math inline">\(\{{A_1, A_2, \dots}\}\)</span></li>
+<li><span class="math inline">\(P(A) &gt;= \emptyset\)</span> for any event <span class="math inline">\(A\)</span> in <span class="math inline">\(\mathscr{F}\)</span></li>
+<li><span class="math inline">\(P(\mathscr{S}) = 1\)</span></li>
+<li>For any countably infite set of disjoint events <span class="math inline">\(\{{A_1, A_2, \dots}\}\)</span></li>
 </ol>
 <center>
 <span class="math inline">\(P(A_1 \cup A_2 \cup \dots) = \sum_{i=1}^\infty P(A_i)\)</span>
 </center>
-<p><strong>Probability space</strong></p>
+<p><strong>Probability space</strong> is the triple of <span class="math inline">\((\mathscr{S}, \mathscr{F}, P)\)</span></p>
+<p>Properties</p>
+<ol style="list-style-type: decimal">
+<li>For any event <span class="math inline">\(A\)</span>, <span class="math inline">\(P(A) + P(!A) = 1\)</span>, from which <span class="math inline">\(P(A) = 1 - P(!A)\)</span></li>
+<li>For any event <span class="math inline">\(A\)</span>, <span class="math inline">\(P(A) \leq 1\)</span></li>
+<li>Addition Rule: For any two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, <span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span></li>
+<li>For any three events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span>, <span class="math inline">\(P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)\)</span></li>
+</ol>
+<p><strong>Conditional Probability</strong></p>
+<ol style="list-style-type: decimal">
+<li>For any two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with <span class="math inline">\(P(B) &gt; 0\)</span>, the conditional probability of <span class="math inline">\(A\)</span> given that <span class="math inline">\(B\)</span> has occured is defined by <span class="math inline">\(P(A|B) = \frac{P(A \cap B)}{P(B)}\)</span></li>
+<li>Multiplication Rule: <span class="math inline">\(P(A \cap B) = P(B) \cdot P(A|B)\)</span></li>
+<li>Extending to 3 or more events: <span class="math inline">\(P(A \cap B \cap C) = P(B) \cdot P(A|B) \cdot P(C|A \cap B)\)</span></li>
+</ol>
+<p><strong>Independence</strong></p>
+<ol style="list-style-type: decimal">
+<li>If events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent from one another, then probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span> is the same as the probability of <span class="math inline">\(A\)</span>, e.g. <span class="math inline">\(P(A|B) = P(A)\)</span>.</li>
+<li>Multiplication Rule: <span class="math inline">\(P(A \cap B) = P(A) \cdot P(B)\)</span></li>
+</ol>
+<p><strong>Bayes’ Rule</strong></p>
+<center>
+<span class="math inline">\(P(A|B) = \frac{P(B|A)P(A)}{P(B)}\)</span>
+</center>
+<strong>Law of Total Probability</strong>
+<center>
+<span class="math inline">\(P(B) = P(B|A) \cdot P(A) + P(B|!A) \cdot P(!A)\)</span>
+</center>
+<p><em>Quiz:</em></p>
+<p>X is a rare disease that affects 2 out of 10,000 people.</p>
+<p>Let Y be the event of a positive test.</p>
+<p>The best test gives the wrong result 1% of the time for healthy people but is always right for affected people.</p>
+<p>If a person tests positive, what is the change that he or she has the disease, P(X|Y)?</p>
+<p><span class="math inline">\(P(X) = 0.0002, P(!X) = 0.9998\)</span></p>
+<p><span class="math inline">\(P(Y|X) = 1\)</span></p>
+<p><span class="math inline">\(P(Y|!X) = 0.01\)</span></p>
+<p><span class="math inline">\(P(Y) = P(Y \cap X) + P(Y \cap !X)\)</span></p>
+<p><span class="math inline">\(P(Y) = P(Y|X) \cdot P(X) + P(Y|!X) \cdot P(!X)\)</span></p>
+<p><span class="math inline">\(P(Y) = (1 \cdot 0.0002) + (0.01 \cdot 0.9998)\)</span></p>
+<p><span class="math inline">\(P(X|Y) = P(Y|X) \cdot P(X) / P(Y)\)</span></p>
+<p><span class="math inline">\(P(X|Y) = \frac{1 \cdot 0.0002}{1 \cdot 0.0002 + 0.01 \cdot 0.9998}\)</span></p>
+<pre><code>## [1] 0.01961169</code></pre>
+</div>
+<div id="unit-4-random-variables" class="section level2">
+<h2>Unit 4: Random Variables</h2>
+Given a Probability space <span class="math inline">\((\mathscr{S}, \mathscr{F}, P)\)</span>, a <strong>random variable</strong> is a function whose domain is the sample space <span class="math inline">\(\mathscr{S}\)</span> and whose range is the set of real numbers.
+<center>
+<span class="math inline">\(X:\mathscr{S} \rightarrow \mathbb{R}\)</span>
+</center>
+<p>e.g. <span class="math inline">\(X(\omega) = x\)</span></p>
+<p>Any random variable whose only possible values are 0 and 1 is called a <strong>Bernoulli random variable</strong>.</p>
+<p>A <strong>discrete set</strong> is a set of disconnected points with no continuous intervals. <span class="math inline">\(O = \left \{ {0, 1, 2, \dots } \right \}\)</span>. Binary outcomes with values <span class="math inline">\(O = \left \{ {0, 1} \right \}\)</span> where 1 represents success and has probability <span class="math inline">\(p\)</span> is called a <strong>Bernoulli distribution</strong>.</p>
+A <strong>Discrete Random Variable</strong> <span class="math inline">\(X\)</span> is described by probability function <span class="math inline">\(f\)</span> in the problem space <span class="math inline">\((\mathscr{S}, \mathscr{F}, P)\)</span>
+<center>
+<span class="math inline">\(f(x) = P(X=x) = P(\left\{w \in \mathscr{S}:X(\omega)=x \right\})\)</span>
+</center>
+<p>where the outcomes <span class="math inline">\(O_x = \left \{x \in \mathbb{R} : f(x) &gt; 0 \right \}\)</span></p>
+<p>A <strong>Continuous Random Variable</strong> <span class="math inline">\(X\)</span> takes on values in a continous interval or set of intervals, but the probability of any one value is zero.</p>
+Describing the <strong>Discrete Random Variable</strong> <span class="math inline">\(X\)</span> in terms of a <strong>Cumulative Probability Function</strong>
+<center>
+<span class="math display">\[F(X)=P(X \leq x)=\sum_{y \in O_x : y \leq x}{f(y)} \text{   (the sum of probability masses)}\]</span>
+</center>
+Example of a probability function for a <strong>bernoulli random variable</strong>, <span class="math inline">\(O_x = \left \{ {0, 1} \right \}\)</span>
+<center>
+<span class="math display">\[\text{Let } \alpha = P(X=1), f(x)= \left\{\begin{array}{lcl} 1-\alpha &amp;; &amp; \mbox{x=0}; \\ \alpha; &amp;; &amp; \mbox{x=1}; \\ 0 &amp; ; &amp; \mbox{otherwise} \end{array} \right.\]</span>
+</center>
+<p><strong>Expectation of Discrete Random Variables</strong></p>
+<p>Let X be a discrete random variable with outcomes <span class="math inline">\(O = \left \{x_1, x_2, \dots, x_k \right \}\)</span> and probability function <span class="math inline">\(f\)</span></p>
+<center>
+<span class="math display">\[\text{Expectation } E(X) = \sum_{j=1}^kx_j \cdot f(x_j)\]</span>
+</center>
+<p><strong>Expectation of random variables with uniform probability distribution</strong></p>
+<p>Let <span class="math inline">\(X\)</span> be a special case where all outcomes have the same probability, e.g. if <span class="math inline">\(f(x_i)=f(x_j) \forall i,j\)</span></p>
+<center>
+<span class="math display">\[\text{Expectation } E(x) = \frac{1}{k}{\sum_j x_j}\]</span>
+</center>
+<p><strong>Expectation of random variables with binary outcomes</strong></p>
+<p>Let <span class="math inline">\(X\)</span> be Bernoulli random variable that has outcomes 0 and 1, e.g. if <span class="math display">\[f(x;\alpha) = \left\{\begin{array}{lcl} 1-\alpha &amp;; &amp; \mbox{x=0}; \\ \alpha; &amp;; &amp; \mbox{x=1}; \\ 0 &amp; ; &amp; \mbox{otherwise} \end{array} \right.\]</span></p>
+<center>
+Expectation <span class="math inline">\(E(X) = \sum_{x \in {0, 1}}x\cdot f(x) = 0 \cdot (1 - \alpha) + 1 \cdot \alpha = \alpha\)</span>
+</center>
+<p><strong>Expectation of geometric random variables</strong></p>
+<p>Let <span class="math inline">\(X\)</span> be geometric random variable for the number of babies born until the first girl, where <span class="math inline">\(G\)</span> is the event the baby is a girl <span class="math display">\[P(G_i) = g \forall i\]</span></p>
+<center>
+<span class="math display">\[f(1)=P(G_1)=g\]</span>
+</center>
+<center>
+<span class="math display">\[f(2)=P(!G_1 \cap G_2)=(1-g) \cdot g\]</span>
+</center>
+<center>
+<span class="math display">\[f(3)=(1-g)^2 \cdot g\]</span>
+</center>
+<center>
+<span class="math display">\[f(x;g)== \left\{\begin{array}{lcl} (1-g)^{x-1} \cdot g &amp;; &amp; x \in \left \{1, 2, \dots \right \}; \\ 0 &amp; ; &amp; \mbox{otherwise} \end{array} \right.\]</span>
+</center>
+<center>
+<span class="math display">\[\text{Expectation } E(X) = \sum_{x \in \left \{ {1, 2 \dots } \right \}}x \cdot (1-g)^{x-1} \cdot g = \frac{1}{g}\]</span>
+</center>
+<p><strong>Expectation of functions of random variables</strong></p>
+<p>Let <span class="math inline">\(X\)</span> be a discrete random variable with probability mass function <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be a function from the real numbers to the real numbers, <span class="math inline">\(g:\mathbb{R} \rightarrow \mathbb{R}\)</span></p>
+<p><span class="math inline">\(g(X)\)</span> is a random variable with probability mass function <span class="math inline">\(f^{'}(x)=P(g(X)=x)=\sum_{y \in O_x, g(y)=x}f(y)\)</span></p>
+<center>
+<span class="math display">\[\text{Expectation } E(g(x)) = \sum_{x} g(x)f(x)\]</span>
+</center>
+<p>Short proof sketch:</p>
+<center>
+<span class="math display">\[E(g(x))=\sum_{x}y \cdot f^{'}(y) = \sum_{y}\sum_{x \in O_x : g(x)=y}y \cdot f(x) = \sum_{y}\sum_{x:g(x)=y} g(x)f(x) = \sum_{x \in O_x} g(x) f(x)\]</span>
+</center>
+<p><strong>Expectation of linear functions of random variables</strong></p>
+<p>Let <span class="math inline">\(X\)</span> be a discrete random variable with probability mass function <span class="math inline">\(f\)</span>, and let <span class="math inline">\(g\)</span> be a function from the real numbers to the real numbers, <span class="math inline">\(g:\mathbb{R} \rightarrow \mathbb{R}\)</span>.</p>
+<p><span class="math display">\[\text{With } E(g(x)) = \sum_{x \in O_x} g(x) f(x) \text{, let } g(x) = ax + b\]</span></p>
+<center>
+<span class="math display">\[\text{Expectation } E(g(x)) = \sum_{x \in O_x} (ax+b)f(x) = \sum_x axf(x) + bf(x) = a\sum xf(x) + b\sum f(x) = aE(x)+b = g(E(x))\]</span>
+</center>
+<p>A <strong>Continuous Random Variable</strong> <span class="math inline">\(X\)</span> is described by probability density function <span class="math inline">\(f\)</span> in the problem space <span class="math inline">\((\mathscr{S}, \mathscr{F}, P)\)</span></p>
+<center>
+<span class="math display">\[P(a \leq X \leq b) = \int_{x=a}^b{f(x)dx}\]</span>
+</center>
+<p>The **cumulative probability distribution, <span class="math inline">\(F(x)\)</span>, is the area under f from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(x\)</span>:</p>
+<center>
+<span class="math display">\[F(x)=\int_{x=-\infty}^x{f(x)dx}\]</span>
+</center>
+<p><span class="math inline">\(\text{Noting that } \int_{x=-\infty}^\infty{f(x)dx} = 1\)</span></p>
+<p><span class="math inline">\(\text{By the fundamental theorom of calculus, } f(x)=F^{'}(x) \text{ when } F^{'}(x) \text{ exists }\)</span></p>
+<p><strong>Expectation of Continuous Random Variables</strong></p>
+<center>
+<span class="math display">\[\text{Expectation } (x)=\int_{x=-\infty}^\infty x \cdot f(x)dx\]</span>
+</center>
+<p><span class="math inline">\(\text{if } h:\mathbb{R}\rightarrow \mathbb{R} \text{ then } h(x) \text{ is a random variable and } E(h(x))=\int_{x=-\infty}^\infty h(x)f(x)dx\)</span></p>
+<p><span class="math inline">\(\text{if }h(x) = ax+b \text{ then } E(h(x)) = aE(x)+b\)</span></p>
+<p><strong>Uniform Random Variable</strong></p>
+<p>(graph of horizontal line from A to B)</p>
+X has a uniform distribution on [A,B] if it has probably density function
+<center>
+<span class="math display">\[f=\left\{\begin{array}{lcl} \frac{1}{B-A} &amp;; &amp; A \leq x \leq B \\ 0 &amp; ; &amp; \mbox{otherwise} \end{array} \right.\]</span>
+</center>
+<p>for <span class="math inline">\(A \leq x \leq B\)</span></p>
+<center>
+<span class="math display">\[F(x)=\int_{-\infty}^{x}f(y)dy = \int_{A}^{x}\frac{1}{B-A}dy={\frac{y}{B-A}} \bigg\rvert_{a}^{x}=\frac{x-A}{B-A}\]</span>
+</center>
+<p>(graph of sloped line from A to B)</p>
+<p><span class="math inline">\(f(x;\alpha) = \left\{\begin{array}{lcl} 0 &amp;; &amp; \mbox{x&lt;A}; \\ \frac{X-A}{B-A}; &amp;; &amp; {A \leq x \leq B}; \\ 1 &amp; ; &amp; B \leq x \end{array} \right.\)</span></p>
+<center>
+Expectation <span class="math inline">\(E(x) = \int_{-\infty}^{\infty}x \cdot f(x)dx = \int_{A}^{B}x \cdot \frac{x}{B-A}dx = \frac{x^2}{2\cdot(B-A)}\bigg\rvert_{A}^{B}=\frac{B^2-A^2}{2 \cdot(B-A)} = \frac{A+B}{2}\)</span>
+</center>
+<p><strong>Variance Page</strong></p>
+<p>(todo)</p>
+</div>
+<div id="section" class="section level2">
+<h2>—</h2>
 <p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
 <p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
 <pre class="r"><code>summary(cars)</code></pre>
