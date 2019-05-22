@@ -37,14 +37,15 @@ Discussion Questions:
 	* -How are decisions made in your organization? How do standard operating procedures influence what you do? Do you find them helpful or are they a hindrance?
   * How might frameworks about how decisions are made in organizations be useful to data scientists?
   
-  * Models
-    * Rational Actor Model
-    * Organizational Process Model (Standard Operating Procedures)
-    * Beurocratic Politics Model
-  * Key takeaways
-    * Data doesn't always favor the rational choice model
-    * More data isn't always more better
-    * Need to understand the climate and context around the decision making process
-      * There will always be a political element
-      * It will be loaded with emotion
-      * There will be asymmetric information
+* Models
+  * Rational Actor Model
+  * Organizational Process Model (Standard Operating Procedures)
+  * Beurocratic Politics Model
+  
+* Key takeaways
+  * Data doesn't always favor the rational choice model
+  * More data isn't always more better
+  * Need to understand the climate and context around the decision making process
+    * There will always be a political element
+    * It will be loaded with emotion
+    * There will be asymmetric information
