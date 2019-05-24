@@ -186,7 +186,7 @@ xy <-{1 * 0.0002} / {1 * 0.0002 + 0.01*0.9998}
 xy
 ```
 
-## Unit 4: Random Variables
+## Unit 4.1: Discrete Random Variables
 
 Given a Probability space $(\mathscr{S}, \mathscr{F}, P)$, a **random variable** is a function whose domain is the sample space $\mathscr{S}$ and whose range is the set of real numbers.
 <center>$X:\mathscr{S} \rightarrow \mathbb{R}$</center>
@@ -199,8 +199,6 @@ A **discrete set** is a set of disconnected points with no continuous intervals.
 A **Discrete Random Variable** $X$ is described by probability function $f$ in the problem space $(\mathscr{S}, \mathscr{F}, P)$
 <center>$f(x) = P(X=x) = P(\left\{w \in \mathscr{S}:X(\omega)=x \right\})$</center>
 where the outcomes $O_x = \left \{x \in \mathbb{R} : f(x) > 0 \right \}$
-
-A **Continuous Random Variable** $X$ takes on values in a continous interval or set of intervals, but the probability of any one value is zero.
 
 Describing the **Discrete Random Variable** $X$ in terms of a **Cumulative Probability Function**
 <center>$$F(X)=P(X \leq x)=\sum_{y \in O_x : y \leq x}{f(y)} \text{   (the sum of probability masses)}$$</center>
@@ -258,11 +256,32 @@ $$\text{With } E(g(x)) = \sum_{x \in O_x} g(x) f(x) \text{, let } g(x) = ax + b$
 
 <center>$$\text{Expectation } E(g(x)) = \sum_{x \in O_x} (ax+b)f(x) = \sum_x axf(x) + bf(x) = a\sum xf(x) + b\sum f(x) = aE(x)+b = g(E(x))$$</center>
 
+**Variance**
+Let $X$ be a random variable and let $\mu=E(X)$
+
+The variance of $X$ is defined as $var(X)=E[(X-\mu)^2]$. Carrying the calculations through,
+
+$var(X)=E[X^2-2X\mu+\mu^2]=E(x^2)-E(2X\mu)+E(\mu^2)=E(X^2)-2\mu E(X)+\mu^2 =E(X^2)-2\mu^2+\mu^2 = E(X^2)-\mu^2=E(X^2)-[E(X)]^2$
+
+Properties
+
+Let $c\in\mathbb{R}$.
+
+1. $var(X+c)=E[(X+c-E(X+c))^2] = E[(X+c-E(X)-c)^2]= var(X)$
+2. $var(cX)=E[(cX-E(cX)^2]=E[(cX-cE(X))^2]=E[c^2(X-E(ZX))^2]=c^2E[(x-E(x))^2]=c^2var(X)$
+
+Standard deviation
+$\sigma_x=\sqrt{var(x)}$
+
+## Unit 4.2: Continuous Random Variables
+
+A **Continuous Random Variable** $X$ takes on values in a continous interval or set of intervals, but the probability of any one value is zero.
+
 A **Continuous Random Variable** $X$ is described by probability density function $f$ in the problem space $(\mathscr{S}, \mathscr{F}, P)$
 
 <center>$$P(a \leq X \leq b) = \int_{x=a}^b{f(x)dx}$$</center>
 
-The **cumulative probability distribution, $F(x)$, is the area under f from $-\infty$ to $x$:
+The **cumulative probability distribution**, $F(x)$, is the area under f from $-\infty$ to $x$:
 
 <center>$$F(x)=\int_{x=-\infty}^x{f(x)dx}$$</center>
 
@@ -297,27 +316,3 @@ for $A \leq x \leq B$
 $f(x;\alpha) = \left\{\begin{array}{lcl} 0 &; & \mbox{x<A}; \\ \frac{X-A}{B-A}; &; & {A \leq x \leq B}; \\ 1 & ; & B \leq x \end{array} \right.$
 
 <center>Expectation $E(x) = \int_{-\infty}^{\infty}x \cdot f(x)dx = \int_{A}^{B}x \cdot \frac{x}{B-A}dx = \frac{x^2}{2\cdot(B-A)}\bigg\rvert_{A}^{B}=\frac{B^2-A^2}{2 \cdot(B-A)} = \frac{A+B}{2}$</center>
-
-**Variance Page**
-
-(todo)
-
-## ---
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
