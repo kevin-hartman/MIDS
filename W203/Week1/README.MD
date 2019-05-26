@@ -30,3 +30,6 @@ Live Session Notes
       * When I select different samples my sample mean will change. That variance is called variance of mean.
       * Sample variance is the variance within the sample
     * Key thing - randomization of data that is not biased so that we can estimate the population mean
+
+Session Notebook
+* [my notebook](./unit_1_ls/unit_1_ls.ipynb)

@@ -1,5 +1,8 @@
 Week 2
 
+Homework Due
+* [unit_1_hw](./unit_1_hw/Kevin_Hartman_unit_1_hw.ipynb)
+
 Async
 * [2.4 Histograms](https://learn.datascience.berkeley.edu/ap/courses/267/sections/283e2e3a-e711-41fb-b042-64d28352a50a/coursework/module/a74b90d6-38fe-467e-a1d6-72eeccbcfdf8/segment/68c9754a-3be0-461d-a506-ecf037309726), [2.5 Boxplots](https://learn.datascience.berkeley.edu/ap/courses/267/sections/283e2e3a-e711-41fb-b042-64d28352a50a/coursework/module/a74b90d6-38fe-467e-a1d6-72eeccbcfdf8/segment/04ac3656-fb22-4ae7-92f8-1424eda72891) and [Research Design and Probability Theory](https://learn.datascience.berkeley.edu/ap/courses/267/sections/283e2e3a-e711-41fb-b042-64d28352a50a/coursework/courseModule/659838b8-0cc0-4f51-950c-99c97f494e30)
 
@@ -37,5 +40,5 @@ Live Session Notes
 Session Notebook
 * [my notebook](./unit_3_ls/unit_3_ls.ipynb)
 * [master notebook](./unit_3_ls_sol/unit_3_ls_inst.ipynb)
-* [Section 5 notebook](./unit_3_ls_sol/unit_3_ls_Sect_5.ipynb))
+* [section 5 notebook](./unit_3_ls_sol/unit_3_ls_Sect_5.ipynb)
 

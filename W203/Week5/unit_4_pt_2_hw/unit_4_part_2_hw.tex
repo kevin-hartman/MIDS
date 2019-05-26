@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Statistics for Data Science (DataSci w203)
+% Unit 4 homework
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Setup
+\documentclass[12pt,a4paper]{article}
+\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\numberwithin{equation}{subsection}
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\title{Statistics for Data Science \\
+       Unit 4 Part 2 Homework: Continuous Random Variables}
+%\institute{Institution}
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\begin{enumerate}
+
+\item \textbf{Processing Pasta}
+
+A certain manufacturing process creates pieces of pasta that vary by length.  Suppose that the length of a particular piece, $L$, is a continuous random variable with the following probability density function.
+
+$$f(l) = \begin{cases} 0, &l \leq 0 \\
+l/2, &0 < l \leq 2 \\ 
+0, &2 < l
+\end{cases}
+$$
+
+\begin{enumerate}
+\item Write down a complete expression for the cumulative probability function of $L$.
+\item Using the definition of expectation for a continuous random variable, compute the expected length of the pasta, $E(L)$.
+\end{enumerate}
+
+\item \textbf{The Warranty is Worth It}
+
+Suppose the life span of a particular (shoddy) server is a continuous random variable, T, with a uniform probability distribution between 0 and 1 year.  The server comes with a contract that guarantees you money if the server lasts less than 1 year.  In particular, if the server lasts $t$ years, the manufacturer will pay you $g(t)= \$100(1-t)^{1/2}$.  Let $X = g(T)$ be the random variable representing the payout from the contract.
+
+Compute the expected payout from the contract, $E(X) = E(g(T))$.
+
+\item \textbf{(Lecture)\#Fail}
+
+Suppose the length of Paul Laskowski's lecture in minutes is a continuous random variable C, with pmf $f(t) = e^{-t}$ for $t > 0$.  This is an example of an exponential random variable, and it has some special properties.  For example, suppose you have already sat through t minutes of the lecture, and are interested in whether the lecture is about to end immediately.  In statistics, this can be represented by something called the \textit{hazard rate}:
+
+$$h(t) = \frac{f(t)}{1-F(t)}$$
+
+To understand the hazard rate, think of the numerator as the probability the lecture ends between time $t$ and time $t+ dt$.  The denominator is just the probability the lecture does not end before time $t$.  So you can think of the fraction as the conditional probability that the lecture ends between $t$ and $t + dt$ given that it did not end before $t$.
+
+Compute the hazard rate for C.
+
+\item \textbf{Optional Advanced Exercise: Characterizing a Function of a Random Variable}
+
+Let $X$ be a continuous random variable with probability density function $f(x)$, and let $h$ be an invertible function where $h^{-1}$ is differentiable.  Recall that $Y = h(X)$ is itself a continuous random variable.  Prove that the probability density function of $Y$ is 
+
+$$g(y) =f(h^{-1}(y)) \cdot \left| \frac{d}{dy}h^{-1}(y) \right| $$
+
+\end{enumerate}
+
+\end{document}
