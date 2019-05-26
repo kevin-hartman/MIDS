@@ -17,7 +17,7 @@
 
 \usepackage{Sweave}
 \begin{document}
-\input{Kevin_Hartman_unit_4_part_1_hw-concordance}
+\SweaveOpts{concordance=TRUE}
 \input{Kevin_Hartman_unit_4_part_1_hw-concordance}
 
 \author{Kevin Hartman (W203 Wednesday 6:30pm Summer 2019)}
@@ -53,7 +53,15 @@ $$\text{Probablity of 1 Heads: }P(X=1)=b(1;3,\frac{1}{2}) = (^3_1)(\frac{1}{2})^
 $$\text{Probablity of 2 Heads: }P(X=2)=b(2;3,\frac{1}{2}) = (^3_2)(\frac{1}{2})^3 = \frac{3}{8}$$
 $$\text{Probablity of 3 Heads: }P(X=3)=b(3;3,\frac{1}{2}) = (^3_3)(\frac{1}{2})^3 = \frac{1}{8}$$
 
+<<echo=FALSE, results=hide>>=
+	x = seq(0,3,by=1)
+	y = dbinom(x, size = 3,prob=.5)
+@
 	
+<<label=xbinom, fig=TRUE, echo=FALSE, pdf=FALSE, eps=TRUE, png=TRUE, include=FALSE>>=
+	plot(x,y, type="h", col=2, ylab="P(x)", xlab="x", ylim=c(0,0.4125))
+	abline(v=1.5, col="blue", lty=3)
+@
 
 \begin{minipage}{\linewidth}
   \centering
