@@ -19,6 +19,8 @@
 \begin{document}
 \input{Kevin_Hartman_unit_4_part_1_hw-concordance}
 
+\author{Kevin Hartman (W203 Wednesday 6:30pm Summer 2019)}
+\date{5/29/2019}
 \title{Statistics for Data Science \\
        Unit 4 Part 1 Homework: Discrete Random Variables}
 \maketitle
@@ -31,12 +33,13 @@
 \item \textbf{Best Game in the Casino}ß†
 
 You flip a fair coin 3 times, and get a different amount of money depending on how many heads you get. For 0 heads, you get \$0. For 1 head, you get \$2. For 2 heads, you get \$4. Your expected winnings from the game are \$6. 
-
-\textbf{GIVENS}
-
+\\
+\\
+\textbf{\underline{Givens:}}
+\\
 X is a binomial random variable based on $n$ trials with success probability $p$.
 
-Let x be the number of H's among the $n=3$ trials.
+When X=x, let x be the number of heads among the $n=3$ trials with the probability of a head in each trial being $p=\frac{1}{2}$.
 
 $$b(x;n,p) = \begin{cases}
 (^n_k)p^x(1-p)^{n-x}, &x \in \{0,1,2,3,...\}\\
@@ -60,6 +63,8 @@ $$\text{Probablity of 3 Heads: }P(X=3)=b(3;3,\frac{1}{2}) = (^3_3)(\frac{1}{2})^
 \item How much do you get paid if the coin comes up heads 3 times?
 \\
 \\
+\textbf{\underline{Answer:}}
+\\
 $\text{Given fair coins, the expectation of X, } E(X) = np = 3 \cdot \frac{1}{2} = \frac{3}{2} \text{ (also shown in graph above)}$
 \\
 \\
@@ -80,7 +85,7 @@ $G(X=3) = A$
 \\
 Using the expectation that $E(g(X)) = g(E(X))$ we can solve for A:
 
-$$E(g(X)) = \sum_x g(x) \cdot p(x) = 6$$
+$$E(g(X)) = \sum_{y=0}^x g(y) \cdot p(y) = 6$$
 
 $$(0 \cdot \frac{1}{8}) + (2 \cdot \frac{3}{8}) + (4 \cdot \frac{3}{8}) +  (A \cdot \frac{1}{8} ) = 6$$
 
@@ -93,11 +98,15 @@ $$A = 30$$
 
 \item Write down a complete expression for the cumulative probability function for your winnings from the game.
 \\
-$$g(x) = \left\{\begin{array}{{lcl}} 0 &;& x < 1 \\  \frac{16}{3} &;& 1 \leq x < 3 \\  208 &;& x \leq 3 \end{array} \right.,\quad  p=\frac{1}{2}$$
+\\
+\textbf{\underline{Answer:}}
+$$\text{With} \enskip g(x) = \left\{\begin{array}{{lcl}} 0 &;& x < 1 \\  \frac{16}{3} &;& 1 \leq x < 3 \\  208 &;& x \leq 3 \end{array} \right.,\enskip  p=\frac{1}{2}, \enskip \text{and } n=3$$
 
-$$\text{Winnings } = g(P(X \leq x)) = \sum_{y=0}^x g(y) \left(^3_y \right)p^y(1-p)^{3-y}$$
+$$\text{Winnings } = g(P(X \leq x)) = \sum_{y=0}^x g(y) \cdot \left(^n_y \right)p^y(1-p)^{n-y}$$
 
-$G(P(X \leq 0)) = (\frac{1}{8} \cdot 0) = 0$
+\textbf{\underline{Proof:}}
+\\
+\\$G(P(X \leq 0)) = (\frac{1}{8} \cdot 0) = 0$
 \\
 \\
 $G(P(X \leq 1)) = (\frac{1}{8} \cdot 0) + (\frac{3}{8} \cdot \frac{16}{3}) = 2$
@@ -116,11 +125,36 @@ Let $X$ be a random variable representing the outcome of rolling a 6-sided die. 
 
 \begin{enumerate}
 \item You get $1/E(X)$ in dollars right away.
+\\
+\\
+\textbf{\underline{Proof:}}
+\\
+Since each die roll has uniform probability we can compute $E(X)$ as:
+\\
+$$E(X) = \frac{1}{k}{\sum_j x_j} = \frac{1+2+3+4+5+6}{6} = 3.5$$
+\\
+\\
+$1/E(X)$ is approx .28571 dollars
+
 \item You wait until the die is rolled, then get $1/X$ in dollars.
+\\
+\\
+\textbf{\underline{Proof:}}
+\\
+$\text{Given } g(X) = 1/X \text{ and } E(g(X)) = \sum_x g(x) \cdot p(x)$
+\\
+$$E(g(X)) = (1 \cdot \frac{1}{6}) + (\frac{1}{2} \cdot \frac{1}{6}) + (\frac{1}{3} \cdot \frac{1}{6}) + (\frac{1}{4} \cdot \frac{1}{6}) + (\frac{1}{5} \cdot \frac{1}{6}) + (\frac{1}{6} \cdot \frac{1}{6})$$
+\\
+$E(g(X))$ is approx .408333 dollars
+
 \item Which option is better for you, in expectation?
+\\
+\\
+\textbf{\underline{Answer:}}
+\\
+$.408333$ is greater than $.28571$. The second option is better in expectation.
+
 \end{enumerate}
-
-
 
 \item \textbf{The Baseline for Measuring Deviations}
 
@@ -130,9 +164,29 @@ You might wonder why we often square deviations (instead of taking an absolute v
 
 \begin{enumerate}
 \item Write down an expression for $E(Y)$ and simplify it as much as you can.  Even though we haven't proved this yet, you can use the fact that for any two random variables, $A$ and $B$, $E(A + B) = E(A) + E(B)$.
+\\
+\textbf{\underline{Answer:}}
+$$E(Y) = E[(X - t)^2] = E[(X^2 -2tX + t^2)]$$
+$$= E[(X^2)] + E[(-2tX)] + E[(t^2)]$$
+$$= E(X^2) - 2tE(X) + t^2$$
 \item Taking a partial derivative with respect to $t$, compute the value of $t$ that minimizes $E(Y)$.  (Hint: Your answer should be a very familiar value)
+\\
+\newpage
+\textbf{\underline{Answer:}}
+$$E(Y)'_{(x, t)} = \frac{\partial }{\partial t} [E(X^2) - 2tE(X) + t^2] = - 2E(X) + 2t$$
+$E(Y)$ approaches minimum when
+$$t = E(X)$$
 \item What is the value of $E(Y)$ for this choice of $t$?
 (Hint: this should also be a very familiar value)
+\\
+\textbf{\underline{Answer:}}
+\\
+Replacing $t$ with $E(X)$ in $E(Y) = E(X^2) - 2tE(X) + t^2$:
+$$E(X^2) - 2tE(X) + t^2 = E(X^2) - 2E(X)E(X) + [E(X)]^2$$
+$$ = E(X^2) - 2[E(X)]^2 + [E(X)]^2$$
+The value of $E(Y)$ at the minimum will be 
+$$E(Y) = E(X^2) - [E(X)]^2$$
+
 \end{enumerate}
 
 \item \textbf{Optional Advanced Exercise: Heavy Tails}
@@ -149,12 +203,16 @@ where $c$ is a constant (you can calculate its value if you like, but it's not i
 
 \begin{enumerate}
 \item Is $E(M)$ finite?
-
-Yes it is finite because the sum of $c/x^3$ from 1 to $\infty$ will converge.  It converges because this is a p-series $(1/n^p)$ that converges when p > 1 and diverges when 0 < p < 1.
+\\
+\textbf{\underline{Answer:}}
+\\
+Yes it is finite because although this an infinite series, the sum of $c/x^3$ from 1 to $\infty$ will eventually converge.  It converges because the equation represents a p-series $(1/n^p)$ and a p-series converges when p > 1 and diverges when 0 < p < 1.
 
 \item Is $V(M)$ finite?
-
-Also finite for the same reason.
+\\
+\textbf{\underline{Answer:}}
+\\
+Also finite for the same reason as (a). For $V(M)$ to be calculated the infinite series must converge.
 
 \end{enumerate}
 
