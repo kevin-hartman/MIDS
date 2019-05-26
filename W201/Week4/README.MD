@@ -6,7 +6,7 @@ Week 4 | Biases in Decision Making
 
 
 Async
-* [High Pressure Decision Making](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/935a388b-b3b4-4fde-82d4-3f70dd49662f)
+* [Biases in Decision Making](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/657e66fd-3839-43f3-a2e5-79f87b948318)
 
 Required readings:
 * Kahneman, Daniel. Thinking, Fast and Slow. Farrar, Strauss and Giroux, 2011, chapters 10–18.
@@ -37,7 +37,7 @@ Additional Async Notes
   * “A recurrent theme of this book is that luck plays a large role in every story of success; it is almost always easy to identify a small change in the story that would have turned a remarkable achievement into a mediocre outcome.” (p.9)
   * Origin of the title. “The spontaneous search for an intuitive solution sometimes fails—neither an expert solution nor a heuristic answer comes to mind. In such cases we often find ourselves switching to a slower, more deliberate and effortful form of thinking. This is the slow thinking of the title. Fast thinking includes both variants of intuitive thought—the expert and the heuristic—as well as the entirely automatic mental activities of perception and memory, the operations that enable you to know there is a lamp on your desk or retrieve the name of the capital of Russia.” (p. 13)
 * Daniel Kahneman on NPR, Hidden Brain (link to audio). This interview is awesome. It reinforces many of the ideas covered in the book. 
-  * [Daniel Kahneman On Misery, Memory, And Our Understanding Of The Mind March 12, 2018]((https://www.npr.org/2018/03/12/592986190/daniel-kahneman-on-misery-memory-and-our-understanding-of-the-mind))
+  * [Daniel Kahneman On Misery, Memory, And Our Understanding Of The Mind March 12, 2018](https://www.npr.org/2018/03/12/592986190/daniel-kahneman-on-misery-memory-and-our-understanding-of-the-mind)
 * If you want more on many of the ideas presented in the Kahneman reading, the optional Heuer readings compliments the Kahneman text well.
 * Remember all optional readings are optional. If you decide to skim the optional readings, I recommend you skip the Davenport readings from Judgment Calls: Twelve Stories of Big Decisions and the Teams That Got Them Right. If you want to peek at them, the [following link](https://books.google.com/books?id=H-wtglBZ5wIC&printsec=frontcover&dq=Judgment+calls+:+12+stories+of+big+decisions+and+the+teams+that+got+them+right&hl=en&sa=X&ved=0ahUKEwis1t3K0v7YAhVG5mMKHevMDgkQ6AEIMDAB#v=onepage&q&f=false) provides most of the chapters. The main takeaways are 
   * How do you minimize the cost of making bad decisions?
