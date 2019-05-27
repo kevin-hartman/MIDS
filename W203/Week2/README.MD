@@ -1,4 +1,7 @@
-Week 2
+---
+---
+
+# Week 2 | Probability Theory
 
 Homework Due
 * [My completed homework for unit 1](./unit_1_hw/Kevin_Hartman_unit_1_hw.ipynb)
