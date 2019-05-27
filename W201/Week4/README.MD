@@ -1,8 +1,7 @@
 Week 4 | Biases in Decision Making
-
-* Biases in individual and organizational decision making, including:
-  * anchoring, groupthink, inertia, recency, attribution asymmetry
-* Countering bias in everyday life
+  * Biases in individual and organizational decision making, including:
+    * anchoring, groupthink, inertia, recency, attribution asymmetry
+  * Countering bias in everyday life
 
 
 Async
