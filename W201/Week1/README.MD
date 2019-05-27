@@ -1,4 +1,7 @@
-Week 1 | Data Science: More Than a Technical Discipline
+---
+---
+
+# Week 1 | Data Science: More Than a Technical Discipline
   * Data science at the School of Information: More than a technical discipline
   * How organizations will benefit from broadly trained data scientists
   * Data science today—reality, aspiration, controversy, possibility
