@@ -1,4 +1,7 @@
-Week 3
+---
+---
+
+# Week 3 | Discrete Random Variables
 
 Homework Due
 * [My completed homework for unit 3](./unit_3_hw/Kevin_Hartman_unit_3_hw.pdf)
