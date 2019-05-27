@@ -58,7 +58,7 @@ $$\text{Probablity of 3 Heads: }P(X=3)=b(3;3,\frac{1}{2}) = (^3_3)(\frac{1}{2})^
 \begin{minipage}{\linewidth}
   \centering
   \includegraphics[width=6cm]{Kevin_Hartman_unit_4_part_1_hw-xbinom}
-  \captionof{figure}{Plot of binomial distribution of n=3, p=$\frac{1}{2}$}
+  \captionof{figure}{Plot of binomial distribution with n=3, p=$\frac{1}{2}$}
 \end{minipage}
 
 \begin{enumerate}
@@ -104,7 +104,6 @@ $$A = 30$$
 \textbf{\underline{Answer:}}
 \\
 %%$$\text{With} \enskip g(y) = \left\{\begin{array}{{lcl}} 0 &;& y < 1 \\  \frac{16}{3} &;& 1 \leq y < 3 \\  208 &;& y \leq 3 \end{array} \right.,\enskip  p=\frac{1}{2}, \enskip \text{and } n=3$$
-%%$$\text{Winnings } = g(P(X \leq x)) = \sum_{y=0}^x g(y) \cdot \left(^n_y \right)p^y(1-p)^{n-y}$$
 The cumulative probability function for the winnings, $F(g(X))$, is:
 \\
 \\
@@ -115,6 +114,12 @@ $F(g(X)) = \begin{cases}
 7/8, &4 \leq g(X) < 30 \\
 1, &g(X) \geq 30\\
 \end{cases}$
+\\
+\\
+We can also write the winnings collected from X,  g(X), as a cumulative function:
+$$g(X) = g(P(X \leq x)) = \sum_{y=0}^x h(y) \cdot \left(^n_y \right)p^y(1-p)^{n-y}$$
+
+$$\text{where } h(y) = \left\{\begin{array}{{lcl}} 0 &;& y < 1 \\  \frac{16}{3} &;& 1 \leq y < 3 \\  208 &;& y \leq 3 \end{array} \right. ,\enskip p=\frac{1}{2}, \enskip \text{and } n=3$$
 
 \end{enumerate}
 
@@ -206,7 +211,7 @@ where $c$ is a constant (you can calculate its value if you like, but it's not i
 \\
 \textbf{\underline{Answer:}}
 \\
-Yes it is finite because although this an infinite series, the sum of $c/x^3$ from 1 to $\infty$ will eventually converge.  It converges because the equation represents a p-series $(1/n^p)$ and a p-series converges when p > 1 and diverges when 0 < p < 1.
+Yes it is finite because although this an infinite series, the sum of $c/x^3$ from 1 to $\infty$ will eventually converge.  It converges because $c/x^3$ is is a p-series equation $(1/n^p)$ with p > 1.  A p-series equation converges when p > 1 and diverges when 0 < p < 1.
 
 \item Is $V(M)$ finite?
 \\

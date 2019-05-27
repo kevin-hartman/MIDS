@@ -8,6 +8,11 @@ McNamara and the Vietnam War’s body count
 
 Identifying data needs; when do we need big data?; data availability challenges and opportunities
 
+Homework Due
+* Individual Assignment #1: Impact of Data Science and Policy Implications
+  * Topic: Crossing the Data Chasm in Manufacturing: Preparing your factory for Industrial IoT
+  * [Presentation](./individual_assignment_1/Crossing_the_Data_Chasm_in_Manufacturing_Presentation.pptx).
+  * [Recording](./individual_assignment_1/Crossing_the_Data_Chasm_in_Manufacturing_Recording.mp4)
 
 Async
 * [High Pressure Decision Making](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/935a388b-b3b4-4fde-82d4-3f70dd49662f)

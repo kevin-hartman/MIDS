@@ -25,11 +25,13 @@ Books
 * [Storytelling with Data: A Data Visualization Guide for Business Professionals](https://smile.amazon.com/gp/product/1119002257/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 
 
-<b>Weekly Reading List</b>
+<b>Weekly Readings, Live Session Notes and Homework</b>
 * [Week 1](./Week1/README.MD)
+* [Week 2](./Week2/README.MD)
+* [Week 3](./Week3/README.MD)
+* [Week 4](./Week4/README.MD)
 
-
-<b>My Coursework</b>
+<b>Other Materials</b>
 
 Student Portfolio
 * https://docs.google.com/document/d/1T4sP0vYzj5ea1jb2XIMC9Pf2hiYFqcq2wm9AKvuvgl4/edit
