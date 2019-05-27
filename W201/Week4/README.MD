@@ -16,7 +16,7 @@ Required readings:
 
 Optional readings:
 * Allison, Graham, and Philip Zelikow. Essence of Decision, 2nd edition. Longman, 1999, chapters 5 and 6. 
-Heuer, Richard J., Jr. “Psychology of Intelligence Analysis.” Center for the Study of Intelligence, 1999, [chapters 2, 9–13]((./../Week2/PsychologyOfIntelligenceAnalysis.pdf). See left hand side "view in OskiCat" then click link below "link to online version" http://search.ebscohost.com/login.aspx?direct=true&db=cat04202a&AN=ucb.b18541235&site=eds-live
+Heuer, Richard J., Jr. “Psychology of Intelligence Analysis.” Center for the Study of Intelligence, 1999, [chapters 2, 9–13](./../Week2/PsychologyOfIntelligenceAnalysis.pdf). See left hand side "view in OskiCat" then click link below "link to online version" http://search.ebscohost.com/login.aspx?direct=true&db=cat04202a&AN=ucb.b18541235&site=eds-live
 * Kahneman, Daniel, and Gary Klein. [“Conditions for Intuitive Expertise: A Failure to Disagree.”](./Conditions_for_Intuitive_Expertise_A_Failure_to_Disagree.pdf) American Psychologist 64 (2009). https://search.proquest.com/docview/614512461/812520E976C042ECPQ/
 * Kahneman, Daniel, and Amos Tversky. [“Prospect Theory: An Analysis of Decision under Risk.”](./Prospect_Theory_An_analysis_of_Decision_under_Risk.pdf) Econometrica 47 (1979). Click “Full Text from JSTOR” http://search.ebscohost.com/login.aspx?direct=true&db=edsjsr&AN=edsjsr.10.2307.1914185&site=eds-live
 * Tverksy, Amos, and Daniel Kahneman. "([Judgment under Uncertainty: Heuristics and Biases,"](./Judgment_under_Uncertainty_Heurisgtics_and_Biases.pdf) Science 185 (1974). Click “Full Text from JSTOR” http://search.ebscohost.com/login.aspx?direct=true&db=rgr&AN=523865061&site=eds-live
