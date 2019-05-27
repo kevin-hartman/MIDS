@@ -10,6 +10,6 @@ General Info
 
 Summer 2019
 
-* [W201 - Research Design and Applications for Data and Analysis (RDADA)](./W201/README.md)
-* [W203 - Statistics for Data Science](./W203/README.md)
+* [W201 - Research Design and Applications for Data and Analysis (RDADA)](./W201/README.MD)
+* [W203 - Statistics for Data Science](./W203/README.MD)
 
