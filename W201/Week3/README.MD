@@ -1,12 +1,8 @@
 Week 3 | High-Pressure Decision Making: People and Organization
-
-Cuban Missile Crisis case study
-
-Decision-making models, including analogical reasoning and analysis of competing hypotheses
-
-McNamara and the Vietnam War’s body count
-
-Identifying data needs; when do we need big data?; data availability challenges and opportunities
+  * Cuban Missile Crisis case study
+  * Decision-making models, including analogical reasoning and analysis of competing hypotheses
+  * McNamara and the Vietnam War’s body count
+  * Identifying data needs; when do we need big data?; data availability challenges and opportunities
 
 Homework Due
 * Individual Assignment #1: Impact of Data Science and Policy Implications
