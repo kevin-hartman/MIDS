@@ -1,8 +1,10 @@
-Week 4 | Biases in Decision Making
+---
+---
+
+# Week 4 | Biases in Decision Making
   * Biases in individual and organizational decision making, including:
     * anchoring, groupthink, inertia, recency, attribution asymmetry
   * Countering bias in everyday life
-
 
 Async
 * [Biases in Decision Making](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/657e66fd-3839-43f3-a2e5-79f87b948318)
