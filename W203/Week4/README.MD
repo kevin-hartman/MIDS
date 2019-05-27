@@ -1,4 +1,7 @@
-Week 4
+---
+---
+
+# Week 4 | Continuous Random Variables
 
 Homework Due
 * [My completed homework for unit 4, part 1](./unit_4_pt_1_hw/Kevin_Hartman_unit_4_part_1_hw.pdf)
