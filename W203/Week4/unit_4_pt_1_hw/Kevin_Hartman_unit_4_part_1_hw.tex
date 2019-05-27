@@ -102,22 +102,19 @@ $$A = 30$$
 \\
 \\
 \textbf{\underline{Answer:}}
-$$\text{With} \enskip g(x) = \left\{\begin{array}{{lcl}} 0 &;& x < 1 \\  \frac{16}{3} &;& 1 \leq x < 3 \\  208 &;& x \leq 3 \end{array} \right.,\enskip  p=\frac{1}{2}, \enskip \text{and } n=3$$
-
-$$\text{Winnings } = g(P(X \leq x)) = \sum_{y=0}^x g(y) \cdot \left(^n_y \right)p^y(1-p)^{n-y}$$
-
-\textbf{\underline{Proof:}}
 \\
-\\$G(P(X \leq 0)) = (\frac{1}{8} \cdot 0) = 0$
+%%$$\text{With} \enskip g(y) = \left\{\begin{array}{{lcl}} 0 &;& y < 1 \\  \frac{16}{3} &;& 1 \leq y < 3 \\  208 &;& y \leq 3 \end{array} \right.,\enskip  p=\frac{1}{2}, \enskip \text{and } n=3$$
+%%$$\text{Winnings } = g(P(X \leq x)) = \sum_{y=0}^x g(y) \cdot \left(^n_y \right)p^y(1-p)^{n-y}$$
+The cumulative probability function for the winnings, $F(g(X))$, is:
 \\
 \\
-$G(P(X \leq 1)) = (\frac{1}{8} \cdot 0) + (\frac{3}{8} \cdot \frac{16}{3}) = 2$
-\\
-\\
-$G(P(X \leq 2)) = (\frac{1}{8} \cdot 0) + (\frac{3}{8} \cdot \frac{16}{3}) + (\frac{3}{8} \cdot \frac{16}{3}) = 4$
-\\
-\\
-$G(P(X \leq 3)) = (\frac{1}{8} \cdot 0) + (\frac{3}{8} \cdot \frac{16}{3}) + (\frac{3}{8} \cdot \frac{16}{3}) + (\frac{1}{8} \cdot 208) = 30$
+$F(g(X)) = \begin{cases}
+0, &g(X) < 0 \\
+1/8,  &0 \leq g(X) < 2 \\
+1/2, &2 \leq g(X) < 4 \\
+7/8, &4 \leq g(X) < 30 \\
+1, &g(X) \geq 30\\
+\end{cases}$
 
 \end{enumerate}
 

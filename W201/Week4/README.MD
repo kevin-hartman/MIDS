@@ -10,16 +10,16 @@ Async
 
 Required readings:
 * Kahneman, Daniel. Thinking, Fast and Slow. Farrar, Strauss and Giroux, 2011, chapters 10–18.
-* Stauffer, David. “How Good Data Leads to Bad Decisions.” Harvard Business Publishing Newsletters (2002). http://search.ebscohost.com/login.aspx?direct=true&db=f5h&AN=8587204&site=eds-live
-* Davenport, Thomas H. “Make Better Decisions.” Harvard Business Review (November 2009). http://search.ebscohost.com/login.aspx?direct=true&db=edswss&AN=000271040500023&site=eds-live
-* Hammond, John S., Ralph L. Keeney, and Howard Raiffa. “The Hidden Traps in Decision Making.” Harvard Business Review (September–October 1998). http://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=1040942&site=eds-live (see "PDF Full Text" at left)
+* Stauffer, David. [“How Good Data Leads to Bad Decisions.”](./How_Good_Data_Leads_to_Bad_Decisions.pdf) Harvard Business Publishing Newsletters (2002). http://search.ebscohost.com/login.aspx?direct=true&db=f5h&AN=8587204&site=eds-live
+* Davenport, Thomas H. [“Make Better Decisions.”](./Make_Better_Decisions.pdf) Harvard Business Review (November 2009). http://search.ebscohost.com/login.aspx?direct=true&db=edswss&AN=000271040500023&site=eds-live
+* Hammond, John S., Ralph L. Keeney, and Howard Raiffa. [“The Hidden Traps in Decision Making.”](./THE_HIDDEN_TRAPS_IN_DECISION_MAKING.pdf) Harvard Business Review (September–October 1998). http://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=1040942&site=eds-live (see "PDF Full Text" at left)
 
 Optional readings:
 * Allison, Graham, and Philip Zelikow. Essence of Decision, 2nd edition. Longman, 1999, chapters 5 and 6. 
-Heuer, Richard J., Jr. “Psychology of Intelligence Analysis.” Center for the Study of Intelligence, 1999, chapters 2, 9–13. See left hand side "view in OskiCat" then click link below "link to online version" http://search.ebscohost.com/login.aspx?direct=true&db=cat04202a&AN=ucb.b18541235&site=eds-live
-* Kahneman, Daniel, and Gary Klein. “Conditions for Intuitive Expertise: A Failure to Disagree.” American Psychologist 64 (2009). https://search.proquest.com/docview/614512461/812520E976C042ECPQ/
-* Kahneman, Daniel, and Amos Tversky. “Prospect Theory: An Analysis of Decision under Risk.” Econometrica 47 (1979). Click “Full Text from JSTOR” http://search.ebscohost.com/login.aspx?direct=true&db=edsjsr&AN=edsjsr.10.2307.1914185&site=eds-live
-* Tverksy, Amos, and Daniel Kahneman. "Judgment under Uncertainty: Heuristics and Biases," Science 185 (1974). Click “Full Text from JSTOR” http://search.ebscohost.com/login.aspx?direct=true&db=rgr&AN=523865061&site=eds-live
+Heuer, Richard J., Jr. “Psychology of Intelligence Analysis.” Center for the Study of Intelligence, 1999, [chapters 2, 9–13]((./../Week2/PsychologyOfIntelligenceAnalysis.pdf). See left hand side "view in OskiCat" then click link below "link to online version" http://search.ebscohost.com/login.aspx?direct=true&db=cat04202a&AN=ucb.b18541235&site=eds-live
+* Kahneman, Daniel, and Gary Klein. [“Conditions for Intuitive Expertise: A Failure to Disagree.”](./Conditions_for_Intuitive_Expertise_A_Failure_to_Disagree.pdf) American Psychologist 64 (2009). https://search.proquest.com/docview/614512461/812520E976C042ECPQ/
+* Kahneman, Daniel, and Amos Tversky. [“Prospect Theory: An Analysis of Decision under Risk.”](./Prospect_Theory_An_analysis_of_Decision_under_Risk.pdf) Econometrica 47 (1979). Click “Full Text from JSTOR” http://search.ebscohost.com/login.aspx?direct=true&db=edsjsr&AN=edsjsr.10.2307.1914185&site=eds-live
+* Tverksy, Amos, and Daniel Kahneman. "([Judgment under Uncertainty: Heuristics and Biases,"](./Judgment_under_Uncertainty_Heurisgtics_and_Biases.pdf) Science 185 (1974). Click “Full Text from JSTOR” http://search.ebscohost.com/login.aspx?direct=true&db=rgr&AN=523865061&site=eds-live
 * Davenport, Thomas H., and Brook Manville. Judgment Calls: Twelve Stories of Big Decisions and the Teams That Got Them Right. Harvard Business Review Press, 2012, chapter 2, “WGB Homes: How Can We Sell This House?” and chapter 8, “Mabel Yu and the Vanguard Group: Should We Recommend This Bond to Investors?”
 * Davenport, Thomas H., and Brook Manville. Judgment Calls: Twelve Stories of Big Decisions and the Teams That Got Them Right. Harvard Business Review Press, 2012, chapter 10, “Should We Restructure for a New Strategy?”
 * Verducci, Tom. “The Art of Winning an (Even More) Unfair Game.” Sports Illustrated (September 26, 2011). https://www.si.com/vault/2011/09/26/106111997/the-art-of-winning-an-even-more-unfair-game
