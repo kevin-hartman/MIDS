@@ -7,8 +7,8 @@ Week 3 | High-Pressure Decision Making: People and Organization
 Homework Due
 * Individual Assignment #1: Impact of Data Science and Policy Implications
   * Topic: Crossing the Data Chasm in Manufacturing: Preparing your factory for Industrial IoT
-  * [Presentation](./individual_assignment_1/Crossing_the_Data_Chasm_in_Manufacturing_Presentation.pptx).
-  * [Recording](./individual_assignment_1/Crossing_the_Data_Chasm_in_Manufacturing_Recording.mp4)
+  * [Presentation](https://docs.google.com/presentation/d/12uWf-maq3ku26PujEQQWcgzoikdVT7avPq_4u0mKyog/edit?usp=sharing)
+  * [Recording](https://drive.google.com/open?id=1hXQk8eEgb69gKpzdJHgX0x6dOZbaWI2W)
 
 Async
 * [High Pressure Decision Making](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/935a388b-b3b4-4fde-82d4-3f70dd49662f)
