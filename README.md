@@ -1,6 +1,6 @@
----
-title: MIDS coursework and reading material
----
+# MIDS
+
+Coursework and reading material.
 
 General Info
 * [ISVC Dashboard](https://learn.datascience.berkeley.edu/ap/dashboard)
