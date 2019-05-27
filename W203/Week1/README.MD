@@ -1,4 +1,7 @@
-Week 1 
+---
+---
+
+# Week 1 | Class Introduction
 
 Required readings:
 * Devore, J. L. (2015). Probability and statistics for engineering and the sciences. Boston, MA: Cengage Learning. Chapter 1.
@@ -7,7 +10,7 @@ Required readings:
 
 Live Session Notes
 * Use pencil and paper when Paul goes to the blackboard.
-* Get familiar iwth Tidy -?
+* Get familiar with Tidy -?
 * If you want to be running R in Python: R2Py or a subprocess
 * Breakout Questions
   * Why do you need to know classical statistics, when we have fancy machine learning algorithms that can classify and predict with amazing accuracy?
