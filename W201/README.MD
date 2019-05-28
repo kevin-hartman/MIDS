@@ -12,6 +12,11 @@ Materials
 * [Additional Course Materials on Study.net](http://www.study.net/r_mat.asp?crs_id=30140272)
 * [Student Portfolio](https://docs.google.com/document/d/1T4sP0vYzj5ea1jb2XIMC9Pf2hiYFqcq2wm9AKvuvgl4/edit)
 * [Presentation Template](https://docs.google.com/presentation/d/11bOzwhFV66Xcmfr0TfO0xIpupdytHWVR_hEIP9x439s/edit#slide=id.p)
+* Slack Channels
+  * [Our Class Section](https://ucbischool.slack.com/messages/CJ9RQDJGM)
+  * [General Discussions](https://ucbischool.slack.com/messages/CJ9RSDK7F)
+  * [Tech for Evil](https://ucbischool.slack.com/messages/C1UKBQ2AV)
+  * [Tech for Good](https://ucbischool.slack.com/messages/C1UK605MM)
 
 Books
 * [Invisible Ink: A Practical Guide to Building Stories that Resonate](https://smile.amazon.com/gp/product/0998534471/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
