@@ -1,6 +1,11 @@
 # MIDS
 
-Coursework and reading material.
+Coursework
+
+Summer 2019
+
+* [W201 - Research Design and Applications for Data and Analysis (RDADA)](./W201/README.MD)
+* [W203 - Statistics for Data Science](./W203/README.MD)
 
 General Info
 * [ISVC Dashboard](https://learn.datascience.berkeley.edu/ap/dashboard)
@@ -14,9 +19,3 @@ General Info
   * [Events](https://ucbischool.slack.com/messages/C1UK601DM)
   * [Class Recs](https://ucbischool.slack.com/messages/C1VEW8ZF0)
   * [MIDS in Chicago](https://ucbischool.slack.com/messages/C69GG1TV0)
-
-Summer 2019
-
-* [W201 - Research Design and Applications for Data and Analysis (RDADA)](./W201/README.MD)
-* [W203 - Statistics for Data Science](./W203/README.MD)
-
