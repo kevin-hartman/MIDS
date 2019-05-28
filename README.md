@@ -12,7 +12,7 @@ General Info
   * [General Discussions](https://ucbischool.slack.com/messages/C1UJVSNLU)
   * [Announcements](https://ucbischool.slack.com/messages/C0WK5TUV6)
   * [Events](https://ucbischool.slack.com/messages/C1UK601DM)
-  * [Class Recommendations](https://ucbischool.slack.com/messages/C1VEW8ZF0)
+  * [Class Recs](https://ucbischool.slack.com/messages/C1VEW8ZF0)
   * [MIDS in Chicago](https://ucbischool.slack.com/messages/C69GG1TV0)
 
 Summer 2019
