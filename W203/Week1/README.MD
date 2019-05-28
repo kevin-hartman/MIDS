@@ -9,7 +9,9 @@ Required readings:
   * Full book [here](./../Books/probability_and_statistics_for_engineering_and_the_sciences.pdf)
 * Fox, J., & Weisberg, S. (2011). An R companion to applied regression. Thousand Oaks, CA: Sage Publications. Chapters [1.1](./../Study.net/Fox__J__2011__An_R_Companion_To_Applied_Regression__Chapter_1__Section_1_1__R_Basics.pdf), [1.4](./../Study.net/Fox__J__2011__An_R_Companion_To_Applied_Regression__Chapter_1__Section_1_4__Generic_Functi___.pdf), [2.1](./../Study.net/Fox__J__2011__An_R_Companion_To_Applied_Regression__Chapter_2__Section_2_1__Data_Input.pdf), [2.2](./../Study.net/Fox__J__2011__An_R_Companion_To_Applied_Regression__Chapter_2__Section_2_2__Working_with_D___.pdf), and [2.3](./../Study.net/Fox__J__2011__An_R_Companion_To_Applied_Regression__Chapter_2__Section_2_3__Matrices__Arra___.pdf).
 
-Live Session Notes
+[Live Session Notebook](https://nbviewer.jupyter.org/urls/kevin-hartman.github.io/MIDS/W203/Week1/unit_1_ls/unit_1_ls.ipynb)
+
+Additional Live Session Notes
 * Use pencil and paper when Paul goes to the blackboard.
 * Get familiar with Tidy -?
 * If you want to be running R in Python: R2Py or a subprocess
@@ -34,5 +36,3 @@ Live Session Notes
       * When I select different samples my sample mean will change. That variance is called variance of mean.
       * Sample variance is the variance within the sample
     * Key thing - randomization of data that is not biased so that we can estimate the population mean
-
-[Live Session Notebook](https://nbviewer.jupyter.org/urls/kevin-hartman.github.io/MIDS/W203/Week1/unit_1_ls/unit_1_ls.ipynb)
