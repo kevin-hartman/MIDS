@@ -1,5 +1,5 @@
 ---
-title: W201 Week 1 | Data Science: More Than a Technical Discipline
+title: W201 Week 1 | Data Science - More Than a Technical Discipline
 ---
 
 # Week 1 | Data Science: More Than a Technical Discipline
