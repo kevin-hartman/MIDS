@@ -1,4 +1,5 @@
 ---
+title: W201 Week 3 | High-Pressure Decision Making - People and Organization
 ---
 
 # Week 3 | High-Pressure Decision Making: People and Organization
