@@ -34,5 +34,4 @@ Live Session Notes
       * Sample variance is the variance within the sample
     * Key thing - randomization of data that is not biased so that we can estimate the population mean
 
-Live Session Notebook
-* [my notebook](https://nbviewer.jupyter.org/urls/kevin-hartman.github.io/MIDS/W203/Week1/unit_1_ls/unit_1_ls.ipynb)
+[Live Session Notebook](https://nbviewer.jupyter.org/urls/kevin-hartman.github.io/MIDS/W203/Week1/unit_1_ls/unit_1_ls.ipynb)
