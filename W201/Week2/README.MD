@@ -1,4 +1,5 @@
 ---
+title: W201 Week 2 | When Big Data Meets Big Decision
 ---
 
 # Week 2 | When Big Data Meets Big Decision
