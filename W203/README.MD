@@ -1,9 +1,8 @@
 ---
+title: W203 - Statistics for Data Science
 ---
 
-# W203
-
-<b>Course material for W203</b>
+# W203 - Statistics for Data Science
 
 Syllabus, Summer 2019
 * [Stastics For Data Science Syllabus](./w203_syllabus.pdf)
@@ -27,13 +26,11 @@ Books
 * [Devore, J. L. (2015). Probability and statistics for engineering and the sciences Boston, MA: Cengage Learning. 9th Edition](https://smile.amazon.com/Probability-Statistics-Engineering-Sciences-Devore/dp/1305251806/ref=sr_1_1?keywords=Probability+and+statistics+for+engineering+and+the+sciences&qid=1556937315&s=gateway&sr=8-1). In the past, students have downloaded the 8th edition, for less money or for free, and found this to be sufficient for the course. The largest differences we have found between the 8th and 9th editions are in Chapter 8. We have included this chapter in the study.net course packet, below.
 * [Wooldridge, J. (2015). Introductory econometrics: A modern approach 6th ed. Boston, MA: Cengage Learning.](https://smile.amazon.com/Introductory-Econometrics-Modern-Approach-Standalone-dp-130527010X/dp/130527010X/ref=mt_hardcover?_encoding=UTF8&me=&qid=)
 
-<b>Weekly Readings, Live Session Notes and Homework</b>
+Weekly Readings, Live Session Notes and Homework
 * [Week 1](./Week1/README.MD)
 * [Week 2](./Week2/README.MD)
 * [Week 3](./Week3/README.MD)
 * [Week 4](./Week4/README.MD)
-
-<b>Other Materials</b>
 
 Using LaTeX and Markdown
 * Installing on a Mac
