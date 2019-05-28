@@ -5,7 +5,7 @@ title: W203 Week 4 | Continuous Random Variables
 # Week 4 | Continuous Random Variables
 
 Homework Due
-* [My completed homework for unit 4, part 1](./unit_4_pt_1_hw/Kevin_Hartman_unit_4_part_1_hw.pdf)
+* [Completed homework for unit 4, part 1](./unit_4_pt_1_hw/Kevin_Hartman_unit_4_part_1_hw.pdf)
 
 Async
 * [Continuous Random Variables 4.10-4.16](https://learn.datascience.berkeley.edu/ap/courses/267/sections/283e2e3a-e711-41fb-b042-64d28352a50a/coursework/courseModule/8ef8e47b-dfce-43a5-b7d8-4214919337b0)
