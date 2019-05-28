@@ -1,4 +1,5 @@
 ---
+title: W203 Week 2 | Probability Theory
 ---
 
 # Week 2 | Probability Theory
@@ -40,8 +41,5 @@ Live Session Notes
 * Construct validity - operationalization - is it effective. Can you get at what you're saying your getting at. Do you actually measure the radicalness of the invention by measuring citations. Does the construct work. Is it doing what its saying its doing.
 * Look at the number of citations made by that patent and number of citations that patent made
 
-Live Session Notebook
-* [my notebook](./unit_3_ls/unit_3_ls.ipynb)
-* [master notebook](./unit_3_ls_sol/unit_3_ls_inst.ipynb)
-* [section 5 notebook](./unit_3_ls_sol/unit_3_ls_Sect_5.ipynb)
+[Live Session Notebook](https://nbviewer.jupyter.org/urls/kevin-hartman.github.io/MIDS/W203/unit_3_ls.ipynb)
 
