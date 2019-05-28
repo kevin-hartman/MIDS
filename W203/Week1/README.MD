@@ -1,4 +1,5 @@
 ---
+title: W203 Week 1 | Class Introduction
 ---
 
 # Week 1 | Class Introduction
