@@ -31,8 +31,10 @@ Discussion Topics for [An Excercise in Operationalization](./patent_reading.pdf)
   * They may be concluding something else entirely. The invention may not be radical, but rather, a set of patents may just be  popular, or easier to reference than others. We're mixing paradigms and implying causality. Maybe not all radical inventions have patents?
 * In what other ways could you operationalize the concept of radical invention?
   * What is the impact from the invention on everyday life? Can we measure productivity gained in a certain segment before and after the invention? Number of failed night-time operations by physicians before the invention of the light bulb vs after.
-  
-Live Session Notes
+
+[Live Session Notebook](https://nbviewer.jupyter.org/urls/kevin-hartman.github.io/MIDS/W203/unit_3_ls.ipynb)
+
+Additional Live Session Notes
 * In the sofware industry you don't file patents to protect IP, you file them so you can have a portfolio for cross suits
 * Triple damages can be assessed if you do a patent search
 * They never tied the arguments
@@ -40,6 +42,4 @@ Live Session Notes
 * Content validity - measure of the power you have to make your measurement - do you have enough data. Do you have enough levers?
 * Construct validity - operationalization - is it effective. Can you get at what you're saying your getting at. Do you actually measure the radicalness of the invention by measuring citations. Does the construct work. Is it doing what its saying its doing.
 * Look at the number of citations made by that patent and number of citations that patent made
-
-[Live Session Notebook](https://nbviewer.jupyter.org/urls/kevin-hartman.github.io/MIDS/W203/unit_3_ls.ipynb)
 
