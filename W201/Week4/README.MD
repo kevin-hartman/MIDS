@@ -1,4 +1,5 @@
 ---
+title: W203 Week 4 | Biases in Decision Making
 ---
 
 # Week 4 | Biases in Decision Making
