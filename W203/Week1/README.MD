@@ -4,6 +4,9 @@ title: W203 Week 1 | Class Introduction
 
 # Week 1 | Class Introduction
 
+Async
+* [1 Introduction to Quantitative Research and Descriptive Statistics](https://learn.datascience.berkeley.edu/ap/courses/267/sections/283e2e3a-e711-41fb-b042-64d28352a50a/coursework/courseModule/4f5fe5d9-5c4b-4909-982b-21eddfd5e0b1)
+
 Required readings:
 * Devore, J. L. (2015). Probability and statistics for engineering and the sciences. Boston, MA: Cengage Learning. Chapter 1.
   * Full book [here](./../Books/probability_and_statistics_for_engineering_and_the_sciences.pdf)
