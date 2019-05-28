@@ -4,6 +4,12 @@ title: W201 - Research Design and Applications for Data and Analysis (RDADA)
 
 # W201 - Research Design and Applications for Data and Analysis (RDADA)
 
+Weekly Assignments, Readings, and Notes
+* [Week 1](./Week1/README.MD)
+* [Week 2](./Week2/README.MD)
+* [Week 3](./Week3/README.MD)
+* [Week 4](./Week4/README.MD)
+
 Materials
 * [Syllabus, Summer 2019](https://docs.google.com/document/d/1-1Wuytlq26ulC8vvbXVu0iTlo6O4VO3DFxwCmUUDLzE/edit)
 * [Async Sessions, Summer 2019](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/915389b8-6f54-4183-96a8-fb9608bf43a3)
@@ -24,9 +30,3 @@ Books
 * [Thinking, Fast and Slow](https://smile.amazon.com/gp/product/0374533555/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 * [How to Lie with Statistics](https://smile.amazon.com/gp/product/0393310728/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 * [Storytelling with Data: A Data Visualization Guide for Business Professionals](https://smile.amazon.com/gp/product/1119002257/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
-
-Weekly Readings, Live Session Notes and Homework
-* [Week 1](./Week1/README.MD)
-* [Week 2](./Week2/README.MD)
-* [Week 3](./Week3/README.MD)
-* [Week 4](./Week4/README.MD)
