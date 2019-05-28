@@ -6,6 +6,9 @@ title: W201 Week 1 | Data Science - More Than a Technical Discipline
   * Data science at the School of Information: More than a technical discipline
   * How organizations will benefit from broadly trained data scientists
   * Data science today—reality, aspiration, controversy, possibility
+  
+Async
+* [Data Science: More Than a Technical Discipline](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/a12a13b2-f3a4-4239-b69c-93dcd5aa1c11)
 
 Required readings:
 * EMC Data Science Community, Data Science Revealed: A Data-Driven Glimpse into a Burgeoning New Field. 2012.
