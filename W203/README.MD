@@ -12,8 +12,8 @@ Materials
 * [Collaboration Site on Piazza](https://piazza.com/class/jukfsq1loyr6ug)
 * [Additional Course Materials on Study.net](http://www.study.net/r_mat.asp?crs_id=30140273)
 * Slack Channels
-  * [Class Section](https://ucbischool.slack.com/messages/CJC2F9ATB)
-  * [W203](https://ucbischool.slack.com/messages/C1VDJ0YM9)
+  * [Our Class Section](https://ucbischool.slack.com/messages/CJC2F9ATB)
+  * [W203 Overall](https://ucbischool.slack.com/messages/C1VDJ0YM9)
   * [General Stats Topics](https://ucbischool.slack.com/messages/C1VEUJXCL)
 
 Books
