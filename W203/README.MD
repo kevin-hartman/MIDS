@@ -10,7 +10,7 @@ Materials
 * [Additional Async Info, Summer 2019](https://w203-summer-19.github.io/)
 * [Course Documents on Github](https://github.com/w203-summer-19)
 * [Collaboration Site on Piazza](https://piazza.com/class/jukfsq1loyr6ug)
-* [Additional materials on Study.net](http://www.study.net/r_mat.asp?crs_id=30140273)
+* [Additional Course Materials on Study.net](http://www.study.net/r_mat.asp?crs_id=30140273)
 
 Books
 * [Devore, J. L. (2015). Probability and statistics for engineering and the sciences Boston, MA: Cengage Learning. 9th Edition](https://smile.amazon.com/Probability-Statistics-Engineering-Sciences-Devore/dp/1305251806/ref=sr_1_1?keywords=Probability+and+statistics+for+engineering+and+the+sciences&qid=1556937315&s=gateway&sr=8-1). In the past, students have downloaded the 8th edition, for less money or for free, and found this to be sufficient for the course. The largest differences we have found between the 8th and 9th editions are in Chapter 8. We have included this chapter in the study.net course packet, below.
