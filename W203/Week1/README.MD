@@ -35,4 +35,4 @@ Live Session Notes
     * Key thing - randomization of data that is not biased so that we can estimate the population mean
 
 Live Session Notebook
-* [my notebook](./unit_1_ls/unit_1_ls.ipynb)
+* [my notebook](https://nbviewer.jupyter.org/urls/kevin-hartman.github.io/MIDS/W203/Week1/unit_1_ls/unit_1_ls.ipynb)
