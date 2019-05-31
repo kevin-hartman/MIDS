@@ -1,5 +1,6 @@
 ---
 title: W203 Week 4 | Continuous Random Variables
+navigation_weight: 3
 ---
 
 # Week 4 | Continuous Random Variables
