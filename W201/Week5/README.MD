@@ -25,7 +25,7 @@ Additional video:
 
 Additional Async Notes
 * Some questions to guide you if you read/skim the optional week 5 reading. (Or some questions to think about even if you don’t read the optional text.)
-* Engineering and Public Policy Committee on Science. On Being a Scientist: A Guide to Responsible Conduct in Research. National Academies Press, 2009.
+* [Engineering and Public Policy Committee on Science. On Being a Scientist: A Guide to Responsible Conduct in Research. National Academies Press, 2009.](./12192.pdf)
 * Reading is useful for new data scientists but also is a good reality check for more seasoned people. What does it mean to conduct responsible or ethical research? Ask yourself, how much does this mirror my experience or what I do?
   * Q: How might you respond to a concern/report about irresponsible behaviors?
   * Q: What level of (dis)aggregation should data be made available? What is the standard of replicability in your industry? Does it depend on the deliverable?
