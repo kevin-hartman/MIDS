@@ -14,4 +14,4 @@ Required readings:
 * Devore, J. L. (2015). Probability and statistics for engineering and the sciences. Boston, MA: Cengage Learning. Chapter 4-4.3, 4.6. Optional: 4.4, 4.5
   * Full book [here](./../Books/probability_and_statistics_for_engineering_and_the_sciences.pdf)
 
-[Live Session Notebook](https://nbviewer.jupyter.org/urls/kevin-hartman.github.io/MIDS/W203/Week4/unit_4_ls_pt_2/unit_4_ls_part_2.ipynb)
+[Live Session Notebook](https://nbviewer.jupyter.org/urls/kevin-hartman.github.io/MIDS/W203/Week4/unit_4_ls_pt_2/unit_4_part_2_ls_sol_KH.ipynb)
