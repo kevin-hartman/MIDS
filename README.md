@@ -1,5 +1,5 @@
 ---
-title: MIDS
+title: Kevin Hartman MIDS
 navigation_weight: 1
 ---
 
