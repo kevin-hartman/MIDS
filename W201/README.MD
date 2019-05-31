@@ -14,13 +14,13 @@ The Role of Decision Making
 * [Week 3: Decision Making Models and Archetypes](./Week3/README.MD)
 * [Week 4: Biases in Decision Making](./Week4/README.MD)
 
-Metods of Research Design
+Research Design
 * Week 5: Elements of Research Design
 * Week 6: Practical Research Design Methods
 * Week 7: Fallacies and Buried Assumptions
 * Week 8: Research Design Case Study
 
-Methods to Convey Findings
+Conveying Findings
 * Week 9: Storytelling Through Words and Pictures
 * Week 10: Visualizations
 * Week 11: Pursuasion and the Future of Data Science
