@@ -1,3 +1,8 @@
+---
+title: MIDS
+navigation_weight: 1
+---
+
 # MIDS
 
 Coursework
