@@ -5,10 +5,27 @@ title: W201 - Research Design and Applications for Data and Analysis (RDADA)
 # W201 - Research Design and Applications for Data and Analysis (RDADA)
 
 Weekly Assignments, Readings, and Notes
-* [Week 1](./Week1/README.MD)
-* [Week 2](./Week2/README.MD)
-* [Week 3](./Week3/README.MD)
-* [Week 4](./Week4/README.MD)
+Tenets of Data Science
+* [Week 1: Class Introduction](./Week1/README.MD)
+The Role of Decision Making
+* [Week 2: Tactical and Strategic Decisions](./Week2/README.MD)
+* [Week 3: Decision Making Models and Archetypes](./Week3/README.MD)
+* [Week 4: Biases in Decision Making](./Week4/README.MD)
+Metods of Research Design
+* Week 5: Elements of Research Design
+* Week 6: Practical Research Design Methods
+* Week 7: Fallacies and Buried Assumptions
+* Week 8: Research Design Case Study
+Methods to Convey Findings
+* Week 9: Storytelling Through Words and Pictures
+* Week 10: Visualizations
+* Week 11: Pursuasion and the Future of Data Science
+Final Project
+* Week 12: Research Design Project: Abstract and Elevator Pitch
+* Week 13: Research Design Project: Project Proposal
+* Week 14: Research Design Project: Final Presentation
+
+
 
 Materials
 * [Syllabus, Summer 2019](https://docs.google.com/document/d/1-1Wuytlq26ulC8vvbXVu0iTlo6O4VO3DFxwCmUUDLzE/edit)

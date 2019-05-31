@@ -6,10 +6,20 @@ navigation_weight: 2
 # W203 - Statistics for Data Science
 
 Weekly Assignments, Readings, and Notes
-* [Week 1](./Week1/README.MD)
-* [Week 2](./Week2/README.MD)
-* [Week 3](./Week3/README.MD)
-* [Week 4](./Week4/README.MD)
+* [Week 1: Class Introduction](./Week1/README.MD)
+* [Week 2: Probability Theory](./Week2/README.MD)
+* [Week 3: Discrete Random Variables](./Week3/README.MD)
+* [Week 4: Continuous Random Variables](./Week4/README.MD)
+* [Week 5: Joint Distributions of Random Variables](./Week5/README.MD)
+* Week 6: Sampling Distributions and the Central Limit Theorem
+* Week 7: Estimation
+* Week 8: Confidence Intervals and Hypothesis Testing
+* Week 9: Comparing Means and Reproducibility
+* Week 10: Simple Linear Regression
+* Week 11: Multivariate Linear Regression and Endogeneity
+* Week 12: Inference in Multivariate Linear Regression
+* Week 13: Linear Regression: Interpretation and More Testing
+* Week 14: Causality
 
 Materials
 * [Stastics For Data Science Syllabus, Summer 2019](./w203_syllabus.pdf)
