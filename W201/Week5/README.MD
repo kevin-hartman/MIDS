@@ -13,7 +13,7 @@ Async
 
 Required readings:
 * Anderson, Chris. “The End of Theory, Data Deluge Makes Scientific Method Obsolete.” Wired (July 2008). https://www.wired.com/2008/06/pb-theory/
-* Burton, Robert. On Being Certain. St. Martin’s Griffin, 2009, [chapters 1 and 2](./../Study.net/).
+* Burton, Robert. On Being Certain. St. Martin’s Griffin, 2009, [chapters 1 and 2](./../Study.net/Burton_R._2009._On_Being_Certain._Chapters_1_and_2.pdf).
 * Kuhn, Thomas.  University of Chicago Press, 2012, [chapter 12.](./../Study.net/Kuhn__T__2012__The_Structure_of_Scientific_Revolutions__Chapter_12__The_Resolution_of_Revo___.pdf)
 
 Optional readings:
