@@ -1,0 +1,194 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment
+% Structure Specification File
+% Version 1.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage{lastpage} % Required to determine the last page number for the footer
+
+\usepackage{graphicx} % Required to insert images
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\usepackage[most]{tcolorbox} % Required for boxes that split across pages
+
+\usepackage{booktabs} % Required for better horizontal rules in tables
+
+\usepackage{listings} % Required for insertion of code
+
+\usepackage{etoolbox} % Required for if statements
+
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	top=3cm, % Top margin
+	bottom=3cm, % Bottom margin
+	left=2.5cm, % Left margin
+	right=2.5cm, % Right margin
+	headheight=14pt, % Header height
+	footskip=1.4cm, % Space from the bottom margin to the baseline of the footer
+	headsep=1.2cm, % Space from the top margin to the baseline of the header
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage[sfdefault,light]{roboto} % Use the Roboto font
+
+%----------------------------------------------------------------------------------------
+%	HEADERS AND FOOTERS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr} % Required for customising headers and footers
+
+\pagestyle{fancy} % Enable custom headers and footers
+
+\lhead{\small\assignmentClass\ifdef{\assignmentClassInstructor}{\ (\assignmentClassInstructor):}{}\ \assignmentTitle} % Left header; output the instructor in brackets if one was set
+\chead{} % Centre header
+\rhead{\small\ifdef{\assignmentAuthorName}{\assignmentAuthorName}{\ifdef{\assignmentDueDate}{Due\ \assignmentDueDate}{}}} % Right header; output the author name if one was set, otherwise the due date if that was set
+
+\lfoot{} % Left footer
+\cfoot{\small Page\ \thepage\ of\ \pageref{LastPage}} % Centre footer
+\rfoot{} % Right footer
+
+\renewcommand\headrulewidth{0.5pt} % Thickness of the header rule
+
+%----------------------------------------------------------------------------------------
+%	MODIFY SECTION STYLES
+%----------------------------------------------------------------------------------------
+
+\usepackage{titlesec} % Required for modifying sections
+
+%------------------------------------------------
+% Section
+
+\titleformat
+{\section} % Section type being modified
+[block] % Shape type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
+{\Large\bfseries} % Format of the whole section
+{\assignmentQuestionName~\thesection} % Format of the section label
+{6pt} % Space between the title and label
+{} % Code before the label
+
+\titlespacing{\section}{0pt}{0.5\baselineskip}{0.5\baselineskip} % Spacing around section titles, the order is: left, before and after
+
+%------------------------------------------------
+% Subsection
+
+\titleformat
+{\subsection} % Section type being modified
+[block] % Shape type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
+{\itshape} % Format of the whole section
+{(\alph{subsection})} % Format of the section label
+{4pt} % Space between the title and label
+{} % Code before the label
+
+\titlespacing{\subsection}{0pt}{0.5\baselineskip}{0.5\baselineskip} % Spacing around section titles, the order is: left, before and after
+
+\renewcommand\thesubsection{(\alph{subsection})}
+
+%----------------------------------------------------------------------------------------
+%	CUSTOM QUESTION COMMANDS/ENVIRONMENTS
+%----------------------------------------------------------------------------------------
+
+% Environment to be used for each question in the assignment
+\newenvironment{question}{
+	\vspace{0.5\baselineskip} % Whitespace before the question
+	\section{} % Blank section title (e.g. just Question 2)
+	\lfoot{\small\itshape\assignmentQuestionName~\thesection~continued on next page\ldots} % Set the left footer to state the question continues on the next page, this is reset to nothing if it doesn't (below)
+}{
+	\lfoot{} % Reset the left footer to nothing if the current question does not continue on the next page
+}
+
+%------------------------------------------------
+
+% Environment for subquestions, takes 1 argument - the name of the section
+\newenvironment{subquestion}[1]{
+	\subsection{#1}
+}{
+}
+
+%------------------------------------------------
+
+% Command to print a question sentence
+\newcommand{\questiontext}[1]{
+	\textbf{#1}
+	\vspace{0.5\baselineskip} % Whitespace afterwards
+}
+
+%------------------------------------------------
+
+% Command to print a box that breaks across pages with the question answer
+\newcommand{\answer}[1]{
+	\begin{tcolorbox}[breakable, enhanced]
+		#1
+	\end{tcolorbox}
+}
+
+%------------------------------------------------
+
+% Command to print a box that breaks across pages with the space for a student to answer
+\newcommand{\answerbox}[1]{
+	\begin{tcolorbox}[breakable, enhanced]
+		\vphantom{L}\vspace{\numexpr #1-1\relax\baselineskip} % \vphantom{L} to provide a typesetting strut with a height for the line, \numexpr to subtract user input by 1 to make it 0-based as this command is
+	\end{tcolorbox}
+}
+
+%------------------------------------------------
+
+% Command to print an assignment section title to split an assignment into major parts
+\newcommand{\assignmentSection}[1]{
+	{
+		\centering % Centre the section title
+		\vspace{2\baselineskip} % Whitespace before the entire section title
+		
+		\rule{0.8\textwidth}{0.5pt} % Horizontal rule
+		
+		\vspace{0.75\baselineskip} % Whitespace before the section title
+		{\LARGE \MakeUppercase{#1}} % Section title, forced to be uppercase
+		
+		\rule{0.8\textwidth}{0.5pt} % Horizontal rule
+		
+		\vspace{\baselineskip} % Whitespace after the entire section title
+	}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\author{\textbf{\assignmentAuthorName}} % Set the default title page author field
+\date{} % Don't use the default title page date field
+
+\title{
+	\thispagestyle{empty} % Suppress headers and footers
+	\vspace{0.2\textheight} % Whitespace before the title
+	\textbf{\assignmentClass:\ \assignmentTitle}\\[-4pt]
+	\ifdef{\assignmentDueDate}{{\small Due\ on\ \assignmentDueDate}\\}{} % If a due date is supplied, output it
+	\ifdef{\assignmentClassInstructor}{{\large \textit{\assignmentClassInstructor}}}{} % If an instructor is supplied, output it
+	\vspace{0.32\textheight} % Whitespace before the author name
+}
