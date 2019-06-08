@@ -1,5 +1,5 @@
 ---
-title: W203 Week 5 | What is Knowing?
+title: W201 Week 5 | What is Knowing?
 ---
 
 # Week 5 | What is Knowing
@@ -21,7 +21,7 @@ Optional readings:
 
 
 Additional video:
-* Below you can find a short youtube video that will supplement my overview at the beginning of class. You must be signed into your bmail account to view the video. https://youtu.be/fhpA91i7oBo
+* Below you can find a short youtube video that will supplement my overview at the beginning of class. You must be signed into your bmail account to view the video. [Week 5 Introductory Comments](https://youtu.be/fhpA91i7oBo)
 
 Additional Async Notes
 * Some questions to guide you if you read/skim the optional week 5 reading. (Or some questions to think about even if you don’t read the optional text.)
