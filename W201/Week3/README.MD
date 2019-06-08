@@ -23,7 +23,7 @@ Required readings:
 * Neustad, Richard, and Ernest May. Thinking in Time: The Uses of History for Decision Makers, 2nd edition. Free Press, 1988, chapter 1. download [here](./Thinking_in_Time_The_Uses_of_History_for_Decision_Makers_2nd_edition.pdf)
 
 Additional video:
-* Below you can find a short youtube video that will replace my normal overview at the beginning of class. Please view this so we can dive right into presentations. You must be signed into your bmail account to view the video. https://www.youtube.com/watch?v=K2IgYGcq34E&feature=youtu.be
+* Below you can find a short youtube video that will replace my normal overview at the beginning of class. Please view this so we can dive right into presentations. You must be signed into your bmail account to view the video. [Week 3 Introductory Comments](https://www.youtube.com/watch?v=K2IgYGcq34E&feature=youtu.be)
 
 
 Discussion Questions:
