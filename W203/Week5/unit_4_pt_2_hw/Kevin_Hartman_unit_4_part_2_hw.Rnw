@@ -101,8 +101,11 @@ To understand the hazard rate, think of the numerator as the probability the lec
 
 Compute the hazard rate for C.
 \\
-\textbf{\underline{Answer:}}
+\textbf{\underline{Givens:}}
 \\
+The hazard rate is defined as
+$$h(t) = \frac{f(t)}{1-F(t)}$$
+
 The CDF of C, where $t$ is the length of C in minutes, is defined as
 $$F(t) = \int_{y=-\infty}^{t} f(y) dy$$
 
@@ -111,20 +114,48 @@ $$f(t) = \begin{cases} 0, &t \leq 0 \\
 e^{-t}, &0 < t
 \end{cases}
 $$
+\\
+\textbf{\underline{Answer:}}
+\\
 When $t \leq 0$,
 $$F(t) = \int_{y=-\infty}^{0}  0 \cdot dy = 0$$
 
 When $0 < t$
 $$F(t) = \int_{y=0}^{t} e^{-y} dy = (-e^y + B)\bigg|_0^t = (-e^t + B) - (-e^0 + B) = -e^{-t} + B + 1 - B = 1 - e^{-t}$$
 
-The hazard function for C, where $t$ is the length of C in minutes, is defined as
-$$h(t) = \frac{f(t)}{1-F(t)} = \frac{e^{-t}}{1 - (1 - e^{-t})} = \frac{e^{-t}{e^{-t} = 1$$
+When combined, $F(t) = 1 - e^{-t}$
+
+Replacing $f(t)$ and $F(t)$ in the hazard rate for C,
+
+$$ h_C(t) = \frac{e^{-t}}{1 - (1 - e^{-t})} = \frac{e^{-t}}{e^{-t}} = 1 \text{ for } t > 0$$
 
 \item \textbf{Optional Advanced Exercise: Characterizing a Function of a Random Variable}
 
 Let $X$ be a continuous random variable with probability density function $f(x)$, and let $h$ be an invertible function where $h^{-1}$ is differentiable.  Recall that $Y = h(X)$ is itself a continuous random variable.  Prove that the probability density function of $Y$ is 
 
 $$g(y) =f(h^{-1}(y)) \cdot \left| \frac{d}{dy}h^{-1}(y) \right| $$
+\\
+\textbf{\underline{Proof:}}
+\\
+If $h$ is invertible and $Y = h(X)$ then $X = h^{-1}(Y)$
+
+If $h^{-1}$ is differentiable then so is $h$, and $h$ will always be increasing or decreasing.
+
+Let $h$ be increasing, as proof for the other side would be similar.
+
+Following the above,
+
+$$\text{    if }Y = h(X) \text{   then } P(Y \leq y) = P(h(X) \leq y)$$
+
+$$\text{and if } X = h^{-1}(Y)  \text{ then } P(Y \leq y) = P(X \leq h^{-1}(y)$$
+
+Thus, the CDF  of Y, G(y), is
+$$ G(y) = \int_{-\infty}^{h^{-1}(y)}f(x)dx = \int_{-\infty}^{y}f(h^{-1}(u)) \cdot \frac{d}{dy}h^{-1}(u)du \quad \text{ by substitution }$$
+$$ = \int_{-\infty}^{y}f(h^{-1}(u)) \cdot \bigg|\frac{d}{dy}h^{-1}(u)\bigg|du \quad \text{ since h is increasing }$$
+
+Since $g(y) = G^{'}(y)$,
+$$g(y) = f(h^{-1}(y)) \cdot \bigg|\frac{d}{dy}h^{-1}(y)\bigg|$$
+
 
 \end{enumerate}
 

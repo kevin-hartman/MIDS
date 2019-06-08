@@ -1,6 +1,5 @@
 ---
 title: W203 Week 5 | Joint Distributions of Random Variables
-navigation_weight: 3
 ---
 
 # Week 5 | Joint Distributions of Random Variables
@@ -16,4 +15,4 @@ Required readings:
   * Full book [here](./../Books/probability_and_statistics_for_engineering_and_the_sciences.pdf)
 * [The end of Theory by Chris Anderson](https://www.wired.com/2008/06/pb-theory/)
 
-[Live Session Notebook](./unit_5_ls/unit_5_ls_sol_KH.ipynb)
+[Live Session Notebook](./unit_5_ls/unit_5_ls_ex.ipynb)
