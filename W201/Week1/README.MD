@@ -41,6 +41,9 @@ Optional readings:
   * http://www.forbes.com/sites/bernardmarr/2016/01/07/big-data-uncovered-what-does-a-data-scientist-really-do/
 * Dutcher, Jenna. “What is Big Data?” Berkeley Data Science Program (September 2014).
   * http://datascience.berkeley.edu/what-is-big-data/
+  
+Additional video:
+* Below you can find a short youtube video that will supplement my overview at the beginning of class. You must be signed into your bmail account to view the video. [Week 1 Introductory Comments pt 1](https://youtu.be/4FyuEVCRHXQ) and [pt 2](https://youtu.be/7QBkSwPEIC0)
 
 Live Session Notes
 * What is RDADA.
