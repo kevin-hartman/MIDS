@@ -1,5 +1,5 @@
 ---
-title: W203 Week 4 | Biases in Decision Making
+title: W201 Week 4 | Biases in Decision Making
 ---
 
 # Week 4 | Biases in Decision Making
@@ -30,7 +30,7 @@ Heuer, Richard J., Jr. “Psychology of Intelligence Analysis.” Center for the
 
 
 Additional video:
-* Below you can find a short youtube video that will supplement my overview at the beginning of class. You must be signed into your bmail account to view the video. https://www.youtube.com/watch?v=RQJL6-aYAmw&feature=youtu.be
+* Below you can find a short youtube video that will supplement my overview at the beginning of class. You must be signed into your bmail account to view the video. [Week 4 Introductory Comments](https://www.youtube.com/watch?v=RQJL6-aYAmw&feature=youtu.be)
 * Mike mentions that the Kahneman text discusses the uses and abuses of anchors on page 163. It’s page 126, not page 163. 
 
 Additional Async Notes
