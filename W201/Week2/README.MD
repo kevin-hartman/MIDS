@@ -16,7 +16,7 @@ Required readings:
 * Shah, Shvetank, Andrew Horne, and Jaime Capellá. [“Good Data Won't Guarantee Good Decisions.”](./Good_Data_Wont_Guarantee_Good_Decisions.pdf) Harvard Business Review (April 2012). http://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=73552652&site=eds-live
 
 Additional video:
-* Below you can find a short youtube video that will supplement my overview at the beginning of class. You must be signed into your bmail account to view the video. https://www.youtube.com/watch?v=VVT7oWOhyjk&feature=youtu.be
+* Below you can find a short youtube video that will supplement my overview at the beginning of class. You must be signed into your bmail account to view the video. [Week 2 Introductory Comments](https://www.youtube.com/watch?v=VVT7oWOhyjk&feature=youtu.be)
 
 Optional readings:
 * Heuer, Richard J., Jr. “Psychology of Intelligence Analysis.” Center for the Study of Intelligence, 1999, [chapter 6](./PsychologyOfIntelligenceAnalysis.pdf).  See left hand side "view in OskiCat" then click link below "link to online version" http://search.ebscohost.com/login.aspx?direct=true&db=cat04202a&AN=ucb.b18541235&site=eds-live. It offers some mental tools one could use to open one's minds to new ideas. Pages 69, 71, 72, 82 are particularly useful.
