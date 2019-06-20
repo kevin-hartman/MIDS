@@ -5,7 +5,7 @@ title: W203 Week 6 | Sampling Distributions and the Central Limit Theorem
 # Week 6 | Sampling Distributions and the Central Limit Theorem
 
 Homework Due
-* [Completed homework for unit 5](./unit_5_hw/Kevin_Hartman_unit_5_hw.pdf)
+* [Completed homework for unit 5](./unit_5_hw/Kevin_Hartman_unit_5_hw.html)
 
 Async
 * [Sampling and the Central Limit Theorem](https://learn.datascience.berkeley.edu/ap/courses/267/sections/283e2e3a-e711-41fb-b042-64d28352a50a/coursework/courseModule/162b97b2-4873-4ca8-aca2-26f20e66b580)

@@ -16,8 +16,8 @@ The Role of Decision Making
 
 Research Design
 * [Week 5: What is Knowing? The Principles of Scientific Research](./Week5/README.MD)
-* Week 6: Practical Research Design Methods
-* Week 7: Fallacies and Buried Assumptions
+* [Week 6: Practical Research Design Methods] (./Week6/README.MD)
+* [Week 7: Fallacies and Buried Assumptions] (./Week7/README.MD)
 * Week 8: Research Design Case Study
 
 Conveying Findings

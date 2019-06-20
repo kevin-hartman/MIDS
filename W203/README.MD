@@ -11,8 +11,8 @@ Weekly Assignments, Readings, and Notes
 * [Week 3: Discrete Random Variables](./Week3/README.MD)
 * [Week 4: Continuous Random Variables](./Week4/README.MD)
 * [Week 5: Joint Distributions of Random Variables](./Week5/README.MD)
-* Week 6: Sampling Distributions and the Central Limit Theorem
-* Week 7: Estimation
+* [Week 6: Sampling Distributions and the Central Limit Theorem](./Week6/README.MD)
+* [Week 7: Estimation](./Week7/README.MD)
 * Week 8: Confidence Intervals and Hypothesis Testing
 * Week 9: Comparing Means and Reproducibility
 * Week 10: Simple Linear Regression
