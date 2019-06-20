@@ -1,0 +1,58 @@
+---
+title: "Confidence Interval Demonstration"
+author: "w203 Instructional Team"
+output: pdf_document
+---
+
+
+This exercise is meant to demonstrate what the confidence level in a confidence interval represents.  We will assume a standard normal population distribution and simulate what happens when we draw a sample and compute a confidence interval.
+
+Your task is to complete the following function so that it,
+
+1) simulates and stores n draws from a standard normal distribution
+2) based on those draws, computes a valid confidence interval with confidence level $\alpha$.
+
+Your function should return a vector of length 2, containing the lower bound and upper bound of the confidence interval.
+
+```{r}
+sim_conf_int = function(n, alpha) {
+  # Your code to 
+  # 1. simulate n draws from a standard normal dist.
+  # 2. compute a confidence interval with confidence level alpha
+ return(c(-1,1))  # replace with the interval you compute.
+}
+```
+
+When your function is complete, you can use the following code to run your function 100 times and plot the results.
+
+```{r}
+many_conf_int = function(m, n, alpha) {
+  results = NULL
+  for(i in 1:m) {
+    interval = sim_conf_int(n, alpha)
+    results = rbind(results, c(interval[1], interval[2], interval[1]<0 & interval[2]>0))
+  }
+  resultsdf = data.frame(results)
+  names(resultsdf) = c("low", "high", "captured")
+  return(resultsdf)
+}
+
+n = 20
+cints = many_conf_int(100, n, .05)
+
+plot(NULL, type="n",xlim=c(1,100),ylim=c(min(cints$low), max(cints$high)), xlab="Trial",ylab=expression(mu),pch=19)
+abline(h = c(0, qt(0.975, n-1)/sqrt(n), qt(0.025, n-1)/sqrt(n)), lty = c(1,2,2), col = "gray")
+points(cints$high, col = 2+cints$captured, pch = 20)
+points(cints$low, col = 2+cints$captured, pch = 20)
+for(i in 1:100)
+   {
+     lines(c(i,i), c(cints$low[i],cints$high[i]), col = 2+cints$captured[i], pch = 19)
+     }
+title(expression(paste("Simulation of t-Confidence Intervals for ", mu,
+                          " with Sample Size 20")))
+legend(0,-.65, legend = c(expression(paste(mu," Captured")),
+                             expression(paste(mu," Not Captured"))), fill = c(3,2))
+
+```
+
+Notice how many of the simulated confidence intervals contain the true mean (zero).  Now meditate on the fact that if you run a single study, you would only get a single confidence interval instead of 100.  The mean could be inside your one interval, or it could be outside it.  In a Frequentist sense, there's no probability attached to these statements, they are simply true or false.
