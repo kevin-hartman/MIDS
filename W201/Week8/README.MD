@@ -1,7 +1,12 @@
 # Week 8 | Research Design Case Study
 * Practicum on research design: A case study from start to “finish”
 
-
+Homework Due
+* Group Assignment #1
+  * Improving 911 Outcomes for the Mentally Ill
+    * [Link to presentation](https://docs.google.com/presentation/d/1eNQqBpYg-jLcEloJzYUbB9EU10NInOdsBaajsz6985g/edit?usp=sharing)
+    * [Link to recording](https://drive.google.com/file/d/1ASha4p7zRfiz3Q219OdA6HtoFHUMc5BR/view?usp=sharing)
+    
 Async
 * [Research Design Case Study](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/b7de393f-197e-4fce-9b4c-d0907d1c7d80)
 
