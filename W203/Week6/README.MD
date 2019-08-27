@@ -1,7 +1,3 @@
----
-title: W203 Week 6 | Sampling Distributions and the Central Limit Theorem
----
-
 # Week 6 | Sampling Distributions and the Central Limit Theorem
 
 Homework Due
