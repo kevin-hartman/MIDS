@@ -1,7 +1,3 @@
----
-title: W201 Week 14 | Finals Week
----
-
 # Week 14 | Finals Week
 * Build on what your small teams learned in Week 14
 
