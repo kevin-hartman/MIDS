@@ -12,19 +12,19 @@ The Role of Decision Making
 
 Research Design
 * [Week 5: What is Knowing? The Principles of Scientific Research](./Week5/README.MD)
-* [Week 6: Practical Research Design Methods] (./Week6/README.MD)
-* [Week 7: Fallacies and Buried Assumptions] (./Week7/README.MD)
-* Week 8: Research Design Case Study
+* [Week 6: Practical Research Design Methods](./Week6/README.MD)
+* [Week 7: Fallacies and Buried Assumptions](./Week7/README.MD)
+* [Week 8: Research Design Case Study](./Week8/README.MD)
 
 Conveying Findings
-* Week 9: Storytelling Through Words and Pictures
-* Week 10: Visualizations
-* Week 11: Pursuasion and the Future of Data Science
+* [Week 9: Storytelling Through Words and Pictures](./Week9/README.MD)
+* [Week 10: Visualizations](./Week10/README.MD)
+* [Week 11: Pursuasion and the Future of Data Science](./Week11/README.MD)
 
 Final Project
-* Week 12: Research Design Project: Abstract and Elevator Pitch
-* Week 13: Research Design Project: Project Proposal
-* Week 14: Research Design Project: Final Presentation
+* [Week 12: Research Design Project: Abstract and Elevator Pitch](./Week12/README.MD)
+* [Week 13: Research Design Project: Project Proposal](./Week13/README.MD)
+* [Week 14: Research Design Project: Final Presentation](./Week14/README.MD)
 
 Materials
 * [Syllabus, Summer 2019](https://docs.google.com/document/d/1-1Wuytlq26ulC8vvbXVu0iTlo6O4VO3DFxwCmUUDLzE/edit)
