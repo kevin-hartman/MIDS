@@ -1,0 +1,1307 @@
+---
+title: 'Local Policy Recommendations for Crime Reduction'
+subtitle: 'Final Report'
+author:
+- "Alexa Bagnard, Joseph Gaustad, Kevin Hartman, Francis Leung"
+- "(W203 Wednesday 6:30pm Summer 2019)"
+date: "8/7/2019"
+tags: [crime, lab, w203, berkeley]
+abstract: The manner and ways in which crime can be reduced in society is a topic of frequent research study. Here, we examine a sample population of data collected in 1987 from statistically signifcant counties in North Carolina to inform policy making for political organizations. Over the course of our study we examine several explanatory variables which have been operationalized as proxies to economic, demographic, law enforcement and judiciary conditions of the county as they relate to crime. In our exploratory data analysis we uncover regional variations between our explanatory variables and use that information to inform our model specification. We investigate three different models, the choices we made in specification, and present our findings. Finally, we conclue with concrete policy recommendations as well as advice for subsequent research in this important domain.
+output:
+  pdf_document:
+    latex_engine: xelatex
+    fig_caption: yes
+    fig_crop: no
+    highlight: haddock
+    keep_tex: yes
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
+  html_document:
+    fig_caption: yes
+    theme: journal
+    toc: yes
+    toc_depth: 2
+    df_print: paged
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+library(stargazer)
+library(cowplot)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+library(reshape2)
+options(kableExtra.latex.load_packages = TRUE)
+library(kableExtra)
+library(plyr)
+library(expss)
+library(car)
+library(corrplot)
+library(gridExtra)
+library(corrr)
+library(Hmisc)
+library(broom)
+library(lmtest)
+library(sandwich)
+library(PerformanceAnalytics)
+library(psych)
+library(GGally)
+library(ggcorrplot)
+library(tmap)
+library(sf)
+
+suppressMessages(library(stargazer))
+suppressMessages(library(cowplot))
+suppressMessages(library(ggplot2))
+suppressMessages(library(tidyr))
+suppressMessages(library(dplyr))
+suppressMessages(library(reshape2))
+suppressMessages(library(kableExtra))
+suppressMessages(library(plyr))
+suppressMessages(library(expss))
+suppressMessages(library(car))
+suppressMessages(library(corrplot))
+suppressMessages(library(gridExtra))
+suppressMessages(library(corrr))
+suppressMessages(library(Hmisc))
+suppressMessages(library(broom))
+suppressMessages(library(lmtest))
+suppressMessages(library(sandwich))
+suppressMessages(library(PerformanceAnalytics))
+suppressMessages(library(psych))
+suppressMessages(library(GGally))
+suppressMessages(library(ggcorrplot))
+suppressMessages(library(knitr))
+suppressMessages(library(tmap))
+suppressMessages(library(sf))
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Introduction
+
+
+## Background
+
+In this report, we seek to examine and discuss determinants of crime and offer actionable policy recommendations for local politicians running for election at the county level in North Carolina. For our analysis, we draw on sample data collected from a study by Cornwell and Trumball, researchers from the University of Georgia and West Virginia University. Our sample data includes data on crime rates, arrests, sentences,  demographics, local weekly wages, tax revenues and more drawn from local and federal government data sources. Although the age of the data may be a potential limitation of our study, we believe the insights we gather and policy recommendations remain appropriate for local campaigns today.
+
+Our primary question that will drive our data exploration and subsequent analysis are to ask which variables affect crime rate the most.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=FALSE}
+#Add a nice little map of North Carolina and shade it by region.
+
+nc <- read_sf(system.file("shape/nc.shp", package = "sf"))
+nc$REGION<-"COASTAL/OTHER"
+nc$REGION[nc$NAME=="Ashe"]<-"WEST"
+nc$REGION[nc$NAME=="Alleghany"]<-"WEST"
+nc$REGION[nc$NAME=="Wilkes"]<-"WEST"
+nc$REGION[nc$NAME=="Watauga"]<-"WEST"
+nc$REGION[nc$NAME=="Caldwell"]<-"WEST"
+nc$REGION[nc$NAME=="Avery"]<-"WEST"
+nc$REGION[nc$NAME=="Burke"]<-"WEST"
+nc$REGION[nc$NAME=="Rutherford"]<-"WEST"
+nc$REGION[nc$NAME=="Polk"]<-"WEST"
+nc$REGION[nc$NAME=="Mitchell"]<-"WEST"
+nc$REGION[nc$NAME=="McDowell"]<-"WEST"
+nc$REGION[nc$NAME=="Yancey"]<-"WEST"
+nc$REGION[nc$NAME=="Madison"]<-"WEST"
+nc$REGION[nc$NAME=="Buncombe"]<-"WEST"
+nc$REGION[nc$NAME=="Henderson"]<-"WEST"
+nc$REGION[nc$NAME=="Transylvania"]<-"WEST"
+nc$REGION[nc$NAME=="Haywood"]<-"WEST"
+nc$REGION[nc$NAME=="Jackson"]<-"WEST"
+nc$REGION[nc$NAME=="Swain"]<-"WEST"
+nc$REGION[nc$NAME=="Macon"]<-"WEST"
+nc$REGION[nc$NAME=="Graham"]<-"WEST"
+nc$REGION[nc$NAME=="Cherokee"]<-"WEST"
+nc$REGION[nc$NAME=="Clay"]<-"WEST"
+nc$REGION[nc$NAME=="Surry"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Yadkin"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Alexander"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Catawba"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Lincoln"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Gaston"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Cleveland"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Stokes"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Forsyth"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Davie"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Rowan"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Cabarrus"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Mecklenburg"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Union"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Stanly"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Davidson"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Rockingham"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Guilford"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Randolph"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Montgomery"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Anson"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Richmond"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Caswell"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Alamance"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Chatham"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Moore"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Lee"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Person"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Orange"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Durham"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Granville"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Wake"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Vance"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Franklin"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Warren"]<-"CENTRAL"
+nc$REGION[nc$NAME=="Iredell"]<-"CENTRAL"
+options(repr.plot.width=6, repr.plot.height=4)
+ggplot() +
+  geom_sf(data = nc, aes(fill = REGION)) + theme_map() +
+  scale_fill_manual(values=c("#999999", "#E69F00", "#56B4E9")) +
+  ggtitle("The Regions of North Carolina") + theme(plot.title = element_text(hjust = 1))
+```
+
+## The Variables
+
+The crime_v2 dataset provided for our study includes 25 variables of interest, listed below by category.
+
+\begin{center}
+\textbf{Data Dictionary}
+\end{center}
+Category | Variable
+---------- | -------------------------------
+Crime Rate | crmrte
+Geographic | county, west, central
+Demographic | urban, density, pctmin80, pctymle
+Economic - Wage | wcon, wtuc, wtrd, wfir, wser, wmfg, wfed, wsta, wloc
+Economic - Revenue  | taxpc
+Law Enforcment | polpc, prbarr, prbconv, mix
+Judicial/Sentencing | prbpris, avgsen
+Time Period | year
+\begin{center}
+Table 1: Data Dictionary
+\end{center}
+
+The variables above operationalize the conditions we wish to explore and their affects on crime.
+
+Chiefly, these break down as follows.
+
+* The Economic variables measures the county's economic activity and health (e.g. opportunity to pursue legal forms of income). These variables come in the form of available wages and tax revenue returned to the county.
+
+* The Law enforcment variables measures the county's ability to utilize law enforcment policy to deter crime.  Similarly, the Judicial variables also signify impact of deterence to crime.
+
+* The Demographic variables measure the cultural variability that represent the social differences between each county, such as urban vs rural and minority populations.
+
+* The Geographic elements are categorical. They  represent the ways in which the population is segmented by geography.
+
+
+# Exploratory Data Analysis (EDA)
+
+## Data Prep and Exploration
+
+We begin our analysis by loading the data set and performing basic checks and inspections.
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime = read.csv("crime_v2.csv")
+summary(dfCrime)
+```
+
+First, we note the blank rows which we will remove from the dataset.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+nrow(dfCrime)
+dfCrime <-na.omit(dfCrime) # omit the NA rows
+nrow(dfCrime)
+```
+
+Next, we will inspect the data to see if there are duplicate records
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime[duplicated(dfCrime),]
+```
+
+A duplicate row exists. We'll remove it.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime <- dfCrime[!duplicated(dfCrime),] # remove the duplicated row
+```
+
+We also see that pbconv is coded as a level. It is not a level but a ratio. We'll change that now.
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$prbconv<-as.numeric(levels(dfCrime$prbconv))[dfCrime$prbconv]
+```
+
+We also notice by comparision of pctymle and pctmin80 that one of the variables is off by a factor of 100. We will divide pctmin80 by 100 so the two variables share consistent unit terms.
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$pctmin80<-dfCrime$pctmin80/100
+```
+
+County was expressed as a number. However, it is a categorical variable and we will convert it to a factor instead.
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$county<-as.factor(dfCrime$county)
+```
+
+Next we inspect the indicator variables to see if they were coded correctly.
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime %>% group_by(west, central) %>% tally()
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime %>%
+filter(west ==1 & central ==1)
+```
+
+One county was either mis-coded (with west=1 and central=1), or the county truly belongs to both regions. However, this association is very unlikely as the proper coding technique is to widen the data and introduce indicator variables for each category. The coding technique does not allow membership in both categories, and a separate third indicator variable would have been created instead.
+
+We will need further analysis on this datapoint to assess proper treatment options.
+
+For now, we will encode a new region variable that does place the datapoint in its own category.
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+#Map central and west to a region code, and create a new category for other
+# Note that county 71 has both western and central codes
+dfCrime$region <- case_when (
+            (dfCrime$central ==0 & dfCrime$west ==0) ~ 0, #Eastern, Coastal, Other
+            (dfCrime$central ==0 & dfCrime$west ==1) ~ 1, #Western
+            (dfCrime$central ==1 & dfCrime$west ==0) ~ 2, #Central
+            (dfCrime$central ==1 & dfCrime$west ==1) ~ 3 #Central-Western county?
+        )
+dfCrime$regcode =
+            factor( dfCrime$region , levels = 0:3 , labels =
+                    c( 'Other',
+                       'West',
+                       'Central',
+                       'CW')
+                   )
+```
+
+We will also introduce an indicator variable for counties located in the "other" region not in west or central
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$other <- ifelse((dfCrime$central ==0 & dfCrime$west ==0), 1, 0)
+```
+
+And we'll add an indicator variable to serve as complement to the urban indicator variable and call this 'nonurban'
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$nonurban <- ifelse((dfCrime$urban==0), 1, 0)
+```
+
+By way of the 1980 Census fact sheet, we discover the urban field is an encoding for SMSA (Standard Metropolitan Statistical Areas). https://www2.census.gov/prod2/decennial/documents/1980/1980censusofpopu8011uns_bw.pdf
+The value is 1 if the county is inside a metropolitan area. Otherwise, if the county is outside a metropolitan area, the value is 0.
+
+We create a metro factor variable to better describe this feature for visualization purposes.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+# create factor for SMSA (standard metropolitan statistical areas) with two levels
+# (inside or outside)
+#    https://www2.census.gov/prod2/decennial/documents/1980/1980censusofpopu8011uns_bw.pdf
+dfCrime$metro =
+            factor( dfCrime$urban , levels = 0:1 , labels =
+                    c( 'Outside Metro',
+                       'Inside Metro'
+                      )
+                   )
+```
+
+Now we will visualize our numerical variables in boxplots and use our categorical variables to highlight differences. 
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+#Plot of the economic and tax related variables vs crmrte
+q1<-ggplot(data = dfCrime, aes(y = wcon, color = regcode)) +
+      geom_boxplot()
+q2<-ggplot(data = dfCrime, aes(y = wtuc, color = regcode)) +
+      geom_boxplot()
+q3<-ggplot(data = dfCrime, aes(y = wtrd, color = regcode)) +
+      geom_boxplot()
+q4<-ggplot(data = dfCrime, aes(y = wfir, color = regcode)) +
+      geom_boxplot()
+q5<-ggplot(data = dfCrime, aes(y = wser, color = regcode)) +
+      geom_boxplot()
+q6<-ggplot(data = dfCrime, aes(y = wmfg, color = regcode)) +
+      geom_boxplot()
+q7<-ggplot(data = dfCrime, aes(y = wfed, color = regcode)) +
+      geom_boxplot()
+q8<-ggplot(data = dfCrime, aes(y = wsta, color = regcode)) +
+      geom_boxplot()
+q9<-ggplot(data = dfCrime, aes(y = wloc, color = regcode)) +
+      geom_boxplot()
+q10<-ggplot(data = dfCrime, aes(y = taxpc, color = regcode)) +
+      geom_boxplot()
+grid.arrange(q1, q2, q3, q4, ncol=2)
+grid.arrange(q5, q6, q7, q8, q9, q10, ncol=2)
+```
+
+We note in the comparison above wser appears to have an extreme outlier.
+
+Other variables show outliers as well, but not as extreme. We will determine if any of these points have leverage or influence in model specification.
+
+For now, we will dig deeper into wser to confirm our understanding of the variable after the visual inspection.
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime %>%
+filter(wser > 2000) %>%
+select(county, wser)
+```
+
+This average service wage is in extreme excess based on what we know about the 1980s and every  wage recorded in comparison. A review of the detailed population statistics describing mean wage per industry (table 231) confirms this. https://www2.census.gov/prod2/decennial/documents/1980/1980censusofpopu801352uns_bw.pdf
+
+We have identified our first outlier. Outliers affect our ability to estimate statistics, resulting in overestimated or underestimated values. Outliers can be due to a number of  factors such as response errors and data entry errors. Outliers will introduce bias into our estimates and they need to be addressed during the analysis phase. The treatment remedies include three options.
+
+1 Trimming - *remove* outliers from the dataset based on a maxima or minima from the mean.
+
+2 Winsorization - *replace* extreme values with the next available point in the range so they fall at the edge of the distribution
+
+3 Imputation - *recode* outliers by calculating the mean of the sample, or by applying a regression model to predict the missing value
+
+Trimming will remove the entire record. This is not an preferred treatment as we will lose valuable information.
+
+Winsorization is a symmetric process that will replace *all* of our smallest and largest data values in the sample. This is not a preferred treatment as we will again lose valuable information, especially when we only seek to replace values that are a result of a coding error.
+
+Imputation recodes the data point using a predictive model derived from the sample. Multiple imputations are performed on the data to account for uncertainty, and each imputed result set is analyzed for its distribution. Then, the mean, mode or median can be chosen from this distribution as the replacement.
+
+We favor the imputation method as we do not wish to apply Winsorization to our data set wholistically and lose some of our information, nor do we wish to apply trimming and remove an entire observation and lose its contribution. Fortunately, a number of packages are available in R that predict a replacement value through imputation A commonly used library for imputation can be found in the Hmisc package which we will use for our outlier treatment.
+
+A full discussion of treatment methods can be found here: http://www.asasrms.org/Proceedings/y2004/files/Jsm2004-000559.pdf
+
+Finally, we make note that none of these methods are ideal. We would be better suited if we could track the nature of the mistake and recode the value from underlying data. Since we do not have access to the underlying data rom which this sample set was derived, we must utilize one of the methods above in order to continue with our analysis.
+
+Now we will begin our treatment.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$wser[which(dfCrime$county==185)]<-NA # set the value to NA so it will be imputed
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE, results='hide'}
+impute_arg <- aregImpute(~ crmrte +  urban + central + west + other +
+                         prbarr + prbconv + prbpris + avgsen + polpc +
+                         density + taxpc + pctmin80 + wcon + wtuc +
+                         wtrd + wfir + wser + wmfg + wfed + wsta + wloc +
+                         mix + pctymle, data = dfCrime, match="weighted",
+                         nk=3, B=10, n.impute = 100)
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+#Review R-squares for Predicting Non-Missing Values for Each Variable.
+#A high R-square reveals a high degree of confidence in being able to predict
+impute_arg$rsq
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+# Review Distribution of Values from Each Imputation
+table(impute_arg$imputed$wser)
+```
+
+We note from the distribution above we see a mode appear from the multiple imputation trials. One may argue that taking the mode is sufficient for replacement. Indeed, taking a mode would be required if this were a categorical value to replace. In this circumstance, and to err on the side of caution, we will reassign this value using the mean value from the prediction trials.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$wser[which(dfCrime$county==185)]<-mean(impute_arg$imputed$wser)
+#Confirm assigned value
+dfCrime$wser[which(dfCrime$county==185)]
+```
+We turn our examination now to the criminal justice variables.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+#Plot of the criminal justice and law enforcment related variables vs crmrte
+q1<-ggplot(data = dfCrime, aes(y = prbarr, color = regcode)) +
+      geom_boxplot()
+q2<-ggplot(data = dfCrime, aes(y = prbconv, color = regcode)) +
+      geom_boxplot()
+q3<-ggplot(data = dfCrime, aes(y = prbpris, color = regcode)) +
+      geom_boxplot()
+q4<-ggplot(data = dfCrime, aes(y = avgsen, color = regcode)) +
+      geom_boxplot()
+q5<-ggplot(data = dfCrime, aes(y = polpc, color = regcode)) +
+      geom_boxplot()
+q6<-ggplot(data = dfCrime, aes(y = mix, color = regcode)) +
+      geom_boxplot()
+
+grid.arrange(q1, q2, ncol=2)
+grid.arrange(q3, q4, q5, q6, ncol=2)
+```
+
+The criminal justice and law enforcement variables show evidence of outliers, notably, prbarr and polpc appear to have extreme data points. 
+
+We will suspend comment on prbarr for now, but, we will comment on the extreme outlier value of polpc which is .009. Based on records describing the US population on police officers per capita, the highest police per capita on record for all United States counties is .007. This high value occurs in Atlantic City, NJ. https://www.governing.com/gov-data/safety-justice/police-officers-per-capita-rates-employment-for-city-departments.html
+
+The datapoint in our sample set is an error, and we will impute it's replacement.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$polpc[which(dfCrime$county==115)]<-NA # set the value to NA so it will be imputed
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE, results='hide'}
+impute_arg <- aregImpute(~ crmrte +  urban + central + west + other +
+                         prbarr + prbconv + prbpris + avgsen + polpc +
+                         density + taxpc + pctmin80 + wcon + wtuc +
+                         wtrd + wfir + wser + wmfg + wfed + wsta + wloc +
+                         mix + pctymle, data = dfCrime, match="weighted",
+                         nk=3, B=10, n.impute = 100)
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+paste("R-squares for Predicting Non-Missing Values for Each Variable")
+impute_arg$rsq
+paste("Predicted values")
+mean(impute_arg$imputed$polpc)
+```
+
+We will reassign this value using the mean from the trials.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$polpc[which(dfCrime$county==115)]<-mean(impute_arg$imputed$polpc)
+```
+
+We continue  our examination and look into the demographic data next.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+#plot of demographic information for counties Outside and Inside the metro areas
+# population density, percent minority, percent young male
+
+ggplot(data = dfCrime, aes(y = density, color = regcode)) +
+      geom_boxplot() + facet_wrap(~ metro)
+ggplot(data = dfCrime, aes(y = pctmin80, color = regcode)) +
+      geom_boxplot() + facet_wrap(~ metro)
+ggplot(data = dfCrime, aes(y = pctymle, color = regcode)) +
+      geom_boxplot() + facet_wrap(~ metro)
+```
+
+More outliers are observed in demographic information. Looking at pctymle, in one county it is nearly 25% young male from 16-24. That seems quite high in normal statistical measures of the population. However, this can be explained as coming from county with a large college town population. Specifically, Appalachian State University in Watauga County (https://en.wikipedia.org/wiki/Watauga_County,_North_Carolina), where the presense of the university notably affects the overall age distribution and our median age. This is further confirmed in county estimate records located here: https://www.osbm.nc.gov/demog/county-estimates.
+
+Finally, we see our CW encoded county prominantely appearing in the density plot. It is clearly not an outside metro county. In addition to being miscoded as both western and central regions it has been miscoded as a non-urban county as well.
+
+We will address the variable now, and also examine whether the region should be 'west', 'central' or 'other' instead of both central and west
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime %>%
+#filter(west ==1 & central ==1) %>%
+filter(density > 2.5) %>%
+select(county, west, central, other, urban, region, regcode, metro)
+```
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$west[which(dfCrime$county==71)]<-NA
+dfCrime$central[which(dfCrime$county==71)]<-NA
+dfCrime$other[which(dfCrime$county==71)]<-NA
+dfCrime$urban[which(dfCrime$county==71)]<-NA
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE, results='hide'}
+impute_arg <- aregImpute(~ crmrte +  urban + central + west +
+                         prbarr + prbconv + prbpris + avgsen + polpc +
+                         density + taxpc + pctmin80 + wcon + wtuc +
+                         wtrd + wfir + wser + wmfg + wfed + wsta + wloc +
+                         mix + pctymle, data = dfCrime, match="weighted",
+                         nk=3, B=10, n.impute = 100)
+```
+
+```{r, include=FALSE, comment=NA, warning=FALSE, echo=FALSE}
+#We need a mode function, so lets define one. Source - public domain
+Mode = function(x){
+    ta = table(x)
+    tam = max(ta)
+    if (all(ta == tam))
+         mod = NA
+    else
+         if(is.numeric(x))
+    mod = as.numeric(names(ta)[ta == tam])
+    else
+         mod = names(ta)[ta == tam]
+    return(mod)
+}
+```
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+paste("R-squares for Predicting Non-Missing Values for Each Variable")
+impute_arg$rsq
+paste("Predicted values")
+Mode(impute_arg$imputed$urban)
+Mode(impute_arg$imputed$central)
+Mode(impute_arg$imputed$west)
+```
+
+The results confirm the county is urban. It is also highly probable that county 71 is not west and most likely associated with central. After correcting our data for urban and west, let's compare 'central' with 'other' to be certain we have the right region.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$urban[which(dfCrime$county==71)]<-Mode(impute_arg$imputed$urban)
+dfCrime$nonurban[which(dfCrime$county==71)]<-1-Mode(impute_arg$imputed$urban)
+dfCrime$west[which(dfCrime$county==71)]<-Mode(impute_arg$imputed$west)
+dfCrime$metro[which(dfCrime$county==71)]<-'Inside Metro'
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE, results='hide'}
+impute_arg <- aregImpute(~ crmrte + central + other +
+                         prbarr + prbconv + prbpris + avgsen + polpc +
+                         density + taxpc + pctmin80 + wcon + wtuc +
+                         wtrd + wfir + wser + wmfg + wfed + wsta + wloc +
+                         mix + pctymle, data = dfCrime, match="weighted",
+                         nk=3, B=10, n.impute = 100)
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+paste("R-squares for Predicting Non-Missing Values for Each Variable")
+impute_arg$rsq
+paste("Predicted values")
+Mode(impute_arg$imputed$other)
+```
+
+We show with high degree of certainty that the county is also not 'other'. The case for central is high. Since the county is not western and not other it must be central by process of elimination, and the Hmisc algorithm bolsters that suggestion. We'll assign our new values.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$other[which(dfCrime$county==71)]<-Mode(impute_arg$imputed$other)
+dfCrime$central[which(dfCrime$county==71)]<-1-Mode(impute_arg$imputed$other)
+dfCrime$region[which(dfCrime$county==71)]<- 2 #Central
+dfCrime$regcode[which(dfCrime$county==71)]<- 'Central'
+```
+
+Finally, we noticed from our boxplots that the density values can be quite small in one of the regions. We will examine it further by taking a look at its distribution.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+options(repr.plot.width=8, repr.plot.height=4)
+ggplot(data = dfCrime, aes(x = density)) +
+      geom_histogram(bins=90)
+```
+
+We note that one of the counties has an extremely low density. Near zero.
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime %>%
+filter(density < 0.01)
+```
+
+In review of the North Carolina county density data from 1985, the smallest population density in any county in North Carolina is 0.0952. http://ncosbm.s3.amazonaws.com/s3fs-public/demog/dens7095.xls
+
+This makes the density of 0.0000203422 for county 173 statistically impossible. It is miscoded and we will impute a new statistically predicted value.
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$density[which(dfCrime$county==173)]<- NA
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE, results='hide'}
+impute_arg <- aregImpute(~ crmrte + urban + central + west + 
+                         prbarr + prbconv + prbpris + avgsen + polpc +
+                         density + taxpc + pctmin80 + wcon + wtuc +
+                         wtrd + wfir + wser + wmfg + wfed + wsta + wloc +
+                         mix + pctymle, data = dfCrime, #%>% filter(urban==0 & west ==1),
+                         match="weighted",  nk=3, B=10, n.impute = 100)
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+paste("R-squares for Predicting Non-Missing Values for Each Variable")
+impute_arg$rsq
+paste("Predicted values")
+mean(impute_arg$imputed$density)
+```
+
+We will reassign this value using the mean from the trials.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$density[which(dfCrime$county==173)]<-mean(impute_arg$imputed$density)
+```
+
+With our variables transformed, we turn now to a discussion on correlation in our data set. To facilitate our discussion we'll draw reference to a network plot.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+options(repr.plot.width=6, repr.plot.height=6)
+myData<-dfCrime
+myData<-myData[, c("crmrte", "west", "central", "other", "urban", "prbarr", "prbconv", "prbpris", "avgsen", "polpc", "taxpc",
+           "pctmin80", "wcon", "wtuc", "wtrd", "wfir", "wser", "wmfg", "wfed", "wsta", "wloc",
+           "mix", "pctymle", "density")]
+plot<-myData %>% correlate() %>% network_plot(min_cor=.2)
+grid.arrange(arrangeGrob(plot, bottom = 'Correlations Among Variables'),
+             top = "Network plot for Correlation Study", ncol=1)
+```
+We first note in the network plot the general proximity of variables with one another. Variables that are clustered together represent the overall magnitude of their correlations. In fact, the cluster of the wage variables are an indication of very tight correlation. Only state wages fall outside this group. We also see the wage variables are positively correlated with our crime outcome variable. Density also positively correlates with wage and the crime rate variable. Urban correlates with wage as well, but suprisingly the correlation between crime and the urban indicator variable is not as high, leading us to suspect that density may tell a better story.
+
+Next, we notice the Law enforcement and Judicial variables are clustered together and have a negative correlation with our outcome variable on crime. We also see they tend to be negatively correlated amongst one another. For example, probability of conviction is slightly negatively corrrelated with the probability of arrest, and both are negatively correlated with our outcome variable. We also see that police per capita and tax per capita are positively correlated with another. This makes sense as the more revenues collected the higher the ability to pay for law enforcement and protection services. Both are also positively correlated with our outcome variable on crime. We also notice that percent young male has a positive correlation with crime rate. A possible explanation for this is that more crimes are committed by younger men as a whole.
+
+The mix variable is an odd one. It possitively correlates with probability of arrests, negatively correlates with probability of convictions, and negatively correlates with service and manufacturing wages. It also has a slight positive correlation with the state wage variable and seems to be clustered with it.
+
+Last, we turn to our region variables and notice the high negative correlation of the minority variable with the western region variable. We also notice a high positive corrlation of minorities with the 'other' (coastal) variable. The pctmin80 variable also correlates positively with crime rate, although the two are not clustered. We especially note that west is negatively correlated with crime rate. There appears to be a lessor propensity for crime in this region, or perhaps a lack of suffient means to detect it. We put this knowledge in our back pocket.
+
+A note to the interested party - for a futher examination of network plots describing correlations in each of the regions please see the diagrams in our appendix. If you are curious about the relationships of data between groups we think you will enjoy them.
+
+## Summary and Results
+
+Our outcome variable is the *crime rate* (“crmrte”) variable, which is defined as the crimes committed per person in a specific county during 1987. The crime rate of the 90 counties in our sample dataset range between 0.0055 - 0.0990, with a mean of 0.0335.
+
+From the boxplot below, most of the counties have a crime rate between 0.0055 and 0.0700, with 5 outliers having a crime rate > 0.0700.
+
+```{r}
+options(repr.plot.width=8, repr.plot.height=4)
+p<-ggplot(data = dfCrime, aes(y = crmrte, color = regcode)) +
+     geom_boxplot(show.legend=FALSE) + facet_wrap(~ regcode)
+p2<-ggplot(data = dfCrime, aes(y = crmrte)) +
+     geom_boxplot()
+grid.arrange(p, p2, ncol=2)
+```
+
+Extending the discussion of mix from our initial correllation discussion, we further note that mix is defined as the type of crime committed. Our research focuses on providing policy recommendations to reduce crime in general, and not a specific type of crime. As a result we will not include additional focus on this variable.
+
+We propose 3 multiple linear regression models
+
+* First Model: Has basic explanatory variables of key interest by region, and no other covariates.
+
+* Second Model: Includes the explanatory variables and covariates that increase the accuracy of our results without substantial bias.
+
+* Third Model: An expansion of the second model with most covariates, designed to demonstrate the robustness of our results before yielding to a discussion on observations of our model specifications.
+
+We are keen to begin.
+
+# Model Analysis
+
+## Model 1
+### Introduction
+
+Our base hypothesis is that county level crime can be fundamentally explained by three factors in a county: regional variations, the effectiveness of the criminal justice system, and economic conditions.
+
+* **Criminal Justice Effectiveness**  
+Criminal Justice Effectiveness is an abstract concept that is operationalized by comparing the number of crimes to convictions. To track crimes, they must be reported to police, who can then make arrests. Then, the legal system provides judgement in the form of convictions and sentencing.  Besides removing some criminals from society, criminal justice can serve as deterrent, as the probability of getting caught, convicted, and sentenced could discourage some would-be criminals from committing crimes.
+
+>We operationalize criminal justice effectiveness as (probability of Convictions for Crimes committed). We define this as: prbconv * prbarr = conv/arrest * arrest/crime = convictions/crime. Without more granular data, this provides a single parsimonious metric that helps understand how well the law enforcement and criminal justice system works.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$crimJustEff<-dfCrime$prbarr * dfCrime$prbconv
+```
+
+* **Region**  
+Region is easily identified as possible factor for predicting crime as seen from our initial EDA in the Introduction.  It would be expected that cultural, economic, government, geographic, and demographic profiles among other important variables would vary across the regions. Without the ability to measure and operationalize these variables, region offers us a suitable proxy for stand in.  
+
+* **Economic Conditions**  
+Finally, we theorize that the third major cause of crime are economic conditions.  We would expect that as someone's economic success and opportunity increases their propensity to commit crime is lowered.  And similarly when there are worse economic conditions, crime would increase due to lack of means, lack of occupation or boredom.  This also means that individuals have less to look forward to and are willing to risk their freedom or endanger themselves.
+
+>We operationalize economic conditions by looking at wages, which includes the sum of all average weekly wages from the 1980 census information in our data set. For this base, parsimonious model, we define economic opportunity as the *scaled* average weekly pay from each sector provided in the data set. We scale this variable by dividing the sum by 9 to underscore the significance of industry diversity within a county. We think this is best proxy from our data because it answers all of the above (higher wages leads to better means and better opportunities). From our EDA we also confirm that in general these sums are not skewed by having one really high paying sector in each county as we see a strong relationship between average quartile across all job types and sector average wages. 
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$scaledWages<-(dfCrime$wcon + dfCrime$wtuc + dfCrime$wtrd + dfCrime$wfir +
+    dfCrime$wser + dfCrime$wmfg + dfCrime$wfed + dfCrime$wsta + dfCrime$wloc) / 9
+```
+
+
+### Model 1 EDA
+
+**Data Transformations: Criminal Justice Effectiveness**  
+First we look at the components of the Criminal Justice Effectiveness: Probability of arrest and Probability of conviction.  
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+p1 <- ggplot(dfCrime, aes(x = prbarr, color=regcode, fill = regcode)) +
+  geom_histogram(position="identity", alpha=0.5, bins=30) +
+  labs(title="Probability of Arrest", x="Arrest per Crime", y="Count")
+p2 <- ggplot(dfCrime, aes(x = prbconv, color=regcode, fill = regcode)) +
+  geom_histogram(position="identity", alpha=0.5, bins=30) +
+  labs(title="Probability of Conviction", x="Conviction per Arrest", y="Count")
+grid.arrange(p2, p1, ncol=2)
+```
+
+The distribution of both probability of conviction and probability of arrest are skewed right.  It could be argued that both of these variables should be bound between 0 and 1.  However, these "probabilities" are proxied by ratios.  It is in fact possible (and perhaps common) that defendants are charged with multiple crimes and convicted, but were only arrested once. For this reason we will not consider outliers in this variable.
+
+For "probability" of arrest, it could also be possible there are multiple arrests for a single crime. However, we have one single data point greater than one, and it is >5 standard deviations away from the distribution. Since this value falls so far out of distribution, it will have high leverage on our model. We will preemptively impute its value as the current data point is likely an error, and is not representative of the bulk of North Carolina counties.
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+# County number of outlier
+(dfCrime$county[dfCrime$crimJustEff > 1]) 
+# how many standard deviations away the outlier lies
+(dfCrime[dfCrime$crimJustEff > 1,]$prbarr - mean(dfCrime$prbarr))/sd(dfCrime$prbarr)
+```
+
+We will use the imputation method to replace the large prbarr value and remove the outlier effect, while also retaining the rest of the information about the county.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$prbarr[which(dfCrime$county==115)]<-NA # set the value to NA so it will be imputed
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE, results='hide'}
+impute_arg <- aregImpute(~ crmrte +  urban + central + west + other +
+                         prbarr + prbconv + prbpris + avgsen + polpc +
+                         density + taxpc + pctmin80 + wcon + wtuc +
+                         wtrd + wfir + wser + wmfg + wfed + wsta + wloc +
+                         mix + pctymle, data = dfCrime, match="weighted",
+                         nk=3, B=10, n.impute = 100)
+```
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+paste("R-squares for Predicting Non-Missing Values for Each Variable")
+impute_arg$rsq
+paste("Predicted values")
+mean(impute_arg$imputed$prbarr)
+```
+
+We will reassign this value using the mean from the trials.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$prbarr[which(dfCrime$county==115)]<-mean(impute_arg$imputed$prbarr)
+```
+
+
+With the outlier imputed, the Criminal Justice Effectiveness can be constructed. We present a histogram showing how log transformation can also improve normality.  Be conducting a log transformation we can also understand the resulting coefficient as a percent change in the ratio of Criminal Justice Effectiveness (convictions/crime) which will be more helpful in communicating recommendations for policy.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$crimJustEff<-dfCrime$prbarr * dfCrime$prbconv
+dfCrime$logcrimJustEff<-log(dfCrime$crimJustEff)
+dfCrime$logcrmrte <- log(dfCrime$crmrte)
+options(repr.plot.width=4, repr.plot.height=4)
+p1 <- ggplot(dfCrime, aes(x = crimJustEff, color=regcode, fill = regcode)) +
+  geom_histogram(position="identity", alpha=0.5, bins=30) +
+  labs(title="Criminal Justice Effectiveness", x="Convictions per Crime", y="Count")
+p2 <- ggplot(dfCrime, aes(x = logcrimJustEff, color=regcode, fill = regcode)) +
+  geom_histogram(position="identity", alpha=0.5, bins=30) +
+  labs(title="log(Criminal Justice Effectiveness)", x="log(Convictions per Crime)", y="Count")
+grid.arrange(p1, p2, ncol=2)
+```
+
+**Data Transformations: Unweighted Average of Sector Wages**
+
+We turn our attention now to the economic variable, the scaled average wage of all provided sectors. The wages trend together well, so there is limited information lost when combining them into one variable.  This can be seen by plotting quartiles of each wage against the scaled average and observing a relatively linear response.  
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+# # Quantiles for all jobs
+dfWage<-mutate(dfCrime,qCon=ntile(dfCrime$wcon,4))
+dfWage<-mutate(dfWage,qTuc=ntile(dfCrime$wtuc,4))
+dfWage<-mutate(dfWage,qTrd=ntile(dfCrime$wtrd,4))
+dfWage<-mutate(dfWage,qFir=ntile(dfCrime$wfir,4))
+dfWage<-mutate(dfWage,qSer=ntile(dfCrime$wser,4))
+dfWage<-mutate(dfWage,qMfg=ntile(dfCrime$wmfg,4))
+dfWage<-mutate(dfWage,qFed=ntile(dfCrime$wfed,4))
+dfWage<-mutate(dfWage,qSta=ntile(dfCrime$wsta,4))
+dfWage<-mutate(dfWage,qLoc=ntile(dfCrime$wloc,4))
+## Average quantile
+dfWage$qAvg= (dfWage$qCon+dfWage$qTuc+dfWage$qTrd+dfWage$qFir+dfWage$qSer+dfWage$qMfg+
+                dfWage$qFed+dfWage$qSta+dfWage$qLoc)/9
+
+plot(dfCrime$scaledWages,dfWage$qAvg)
+```
+
+We again modify this variable with a log transformation for better interpretation. This allows us to interpret percent changes in wage which is more consistent across a range of wages. The result is a relatively normal distribution as seen in the below histogram.  We note that there is a small "second mode" for the Central region, but this is not very concerning.
+
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$logScaledWages <- log(dfCrime$scaledWages)
+p1 <- ggplot(dfCrime, aes(x = logScaledWages, color=regcode, fill = regcode)) +
+  geom_histogram(position="identity", alpha=0.5, bins=30) +
+  labs(title="log(Scaled Wages)", x="log(Scaled Wages)", y="Count")
+p1
+```
+Interestingly, when viewing the wage data plotted against crime rate (below) we see that there is a positive correlation between wages and crime. In model 1, we will see if this holds ture when taking into account the effect of Criminal Justice Effectiveness and discuss some possible causes.  
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+
+q9<-ggplot(data = dfCrime, aes(x = logScaledWages, y = logcrmrte, color = regcode)) +
+      geom_point()+
+  geom_smooth(method = "lm")
+options(repr.plot.width=8, repr.plot.height=16)
+q9
+```
+
+**Data Transformations: Crime Rate**  
+Our dependent variable is crime.  Operationalized it is given as a rate of crimes per capita. We will apply a log transform for two reasons.  First, since this value tends to be small (<.1), the log transform gives us a much better range away from zero, and limits the effect of high crime counties from exerting large leverage on our model. Second, the log transform allows us talk about relative percentage changes in crime rate for the counties.  This allows changes in crime rate to be reported in percent which is relevant to all counties, irrespective of their current status as low or high crime counties. In the below histograms, the improved normality is also observed in the log transformed variable. 
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$logcrmrte <- log(dfCrime$crmrte)
+options(repr.plot.width=4, repr.plot.height=4)
+p1 <- ggplot(dfCrime, aes(x = crmrte, color=regcode, fill = regcode)) +
+  geom_histogram(position="identity", alpha=0.5, bins=30) +
+  labs(title="Crime Rate", x="Crimes per Capita", y="Count")
+p2 <- ggplot(dfCrime, aes(x = logcrmrte, color=regcode, fill = regcode)) +
+  geom_histogram(position="identity", alpha=0.5, bins=30) +
+  labs(title="log(Crime Rate)", x="log(Crimes per capita)", y="Count")
+grid.arrange(p1, p2, ncol=2)
+```
+
+### Model 1 Linear Model
+
+We now turn to the definition of our model in terms of the variables we operationalized, and we perform our linear regression.
+
+$$ log(Crime Rate) = B_0 + B_1log(Scaled Wages) + B_2log(Criminal Justice Effectiveness) + B_3West + B_4Central$$
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+
+#dfCrime$unweighted_avg_wage <- dfCrime$scaledWages/9
+model1 <- lm(logcrmrte ~ logScaledWages + logcrimJustEff + west + central, data=dfCrime)
+model1 # Coefficients
+summary(model1)$adj.r.square # Adjusted R^2 value.
+
+```
+**Cook's Distance (Leverage/Influence) Analysis**  
+None of the points approach a cook's distance of concern.  Some of the higher leveraged points do trend towards larger negative residuals.  This suggests that our model might not be capturing a phenomenon at more extreme values of the regressors. For an initial model there is nothing of major concern.
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+plot(model1, which=5) # Variance Inflation Factor
+```
+
+**Model 1 CLM Assumptions:**  
+* **MLR1** Linear in parameters: The model has had its data transformed as described above to allow a linear fit of the model.
+
+* **MLR2** Random Sampling: The data is collected from a data set with rolled up data for each county.  We cannot comment on the randomness of the samples, though nearly all counties are represented in North Carolina.  
+
+* **MLR3** No perfect multicollinearity: None of the variables chosen for the model are constant or perfectly collinear as the economy and criminal justice effectiveness are independent.  Our low VIF value shows very little collinearity, as would be expected from the diverse and limited variables included in the model.
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+vif(model1) # Variance Inflation Factor
+```
+* **MLR4'** The expectation of u is 0.  This is difficult to prove in a data set like this one.  It is possible that there are serious bias issues in the way crimes are reported and wages are recorded.  However, if one agrees that the data has integrity and that the basic model presented for predicting crime rate is acceptable, then exogeneity can be accepted.  
+
+* **MLR4** The zero conditional mean assumption is well supported when viewing the Residuals vs fitted plot.  The spline fit is nearly flat and centered very close to zero.  
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+plot(model1, which=1)
+```
+
+* **MLR5** Although there does appear to be visible heteroskedacity in the 'lips' appearance of the Residuals vs fitted plot, a Breusch-Pagan test (below) confirms there is not. However, to be conservative and consistent we will proceed with heteroskedastic robust errors.
+```{r}
+bptest(model1)
+coeftest(model1, vcov=vcovHC) #coefficients with heteroskedastic consistent standard errors
+```
+* **MLR6** The final assumption of linear regression is that the errors are normally distributed.  This appears to hold for the bulk of the residuals, however, there is skewness on the tails.  This non-normality is also reflected in the significant return on the Shapiro test.  But our high sample size allows us to leverage the Central Limit Theorem and assume normally distributed errors.
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+shapiro.test(model1$residuals) # test for normality
+plot(model1, which=2) # QQ plot for residuals
+```
+
+### Model 1 Interpretation
+The model 1 gives estimates and standard errors that are heteroskedastic consistent.  All the coefficients are found to be statistically significant. The coefficient of the log of scaled average wage is calculated to be ~2.  This means that an increase of 1% in wages is correlated with an increase of 2% in crime rate.  Generally speaking, increased wages are not normally associated with increased crime.  This suggests that wages are correlated with stronger omitted variables that affects crime.  Another aspect that may be missed in our operationlized variable is the economic inequality in the county.  Averages are easily affected by extreme values.  It is possible there are very high earners that can influence a sector's average wage, but don't represent the bulk of workers.  Further, there is no understanding of the weighting for each sector.  For example, one sector, like telecom, may have high wages in a county but not have very many workers, further demonstrating inequality.  This detail is missed when each sector is rolled into a single average and then scaled with all other sector averages.  However, the significant result of wage on crime suggests that we are capturing some cause of crime that is correlated to wages.  We will continue to monitor how wage changes as a predictor when we introduce more regressors.
+
+Criminal justice effectiveness (convictions/crime) is has a coefficient of around 0.5 which suggests that an increase of 1% increase in convictions per crime will decrease crime by nearly .5%.  This suggests that we have found a relatively strong correlation and constructed a good operationalization of a county's criminal justice effect on crime rate. This variable will be monitored as we add more regressors.
+
+Region dummy variables of West and Central are both significant.  This suggests that regionally, there are differences that are not captured by the Wages and Criminal Justice Effectiveness variable that affect crime.  While the West and Central regions both have lower crime than the Coastal/Other region, the West is much more pronounced with a value of around 0.6.  This suggests that when correcting for differences in Criminal Justice Effectiveness and Wages, the west will still have crime rate lower by about 60%.
+
+Overall, the model shows a moderately good fit, with an adjusted R square of 0.63.  This can be interpreted as: the model explains 63% of the variation in crime.  In the next model we will try to improve our operationalization of economics and criminal justice by investigating police per capita and tax revenue per capita.
+
+## Model 2
+
+### Introduction
+In this model, we introduce the additional covariates of tax per capita (taxpc) and police per capita (polpc) to give us more insight into our economic and law enforcement related variables.
+
+* **Police Per Capitas**  
+The Police Per Capita in a county can be influential on the Criminal Justice Effectiveness. With more police in a given area, one would assume that crime rates would decrease, however, as we mentioned earlier in our EDA, polpc has a positive correlation with crmrte. Including this variable in our analysis will give us more insight into the relationship of variables used in model 1.
+
+* **Tax Per Capita**  
+The Tax Per Capita can have a direct impact on the Police Per Capita. A higher tax per capita means that the county has more revenue to spend on public services like the police force (ie. increasing the number of police in the county). This positive correlation relationship can be seen in our prior introductory data analysis. However, taxpc may also serve as an inidication of economic health as well.
+
+
+### Model 2 EDA and Data Transformations
+
+Before we create our model, we will analyze each of the additional variables to see if transformations are needed.
+
+To start, we will look at the polpc variable:
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+p1 <- ggplot(dfCrime, aes(x = polpc, color=regcode, fill = regcode)) +
+  geom_histogram(position="identity", alpha=0.5, bins=30) +
+  labs(title="Police per Capita", x="Police per Capita", y="Count")
+p2 <- ggplot(dfCrime, aes(x = log(polpc), color=regcode, fill = regcode)) +
+  geom_histogram(position="identity", alpha=0.5, bins=30) +
+  labs(title="Log Transformed Police per Capita", x="Log(Police per Capita)", y="Count")
+grid.arrange(p1, p2, ncol=2)
+```
+
+As we can see from the histograms above, taking the natural log of polpc brings its distribution closer to normal. As a result, we will use the log(polpc) in our analysis.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+# creating the logpolpc variable
+dfCrime$logpolpc <- log(dfCrime$polpc)
+```
+
+Next, we will take a look at our taxpc variable to see if a transformation is warranted:
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+p1 <- ggplot(dfCrime, aes(x = taxpc, color=regcode, fill = regcode)) +
+  geom_histogram(position="identity", alpha=0.5, bins=30) +
+  labs(title="Tax revenue per capita", x="Tax revenue per Capita", y="Count")
+p2 <- ggplot(dfCrime, aes(x = log(taxpc), color=regcode, fill = regcode)) +
+  geom_histogram(position="identity", alpha=0.5, bins=30) +
+  labs(title="Log Transformed Tax revenue per Capita", x="Log(Tax revenue per Capita)", y="Count")
+grid.arrange(p1, p2, ncol=2)
+```
+The histogram of taxpc, depicts each region as having an approximately normal distribution with each centered on a different mean. When we take the natural log of taxpc, we can see in the histogram, above, that each region has a more normal distribution. In addition, taking the natural log of taxpc reduces the extremity of the outlier seen in histogram of taxpc. We will use the log(taxpc) in our analysis.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+dfCrime$logtaxpc <- log(dfCrime$taxpc)
+```
+
+Now that we have transformed our variables, we will take a look at how they relate to crime rate, and if the trends vary between each region.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+
+logpolpc_plot<-ggplot(data = dfCrime, aes(x = logpolpc, y = logcrmrte, color = regcode)) +
+      geom_point()+
+  geom_smooth(method = "lm")
+logtaxpc_plot<-ggplot(data = dfCrime, aes(x = logtaxpc, y = logcrmrte, color = regcode)) +
+      geom_point()+
+  geom_smooth(method = "lm")
+
+options(repr.plot.width=8, repr.plot.height=16)
+grid.arrange(logpolpc_plot,logtaxpc_plot, ncol=2)
+```
+
+Right away, we can see clear difference between each region. The "Other" and "Central" regions have positively sloped regression lines against police per capita, while "West" has a negatively sloped regression line. This suggests that we should investigate interactions between police per capita and the regions in our model.
+
+The tax per capita relationship, on the other hand, does not demonstrate the same slope variation between each regions. As result, we will not look into the interactions between tax per capita and regions in our model.
+
+### Model 2 Linear Model
+
+$$logcrmrte = \beta_0 + \beta_1log(Scaled Wages) + \beta_2log(Criminal Justice Effectiveness) + \beta_3West + \beta_4Central + \beta_5log(Police Per Capita)*West\\ +  \beta_6log(Police Per Capita)*Central  + \beta_7log((Police Per Capita) + \beta_8log(Tax Per Capita) + u$$
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+model2 <- lm(logcrmrte ~ logScaledWages + logcrimJustEff + logpolpc*west + logpolpc*central + logtaxpc, data = dfCrime)
+model2
+summary(model2)$adj.r.square
+```
+
+From the Residuals vs Leverage graph, below, we can see that our model does not contain any outliers with have significant influence (ie. there are no points with a Cook's distance of 0.5 or greater).
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+plot(model2, which=5)
+```
+
+**Model 2 CLM Assumptions:**
+
+* **MLR1** Discussed above.
+* **MLR2** Discussed above.
+
+* **MLR3: Non-perfect Collinearity** We will use the VIF function to provide evidence that our variables in model2 are not perfectly multicollinear. As we can see from the VIF results, below, all of the variables' values are less than five, which allows us to conclude model2 is free from multicollinearity.
+```{r}
+vif(model2)
+```
+
+* **MLR4: Zero Conditional Mean** The residual vs. fitted chart, below, gives us evidence that we meet the zero conditional mean assumption as the majority of the residual means lie close to zero. The exceptions to this trend, lie on the left and right sides of the chart where there are fewer data points (evidence for heteroskedasticity - see MLR5, below).
+```{r}
+plot(model2, which=1)
+```
+
+* **MLR5: heteroskedasticity** The above Residuals vs Fitted graph provides evidence of heteroskedasticity as right and left sides of the chart have fewer date points, and further suggested by the Breusch-Pagan test. Since we have evidence of heteroskedasticity, we will use the White-Huber method with vcovHC to generate coefficients that are robust to heteroskedasticity
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+bptest(model2)
+coeftest(model2, vcov=vcovHC)
+```
+
+As we can see from the coeftest results above, the interaction between logpolpc and west are slightly significant while the interaction between logpolpc and central is not statistically significant.  
+
+However, they may be jointly significant. We will run a F-test to see if this might be the case:
+
+```{R}
+linearHypothesis(model2, c("logpolpc:west=0", "logpolpc:central=0"), vcov=vcovHC)
+```
+
+We can see frome the F-test, above, that the interactions between logpolpc and the dummy variables west and central are not quite statistically significant to our model. However, we will continue to look at the standalone effects of west and central and keep them for our third model.
+
+```{R}
+linearHypothesis(model2, c("logpolpc=0", "logtaxpc=0"), vcov=vcovHC)
+```
+
+We also see that logtaxpc and logpolpc together are not jointly significant. Seeing how logtaxpc is also not individually significant we will dismiss it from inclusion in our third model. However, we will continue to investigate the standalone effects of west and central and keep them for our third model.
+
+
+* **MLR6: Normal Distribution of Errors** The Normal Q-Q plot, below, provides evidence that our residuals follow a normal distribution. While there are some data points on the left and right side of the graph that stray from the diagonal line, since our data set has over 30 datapoints, per the CLT, we can assume residuals have a normal distribution.
+
+```{r}
+plot(model2, which=2)
+summary(model2)
+```
+
+### Model 2 Interpretation
+
+The Adjusted R-squared variable penalizes for additional variables, which means there is a chance that this value will decrease if the added variables do not contribute to the model. By comparing the Adjusted R-squared value between our first and second models, we see that logtaxpc and the interaction between logpolpc and regcode help describe logcrmrte.
+
+Our second model has an Adjusted R-squared value of approx 0.70, which means 70% of the variation in the natural log of the crime rate is explained by the explanatory variables used in this model. This is a slight increase compared to our first model, that has an Adjusted R-squared value that explaines 63% of the model.
+
+Coefficient Analysis (assuming ceterus paribus):
+- logcrimJustEff: This suggests that for a 1% increase in criminal justice efficiency, there is approximately 6.9% decrease in crime rate.
+- logpolpc: This suggests that for a 1% increase in police per capita, there is a .5% increase in crime rate.
+- logScaledWages: This suggests that for a 1% increase in total average weekly wage, there is a 1.2% increase in crime rate.
+- taxpc: This suggests that for a 1% increase in tax per capita, there is a .15% decrease in crime rate.
+
+Compared to model 1, the adjusted $R^2$ of model 2 shows improvement from the variables selected, although interaction behavior for the regions was less pronounced. This suggests we should continue our analysis by focusing on the joint significance of the variables we added in model 2, but without the regional interactions. 
+
+
+## Model 3
+
+### Discussion of Variables
+From Model 2, we noted that the addition of the transformed variable logpolpc had statistical significance and helped improve the fit of the model, as measured by adjusted R-squared, to 70%. To increase our understanding at the linkages between police presence, economic conditions, criminal justice effectiveness and region, we propose to also analyse the areas of demographics which could have an effect on both of our key explanatory variables.  
+
+**Minorities**  
+One key component of demographics is the race of the county inhabitants and how they are perceived and treated by others, especially for minorities in the population.  For example, systemic racism could have an important effect on:  
+* Criminal Justice Effectiveness: If police, lawyers and judges are racially biased, this could lead to more arrests and more convictions regardless of the strength of the legal case and the evidence. As a result, we hypothesize the crime rate would increase.  
+* Economic Opportunity: Racism could prohibit members of the minority from having access to education, jobs and higher wages. Racism could also limit access to healthcare and social programmes which has a negative effect on economic opportunity.
+
+However, since we cannot directly measure racism, we have to operationalize this covariate by examining its effect in the real world. We propose to use the variable pctmin80, which represents the percentage of minorities in the population of the county. This is also a continous parameter and so given a higher the percentage of minorities, we should expect to see a greater effect.
+
+From the summary and boxplot below, we can see that the percentage of minorities ranges from 0.0154 - 0.6435, with a mean of 0.2621. We note that there are no major outliers.
+In addition, different regions and counties can have different demographics. We can see from the boxplots below that counties in the West have a significantly lower percentage of minorities than the other two regions.
+
+We will apply the natural log to the variable pctmin80 to 1) make it easier for us to interpret the coefficient in our linear model and 2) to better expose the linear relationship in the model.
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+summary(dfCrime$pctmin80)
+options(repr.plot.width=8, repr.plot.height=4)
+p<-ggplot(data = dfCrime, aes(y = pctmin80, color = regcode)) +
+     geom_boxplot(show.legend=FALSE) + facet_wrap(~ regcode)
+p2<-ggplot(data = dfCrime, aes(y = pctmin80)) +
+     geom_boxplot()
+grid.arrange(p, p2, ncol=2)
+
+dfCrime$logpctmin80 <- log(dfCrime$pctmin80)
+```
+
+**Density**  
+Another component of demographics is the population density, which can have impacts that may be positive or negative on the crime rate:  
+* **Criminal Justice Effectiveness**: With more people in a given area, there may be more opportunities for more people to commit crimes. However, a higher density may also result in higher deterents such as more eyewitnesses or faster law-enforcement response rates.   
+* **Economic Opportunity**: In high density areas, there is an increase in demand for support services such as food, retail, utilities, etc. As a result, there is a high demand for service jobs, which increases the economic opportunities within the area.  However, more people in a given area, there is a closer proximity to drugs, alcohol and gang violence - all of which are inhibitors to better economic outcomes.
+
+From the summary and boxplot below, we can see that the density ranges from 0.3006 - 8.8277, with a mean of 0.9792 per square mile. We note that while there are some outliers to the data, this does not appear at first glance to be an issue as some counties can contain major cities which would naturally lead to a higher population density. As a result, we will not make adjustments to any outliers unless we detect datapoints having high influence in our model.
+```{r}
+summary(dfCrime$density)
+options(repr.plot.width=8, repr.plot.height=4)
+p<-ggplot(data = dfCrime, aes(y = density, color = regcode)) +
+     geom_boxplot(show.legend=FALSE) + facet_wrap(~ regcode)
+p2<-ggplot(data = dfCrime, aes(y = density)) +
+     geom_boxplot()
+grid.arrange(p, p2, ncol=2)
+```
+
+
+**Variables not considered**  
+Tax per Capital: Given that we found taxes per capita insignificant from model 2, we will exclude it from model 3.
+
+We have also chosen not to include other variables from our dataset in our model:  
+* Urban: We believe the variable "density" better explains the same effects as "urban" while also being a continous. We believe a continous variable is more meaningful rather a binary indicator such as urban as there may be data points that failed to meet the cutoff for being defined as urban, but may still see the same effects as being urban and hence may distort our analysis.  
+* Age and Gender: While age and gender are important demographic variables, the only variable in our dataset is pctymle which provides the percentage of young males in the population. However, given that this variable encompasses both male and young, we may not be able to discern if age or gender has the larger effect (if any at all).   
+* Judgement: We chose not to include the varibles concerning the probability of a prison sentence as well as the average sentence as we believe it is unlikely that potential criminals would have good access to this information. In addition, local county officials have limited influence over the decisions of the judiciary system, as they are separate branches of government.  
+
+Our equation for model 3 is as follows:
+
+$$log(CrimeRate) = \beta_0 + \beta_1log(Scaled Wages) + \beta_2log(CriminalJusticeEffectiveness) + \beta_3West + \\
+\beta_4Central+ \beta_5log(PolicePerCapita) + \beta_6log(PercentageofMinorities) + \beta_7Density +u$$
+
+### Model 3 Linear Model
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+model3_initial<-lm(logcrmrte ~ logScaledWages + logcrimJustEff  +  west + central +
+                     logpolpc + logpctmin80 + density, data = dfCrime)
+coeftest(model3_initial, vcov=vcovHC)
+```
+We note from the the summary above that west and central are no longer statistically significant to the model, but the inclusion of logpctmin80 and density are significant at the 99% confidence level or better. It appears that after controlling for the minority percentage and density, we can better explain the variation between counties rather than purely based on their geographic location and we thus remove the latter 2 variables from our model. We confirm by checking whether we have joint signifcance of west and central below.
+
+```{r}
+linearHypothesis(model3_initial,c("west=0","central=0"), vcov=vcovHC)
+```
+Our revised equation for model 3 thus becomes:
+$$log(CrimeRate) = \beta_0 + \beta_1log(UnweightedAverageWage) + \beta_2log(CriminalJusticeEffectiveness) +  \beta_3log(PolicePerCapita) +\beta_4log(PercentageofMinorities) + \beta_5Density +u$$
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+model3<-lm(logcrmrte ~ logcrimJustEff + logScaledWages +  logpolpc  
+              + logpctmin80 + density, data = dfCrime)
+model3
+```
+```{r}
+summary(model3)$adj.r.square
+```
+
+From the Residuals vs Leverage plot below, we also note that there are despite some data points have more leverage than others, no major outliers that have significant influence on our model as measured by no points having a Cook's distance > 0.5.
+```{r}
+plot(model3,which=5)
+```
+
+**Model 3 CLM Assumptions:**
+
+* **MLR1 and 2**: Discussed earlier.
+
+* **MLR3** No perfect multicollinearity: We demonstrate that our independent variables are not perfectly multicollinear using the VIF function, and note that all of our variance inflation factors are less than 5.
+
+```{r}
+vif(model3)
+```
+
+* **MLR4'** Zero Conditional Mean: From the residual vs. fitted chart below, we see that the mean of the residuals mostly lie along 0, except towards the right side of our chart where there are fewer data points. We can reasonably conclude that we satisfy MLR4.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+plot(model3, which = 1)
+```
+
+* **MLR5'** Spherical errors: We note from the residuals vs fitted chart above that we have some evidence of heteroscedasticity, since there are less datapoints on both the left and right of the chart. As a result, we use the vcovHC method to estimate a robust variance-covariance matrix using White and Huber's method and generate coefficients that are robust to heteroscedasticity.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+coeftest(model3, vcov=vcovHC)
+```
+
+* **MLR6'** Normality of errors: From the qqplot below, we see that the residuals in our model follow a fairly normal distribution. In addition, since we have a large sample size of 90 datapoints, we can rely on a version of the central limit theorem to assume normally distributed errors.
+
+```{r}
+plot(model3,which=2)
+```
+
+
+By satisfying these assumptions, we can expect that our coefficients are approaching the true parameter values in probability.
+
+### Model 3 Interpretation
+The model shows a good fit, with an adjusted R-squared of 0.72, meaning that the model explains 72% of the variation in crime with less variables than model 2.
+
+After accounting for coefficients that are robust to heteroscedasticity, we note only three them have individual statistical significance at the 95% level or better. These are criminal justice efficiency, minority percentages and density. However, running a F-test on the other two variables logpolpc and logScaledWages show that jointly they are still significant for our model, and thus we will include them for final analysis.
+
+```{r}
+linearHypothesis(model3,c("logpolpc=0","logScaledWages=0"), vcov=vcovHC)
+```
+**Interpretation of coefficients (Assuming ceterus paribus):**
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+coeftest(model3, vcov=vcovHC)
+```
+Positive coefficients:  
+* Police presence: If we increase police per capita by 1 percent, we expect the crime rate to increase by around 0.28%.  
+* scaledWages: If we increase wages by 1 percent, we expect the crime rate to also increase by roughly 1%.  
+* Density: If we increase density by 100 people per square mile, we expect the crime rate to increase by approximately 6.6%.  
+* Percentage of minorities: If the percentage of minorities increase by 1%, we expect the crime rate to increase by 0.25%.   
+
+Negative coefficients:  
+* Criminal justice efficiency: If we increase the criminal justice efficiency by 1%, we expect the crime rate to decrease by around 0.43%.
+
+Of these different variables, we should pay particular attention to density given its large practical effect and statistical significance, which we address in our policy recommendations in the next section.
+
+## Comparison of Regression Models
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+#*** Function to convert coeftest results object into data frame
+ctdf=function(x){
+  rt=list()                             # generate empty results list
+  for(c in 1:dim(x)[2]) rt[[c]]=x[,c]   # writes column values of x to list
+  rt=as.data.frame(rt)                  # converts list to data frame object
+  names(rt)=names(x[1,])                # assign correct column names
+  rt[,"sig"]=symnum(rt$`Pr(>|z|)`, corr = FALSE, na = FALSE,
+                    cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1),
+                    symbols = c("***", "**", "*", ".", " "))
+  return(rt)
+}
+# Get vectors of robust standard errors from the coeftest output
+se.model1 <- ctdf(coeftest(model1, vcov=vcovHC))[,"Std. Error"]
+se.model2 <- ctdf(coeftest(model2, vcov=vcovHC))[,"Std. Error"]
+se.model3 <- ctdf(coeftest(model3, vcov=vcovHC))[,"Std. Error"]
+
+# Pass the standard errors into stargazer
+stargazer(model1, model2, model3, type = "text", omit.stat = "f",
+          se = list(se.model1, se.model2, se.model3),
+          star.cutoffs = c(0.05, 0.01, 0.001))
+```
+
+### Interpretation and Discussion
+Comparing the 3 models, we see that by increasing the complexity of our model specifications we have increased the fit of our model. The adjusted R2 value has steadily increased from 63% to nearly 73% between model 1 and 3, indicating that we were able to explain approximately 10% more of the variation in our model. At the same time, our overall standard errors (which have been adjusted to account for hetereoscedacity) have also decreased.  
+
+* logScaledWages: As we dived deeper into our analysis of independent variables that operationalized economic conditions, we note that the scaled average weekly wage has decreased both in terms of its practical significance (as measured by the magnitude of the coefficient) as well as its statistical significance. This indicates that as we controlled for additional covariates, the effect of wages are not as pronounced. In addition, the size of our standard errors increased from model 1 to 3. As a result, we do not believe that the average wage is a good determinant of crime.  
+* logcrimJustEff: Criminal justice effectiveness has maintained relatively stable across all 3 models with a negative coefficient of approximately -0.4 to -0.5, holding constant the effect for other covariates. It also maintained high statistical significance at the 99.9% confidence level and has relatively low standard errors across the models.. Hence, criminal justice effectiveness is an important deterrent of crime, having the ability to lower the crime rate by 0.4% to 0.5% per 1% increase in convictions per crime.  
+* logpolpc: Police per capita was statistically significant in the model 2, but once we controlled for density and the minority percentage, it became statistically insignificant in model 3. However, the higher joint significance with wage shows there is justification that merits further study. 
+* West and Central: The two regions were statistically significant in model 1, but became less significant in the later two models once we started controlling for other variables. However, the western region in particular consistently demonstrated a negative effect on the crime rate and we believe that it would be meaningful for researchers to pursue further analysis with additional data beyond our existing dataset.   
+* Interactions between police presence and regions: These interactions were deemed not statistically significant and removed for model 3.
+* Tax per capita: Taxes did not appear to be practically or statistically significant.
+* Percentage of minorities: This variable was highly statistically significant, and its inclusion helped explain some of the variation in the different regions. In addition, compared to the other variables, it has a relatively low residual standard error. While we think that the percentage of minorities is an important consideration for crime rates, but due to the fact that is opertionalizes a difficult demographic concept (racism), it is unlikely that a high minority percentage in itself is a cause of crime.   
+* Density: Density is statistically significant at the 95% confidence level and represents a large practical effect as an increase in 100 people per square mile leads to approximately 6.7% increase in the crime rate.  
+
+From the analysis of the coefficients, as well as their practical and statistical significance, we highlight specifically 1) Criminal Justice Effectiveness, 2) Percentage of Minorities and 3) Population density as the most important factors in explaining crime. Criminal justice effectiveness can be increased by either increasing convictions or decreasing the number of crimes, while the two demographic variables indicate the areas of focus for policy recommendations. We also note that the western region and possible varations of policing style is deserving of further research and analysis beyond the scope of this paper.
+
+### Ommitted Variables
+
+| Expected correlation between omitted and included variables |
+| ---- |
+
+| Omitted Variable | Crime Rate ($B_k$) | Criminal Justice Effectiveness | Economic Conditions |
+|------------------|--------------------|--------------------------------|---------------------|
+| Education        | -                  |              unknown           | +                   |
+| Social Services  | -                  |              unknown           | unknown             |
+| Unemployment     | +                  |              unknown           | -                   |
+| Inequality       | +                  |              unknown           | -                   |
+| Gang Activity    | +                  | -                              | -                   |
+| Gov't Spending   | -                  | +                              | +                   |
+
+
+The 5 major identified ommited variables are shown above.
+
+* Education is an important variable because of demographic insights it provides.  First, adults with higher education are less likely to participate in Crime and are more likely to have better economic opportunity. Second, a strong school system is also likely correlated with less youth crime.  Because of these expected correlations we are likely overestimating the economic conditions coefficient estimate.
+* Available Social Services could also lower crime.  Citizens with strong social services support have more options to get help when they lack means for purchasing basic life needs.  However this is more difficult to predict, as some social service projects, like homeless shelters, could lead to more criminal activity.
+* Unemployment is used as an important indicator of economic health and opportunity.  This is would be highly correlated to economic conditions variables like sum of wages.  This indicator variable if added to the model would decrease the magnitude of the sum of wage means coefficient estimate. 
+* Economic Inequality may also increase the crime rate as it may provide incentives for certain types of crime such as theft, kidnapping or extortion by people who have less economic means on those who have more economic means.  As discussed in model 1, it is possible that mean wage is correlated to inequality, which explains why wages positively correlate to crime in model 1.  As we add more regressors in later models, this effect is limited.  Likely because inequality is better correlated to these new regressors like density and minority population.  
+* Gang or Organized Crime is a special case of crime that contains unique causes.  It is expected that it would be negatively correlated with criminal justice effectiveness as large social pressures prevent witnesses from supporting prosecution.  Gang crime is also negatively correlated with economic conditions.  From these assumed correlations, we can say that criminal justice effectiveness and economic conditions are both underestimated compared to including a gang activity operationalized variable in the model.  
+* Government spending: Our analysis showed that local tax revenues per capita were not an important variable and part of this may be because tax revenues and government spending may not actually be strongly correlated. Effective government spending could help boost criminal justice effectiveness as well as local economic conditions, including some of the variables noted above such as education, social services and inequality. 
+
+# Conclusion
+
+## Policy Recommendations
+
+We have shown in this report 3 different models that seek to explain and model changes in the crime rate in North Carolina in 1980. We start with the fundamental premise that crime is affected by criminal justice efficiency, economic conditions and regional differences, and further develop our definition of these key explanatory variables which each new model. We propose the following recommendations on crime policy for local political candidates.   
+
+\begin{itemize}
+  \item Crime is more prevalent in places with higher population density and higher minority populations. Those seeking election in these areas should make crime reduction an important part of their message. Note that we do not offer recommendations on how important the issue of crime is relative to other issues as that is beyond the scope of our analysis.
+  \item Increase the number of rightful convictions by providing appropriate staffing and resources to local law enforcement and legal system. In highly populated areas, this could include increasing public safety infrastructure (such as security cameras) and reducing police response times. With the right resources, density can be used against potential criminals and act as a deterrent to crime. However, note that simply increasing the number of police will not necessarily lead to an increase in criminal justice effectiveness.
+  \item Provide additional support for areas with high minority populations, by conducting further studies on our ommitted variables. These could come in different forms such as better access to education, social support services or by reducing income equality. Our analysis has shown that average wages do not have a strong relationship with crime so it is important to get to the root of why these areas suffer from higher crime rates in order to provide more concrete recommendations to reduce crime in these areas.
+    \item Provide racial subconscious bias training to local law enforcement and judiciary officials to reduce the number of wrongful arrests or incidents labelled as potential crimes.
+\end{itemize}
+
+## Recommendations for Future Research
+Our findings can be further strengthed by studying the ommitted variables we have identified, the differences in the western region, as well as a time-panel of data that shows how criminal data and our independent variables change over time. Political candidates who are interested in making crime reduction an important campaign promise should consider funding these studies.
+
+We thank you for the opportunity to research this important matter. We hope our suggestions benefit understanding and provide adequate material for policy discussion in the upcoming campaign.
+
+
+# Appendix
+We include below additional network correlation plots seperated by region and metro attributes. We drew further inspiration from these plots for policy recommendations and variables to test that are be influenced by the regional and density variations.
+
+```{r, include=TRUE, comment=NA, warning=FALSE, echo=TRUE}
+options(repr.plot.width=8, repr.plot.height=4)
+#myData<-myData[, c("crmrte", "prbarr", "prbconv", "prbpris", "avgsen", "polpc", "density", "taxpc",
+#           "pctmin80", "wcon", "wtuc", "wtrd", "wfir", "wser", "wmfg", "wfed", "wsta", "wloc",
+#           "mix", "pctymle")]
+myData<-dfCrime %>% filter(other==1)
+myData<-myData[, c("crmrte", "prbarr", "prbconv", "prbpris", "avgsen", "polpc", "density", "taxpc",
+          "pctmin80", "wcon", "wtuc", "wtrd", "wfir", "wser", "wmfg", "wfed", "wsta", "wloc",
+          "mix", "pctymle")]
+r0 <- myData %>% correlate() %>% network_plot(min_cor=.25)
+myData<-dfCrime %>% filter(central==1)
+myData<-myData[, c("crmrte", "prbarr", "prbconv", "prbpris", "avgsen", "polpc", "density", "taxpc",
+          "pctmin80", "wcon", "wtuc", "wtrd", "wfir", "wser", "wmfg", "wfed", "wsta", "wloc",
+          "mix", "pctymle")]
+r1 <- myData %>% correlate() %>% network_plot(min_cor=.25)
+myData<-dfCrime %>% filter(west==1)
+myData<-myData[, c("crmrte", "prbarr", "prbconv", "prbpris", "avgsen", "polpc", "density", "taxpc",
+          "pctmin80", "wcon", "wtuc", "wtrd", "wfir", "wser", "wmfg", "wfed", "wsta", "wloc",
+          "mix", "pctymle")]
+r2 <- myData %>% correlate() %>% network_plot(min_cor=.25)
+grid.arrange(arrangeGrob(r1, bottom = 'Central Region Correlation Plot'), ncol=1)
+grid.arrange(arrangeGrob(r2, bottom = 'Western Region Correlation Plot'), ncol=1)
+grid.arrange(arrangeGrob(r0, bottom = 'Other Region Correlation Plot'), ncol=1)
+
+
+
+myData<-dfCrime %>% filter(urban==0)
+myData<-myData[, c("crmrte", "prbarr", "prbconv", "prbpris", "avgsen", "polpc", "density", "taxpc",
+          "pctmin80", "wcon", "wtuc", "wtrd", "wfir", "wser", "wmfg", "wfed", "wsta", "wloc",
+          "mix", "pctymle")]
+r0 <- myData %>% correlate() %>% network_plot(min_cor=.25)
+myData<-dfCrime %>% filter(urban==1)
+myData<-myData[, c("crmrte", "prbarr", "prbconv", "prbpris", "avgsen", "polpc", "density", "taxpc",
+          "pctmin80", "wcon", "wtuc", "wtrd", "wfir", "wser", "wmfg", "wfed", "wsta", "wloc",
+          "mix", "pctymle")]
+r1 <- myData %>% correlate() %>% network_plot(min_cor=.25)
+grid.arrange(arrangeGrob(r0, bottom = 'Non-Urban Correlation Plot'), ncol=1)
+grid.arrange(arrangeGrob(r1, bottom = 'Urban Correlation Plot'), ncol=1)
+
+```
+
