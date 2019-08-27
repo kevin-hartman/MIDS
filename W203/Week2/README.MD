@@ -1,7 +1,3 @@
----
-title: W203 Week 2 | Probability Theory
----
-
 # Week 2 | Probability Theory
 
 Homework Due
