@@ -1,7 +1,3 @@
----
-title: W203 Week 3 | Discrete Random Variables
----
-
 # Week 3 | Discrete Random Variables
 
 Homework Due
