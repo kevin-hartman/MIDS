@@ -1,8 +1,3 @@
----
-title: W201 Week 12 | Data Science Futures & Life as a Data Scientist: Domains, Employers, Projects
-
----
-
 # Week 12 | Data Science Futures & Life as a Data Scientist: Domains, Employers, Projects
 * The future of data science: More than Minority Report?
 * Ubiquitous data science’s potential ethical and legal issues
