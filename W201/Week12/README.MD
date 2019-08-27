@@ -5,6 +5,11 @@
 * Work as a data scientist, including interviews with current data scientists
 
 
+Homework Due
+* Individual Assignment #3
+  * Bubblewrapper
+    * [Link to presentation](https://drive.google.com/open?id=1ZB1rk6Az3vlYs7Q9Cl8bSF6nkpWNQXajhkqJJ1CtfSU)
+    * [Link to recording](https://drive.google.com/open?id=1p42BihKBuiEdS2nq6uW9TAD6LxMSmoqB)
 
 Async
 * [Data Science Futures & Life as a Data Scientist](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/f8ca050b-8af1-461e-a394-61b06523b25e)
