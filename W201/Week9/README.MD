@@ -1,7 +1,3 @@
----
-title: W201 Week 9 | Storytelling through Words and Pictures
----
-
 # Week 9 | Storytelling through Words and Pictures
 * Conveying findings through stories and visualizations
 * Overview of storytelling and what makes a good story
