@@ -1,7 +1,3 @@
----
-title: W201 Week 11 | Persuasion in Business and Real Life
----
-
 # Week 11 | Persuasion in Business and Real Life
 * Persuasion and everyday life: changing attitudes and behaviors
 * Examples of persuasion gone bad, including propaganda and misinformation
