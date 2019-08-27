@@ -1,7 +1,3 @@
----
-title: W201 Week 10 | How Visualizations Work
----
-
 # Week 10 | How Visualizations Work
 * Conveying findings to various audiences
 * Revisiting the stories told in our earlier case studies
