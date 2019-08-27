@@ -16,10 +16,16 @@ Your function should return a vector of length 2, containing the lower bound and
 
 ```{r}
 sim_conf_int = function(n, alpha) {
-  # Your code to 
-  # 1. simulate n draws from a standard normal dist.
-  # 2. compute a confidence interval with confidence level alpha
- return(c(-1,1))  # replace with the interval you compute.
+# Your code to 
+# 1. simulate n draws from a standard normal dist.
+X = rnorm(n)
+# 2. compute a confidence interval with confidence level alpha
+
+xbar = mean(X)
+s = sd(X)
+
+
+return(c(xbar + qnorm(1-alpha/2)*s/sqrt(n),xbar + qnorm(alpha/2)*s/sqrt(n))) 
 }
 ```
 

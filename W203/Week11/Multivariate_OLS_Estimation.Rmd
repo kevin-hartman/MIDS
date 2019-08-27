@@ -1,0 +1,156 @@
+---
+title: "Multivariate OLS Estimation of GPA Data"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Analysis of Influential Cases
+
+Previously, we fit a bivariate linear model, predicting GPA as a function of ACT score
+
+$$ colGPA = \beta_0 + \beta_1 ACT + u $$
+
+Here's a quick recap of the steps we took.
+
+
+
+Basic setup and loading of data.
+
+```{r results = "hide"}
+# We use the stargazer package to display nice regression tables.
+library(stargazer)
+
+load("GPA1.rdata")
+head(data)
+```
+
+We examined the colGPA and ACT variables individually, which we omit here.
+
+We then created a scatterplot of the two variables and fit a linear model.
+
+```{r}
+# create the scatterplot
+plot(jitter(data$ACT), jitter(data$colGPA), xlab = "ACT score", ylab = "College GPA", main = "College GPA versus ACT score")
+
+# fit the linear model
+(model1 = lm(colGPA ~ ACT, data = data))
+
+# Add regression line to scatterplot
+abline(model1)
+```
+
+
+
+
+
+Next, we will want to examine our data to check for any unusually
+influential cases.
+We can use a residuals vs. leverage plot for this purpose.
+
+
+```{r influence}
+plot(model1, which = 5)
+
+
+```
+
+The following code shows what would happen if we introduced an error into 
+the data set, resulting in a point with high influence.
+
+```{r}
+ACT_with_error = data$ACT
+ACT_with_error[5] = 80
+model1_with_error = lm(data$colGPA ~ ACT_with_error)
+
+# visualize the data with the error and the new ols line
+plot(jitter(ACT_with_error), jitter(data$colGPA), xlab = "ACT score", ylab = "College GPA", main = "College GPA versus ACT score including Error")
+# Add regression line to scatterplot
+abline(model1_with_error)
+
+plot(model1_with_error, which=5, main = "GPA Data with Error Introduced")
+
+```
+
+Notice that the point now stands out as having Cook's distance greater
+than 1.
+  
+**Warning:** when we find an influential case, we never automatically remove it
+from the data set.
+
+
+
+## Multivariate Linear Model Estimation
+
+Here, we recreate the regression from the lecture and from
+Woodridge chapter 3.
+We predict colGPA from both ACT and high school GPA (hsGPA).  
+
+Our second model looks like this.
+
+$$ colGPA = \beta_0 + \beta_1 ACT + \beta_2 hsGPA + u $$
+
+We first examine the high school GPA variable.
+
+```{r}
+summary(data$hsGPA)
+hist(data$hsGPA, breaks = 20, main = "High School GPA", xlab = NULL)
+library(car)
+scatterplotMatrix(data[,c("colGPA", "ACT", "hsGPA")], diagonal = "histogram")
+```
+
+Next, we fit the linear model.
+
+```{r}
+(model2 = lm(colGPA ~ ACT + hsGPA, data = data))
+model2$coefficients
+```
+
+
+Let's compare the R-squares for our two models.
+
+```{r}
+summary(model1)$r.square
+summary(model2)$r.square
+```
+
+Remember that R-squared can only go up when adding new variables.
+
+For an assessment of model fit that penalizes extra variables, 
+we can use the Akaike Information Criterion (AIC) or the Bayesian
+Information Criterion (BIC)
+
+```{r}
+AIC(model1)
+AIC(model2)
+```
+
+
+## Presenting Regression Output
+
+For a lot of reasons, we usually want to display the results of more than
+one linear model.
+
+1. There can be good arguments for different specifications
+2. We want to show that an effect is robust across models
+3. We want to show that we're not cherry-picking a model that supports our argument
+
+Because of these reasons, we often want to present the results of
+multiple models in a *regression table*.  The stargazer package is
+a great way to create these tables.
+
+
+```{r, results='asis'}
+library(stargazer)
+stargazer(model1, model2, type = "latex", 
+          report = "vc", # Don't report errors, since we haven't covered them
+          title = "Linear Models Predicting College GPA",
+          keep.stat = c("rsq", "n"),
+          omit.table.layout = "n") # Omit more output related to errors
+```
+
+
+
+The Stargazer Cheatsheet, by Jake Russ, is a great place to get started with stargazer.  http://jakeruss.com/cheatsheets/stargazer.html

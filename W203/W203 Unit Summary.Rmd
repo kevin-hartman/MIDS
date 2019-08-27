@@ -12,7 +12,6 @@ library(ggplot2)
 ```
 
 
-
 ## Terms and Definitions
 A **population** is a well-defined collection of objects in an area of interest (investigation).
 
@@ -204,7 +203,7 @@ where the outcomes $O_x = \left \{x \in \mathbb{R} : f(x) > 0 \right \}$
 
 Suppose $p(x)$ depends on a quantity that can be assigned any one of a number of possible values, with each different value determining a different probability distribution. Such a quantity is called a **parameter** of the distribution. The collection of all probability distributions for different values of the parameter is called a **family** of probability distributions.
 
-The **Cumulative Distribution Function** (cdf) $F(X)$ of a **Discrete Random Variable** (discrete rv) $X$ with probability mass function $p(x)$ iis desribed by
+The **Cumulative Distribution Function** (cdf) $F(X)$ of a **Discrete Random Variable** (discrete rv) $X$ with probability mass function $p(x)$ is described by
 <center>$$F(X)=P(X \leq x)=\sum_{y \in O_x : y \leq x}{p(y)} \text{   (the sum of probability masses)}$$</center>
 For any number $x$, $F(x)$ is the probability that the observed value of $X$ will be at most $x$.
 
@@ -317,16 +316,16 @@ A **Continuous Random Variable** $X$ is described by probability density functio
 
 The **cumulative probability distribution**, $F(x)$, is the area under f from $-\infty$ to $x$:
 
-<center>$$F(x)=\int_{x=-\infty}^x{f(x)dx}$$</center>
+<center>$$F(x)=P(X \leq x) = \int_{y=-\infty}^x{f(y)dy}$$</center>
 
-$\text{Noting that } \int_{x=-\infty}^\infty{f(x)dx} = 1$
+$\text{Noting that } \int_{y=-\infty}^\infty{f(y)dy} = 1$
 
 $\text{By the fundamental theorom of calculus, }  f(x)=F^{'}(x) \text{ when } F^{'}(x) \text{ exists }$
 
 
 **Expectation of Continuous Random Variables**
 
-<center>$$\text{Expectation } (x)=\int_{x=-\infty}^\infty x \cdot f(x)dx$$</center>
+<center>$$\text{Expectation of } X =\int_{x=-\infty}^\infty x \cdot f(x)dx$$</center>
 
 $\text{if } h:\mathbb{R}\rightarrow \mathbb{R} \text{ then } h(x) \text{ is a random variable and } E(h(x))=\int_{x=-\infty}^\infty h(x)f(x)dx$
 
@@ -365,6 +364,59 @@ axis(2)
 box()
 ```
 
+<center>Expectation $E(x) = \int_{-\infty}^{\infty}x \cdot f(x)dx = \int_{A}^{B}x \cdot \frac{1}{B-A}dx = \frac{x^2}{2\cdot(B-A)}\bigg\rvert_{A}^{B}=\frac{B^2-A^2}{2 \cdot(B-A)} = \frac{A+B}{2}$</center>
+
+**Normal Distribution**
+
+A continuous rv X is said to have a normal distribution with parameters $\mu$ and $\sigma$ (or $\mu$ and $\sigma^2$), where $-\infty < \mu < \infty$ and $0 < \sigma$, if the pdf of X is:
+
+$$f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-(x-\mu)^2/2\sigma^2} -\infty < x < \infty$$
+It can be shown that $E(X) = \mu$ and $V(X) = \sigma^2$, so the parameters are the mean and the standard deviation of X.
+
+The statement that X is normally distributed with parameters $\mu$ and $\sigma^2$ is often abbreviated $X \sim N(\mu,\sigma^2).$
+
+$\mu$, the location parameter, is both the mean and the median. 
+
+$\sigma$, the scale parameter, stretches the curve horizontally.
+
+Standard Normal, Z, or $\phi(z)$, is when $\mu=0$ and $\sigma=1$
+
+Standardizing a Normal Variable is when we take a normal variable that is not standard normal, and adjust it. The new random variable becomes $\frac{(X-\mu)}{\sigma}$, and we can express probabilities invovling X in terms of the z-distribution.
 
 
-<center>Expectation $E(x) = \int_{-\infty}^{\infty}x \cdot f(x)dx = \int_{A}^{B}x \cdot \frac{x}{B-A}dx = \frac{x^2}{2\cdot(B-A)}\bigg\rvert_{A}^{B}=\frac{B^2-A^2}{2 \cdot(B-A)} = \frac{A+B}{2}$</center>
+Properties of the Normal Distribution
+
+
+68% of the area is within 1 standard deviation of the mean.
+
+95% of the area is within 2 standard deviations of the mean.
+
+99.7% of the area is within 3 standard deviations of the mean.
+
+
+**Deviations from normality**
+
+***Skewness***
+
+Negative Skew - tail is to the left
+
+Positive Skew - tail is to the right
+
+***Kurtosis***
+
+Platykurtic - flatter and smooshed down
+
+Leptokurtic - much more bunched together and peek up.
+
+\section{1. Distributions}
+
+\subsection{Unit 5: Joint Distributions}
+
+\verb|Joint Probability Density Fxn:| For two continuous rv's $X$ and $Y$.  The joint pdf of $(X,Y)$ is defined $\forall A \subseteq \mathbb{R}^2$
+$$  P((X,Y)\in A) = \iint_{A} f(x,y)dx dy $$
+It must be that $f(x,y) \geq 0$ and $\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x, y) dx dy= 1$. Note also that this integration is commutative.
+
+
+
+
+
