@@ -3,6 +3,12 @@
 * Overview of storytelling and what makes a good story
 
 
+Homework Due
+* Individual Assignment #2
+  * Beyond Plug and Pray: How to ensure self-determination in a massively-connected society
+    * [Link to presentation](https://drive.google.com/open?id=1wPsZ5iLa4wUXvq3wjntRle1tqrUoO4DAi5tRCN_sei4)
+    * [Link to recording](https://drive.google.com/open?id=1W5dt01eUqWzF99wj8DhuyQ-xcXIPXIrg)
+    
 Async
 * [Storytelling through Words and Pictures](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/baed7ff0-8b80-49ce-8098-e90300b41e02)
 
