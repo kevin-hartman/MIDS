@@ -1,7 +1,3 @@
----
-title: W201 Week 4 | Biases in Decision Making
----
-
 # Week 4 | Biases in Decision Making
   * Biases in individual and organizational decision making, including:
     * anchoring, groupthink, inertia, recency, attribution asymmetry
