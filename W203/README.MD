@@ -1,8 +1,3 @@
----
-title: W203 - Statistics for Data Science
-navigation_weight: 2
----
-
 # W203 - Statistics for Data Science
 
 Weekly Assignments, Readings, and Notes
