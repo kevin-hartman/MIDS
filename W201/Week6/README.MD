@@ -1,7 +1,3 @@
----
-title: W201 Week 6 | Practical Research Design for Real People
----
-
 # Week 6 | Practical Research Design
 * The linear model of research design 
 * The iterative reality of research design
