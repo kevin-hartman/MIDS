@@ -1,7 +1,3 @@
----
-title: W201 Week 7 | Fallacies
----
-
 # Week 7 | Good Logic, Bad Logic, and Everything in Between
 * Tempting fallacies of argumentation
 * Uncovering buried assumptions and dead conventions 
