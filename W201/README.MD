@@ -1,7 +1,3 @@
----
-title: W201 - Research Design and Applications for Data and Analysis (RDADA)
----
-
 # W201 - Research Design and Applications for Data and Analysis (RDADA)
 
 Weekly Assignments, Readings, and Notes
