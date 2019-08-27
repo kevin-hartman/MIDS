@@ -1,7 +1,3 @@
----
-title: W201 Week 13 | Wrap-Up, Key Lessons, and the Path Forward
----
-
 # Week 13 | Wrap-Up, Key Lessons, and the Path Forward
 * Review
 * Work-in-progress updates
