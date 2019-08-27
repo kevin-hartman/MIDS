@@ -1,7 +1,3 @@
----
-title: W203 Week 5 | Joint Distributions of Random Variables
----
-
 # Week 5 | Joint Distributions of Random Variables
 
 Homework Due
