@@ -4,7 +4,7 @@
 Homework Due
 * Group Assignment #1
   * Improving 911 Outcomes for the Mentally Ill
-    * [Link to presentation](https://docs.google.com/presentation/d/11VZyVNW9LZTxxV1iR9GG4_BazxShmKwl212Wns-oOI4/edit?usp=sharing)
+    * [Link to presentation](https://drive.google.com/open?id=11VZyVNW9LZTxxV1iR9GG4_BazxShmKwl212Wns-oOI4)
     * [Link to recording](https://drive.google.com/file/d/1ASha4p7zRfiz3Q219OdA6HtoFHUMc5BR/view?usp=sharing)
     
 Async
