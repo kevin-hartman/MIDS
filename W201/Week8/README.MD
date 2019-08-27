@@ -1,7 +1,3 @@
----
-title: W201 Week 8 | Research Design Case Study
----
-
 # Week 8 | Research Design Case Study
 * Practicum on research design: A case study from start to “finish”
 
