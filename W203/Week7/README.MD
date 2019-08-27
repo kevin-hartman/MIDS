@@ -1,7 +1,3 @@
----
-title: W203 Week 7 | Estimation
----
-
 # Week 7 | Estimation
 
 Homework Due
