@@ -1,7 +1,3 @@
----
-title: W201 Week 5 | What is Knowing?
----
-
 # Week 5 | What is Knowing
 * The “scientific method”—and its discontents
 * Perspectives on “knowing,” from philosophy to action
