@@ -4,6 +4,12 @@
 * The impact of research design on persuadability
 * Wrap-up: conveying findings
 
+Homework Due
+* Group Assignment #2
+  * A Brave New World? The benefits and pitfalls of Social Credit Monitoring
+    * [Link to presentation](https://drive.google.com/open?id=1HehgdvXWxEHCN0OgFPKh2IllZemi-ccTe8zo_edtIWM)
+    * [Link to recording](https://drive.google.com/open?id=1jvOaEy-rT_gA0bgNyRmJIPOhHzaqtK6j)
+    
 Async
 * [Persuasion in Business and Real Life](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/789e7935-43a9-497e-a9bf-9e2ddf72d497)
 
