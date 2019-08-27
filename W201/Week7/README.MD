@@ -9,7 +9,7 @@ title: W201 Week 7 | Fallacies
 
 
 Async
-* [ood Logic, Bad Logic, and Everything in Between](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/cb4e4ef3-04c5-45da-8eac-69ebfb8a8e23)
+* [Good Logic, Bad Logic, and Everything in Between](https://learn.datascience.berkeley.edu/ap/courses/266/sections/63f6d138-9c2e-4d9e-b9b1-4d2e70788eaf/coursework/courseModule/cb4e4ef3-04c5-45da-8eac-69ebfb8a8e23)
 
 Required readings:
 * Huff, Darrell Huff, and Irving Geis. How to Lie with Statistics. W. W. Norton, 1993.
@@ -21,7 +21,7 @@ Optional readings:
   * [Full book](./Stat-Spotting_A_Field_Guide_to_Identifying_Dubious_Data.pdf)
 
 Additional video:
-* Below you can find a short youtube video that will supplement my overview at the beginning of class. You must be signed into your bmail account to view the video. [Week 6 Mike Overview (Video)](https://youtu.be/2OZKHEHqbgs)
+* Below you can find a short youtube video that will supplement my overview at the beginning of class. You must be signed into your bmail account to view the video. [Week 7 Mike Overview (Video)](https://youtu.be/2OZKHEHqbgs)
 
 Discussion Questions:
 
