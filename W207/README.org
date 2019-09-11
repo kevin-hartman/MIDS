@@ -33,7 +33,7 @@ Machine learning is a rapidly growing field at the intersection of computer scie
   3. Programming experience in Python. Homework will often require students to consult the [[http://scikit-learn.org/stable/index.html][scikit-learn]] library documentation.
 
 * Assignments and Grading
-Course grades will be based mostly on three guided programming projects designed to synthesize concepts introduced in the lectures and one more open-ended final project. Please see [[./assignments][this document]] for more details.
+Course grades will be based mostly on three guided programming projects designed to synthesize concepts introduced in the lectures and one more open-ended final project. Please see [[./Assignments][this page]] for more details.
 
 
 Course Resources
