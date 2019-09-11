@@ -28,4 +28,4 @@ All the projects should run fine on your personal computer. Install python, ipyt
 
 Both Enthought and Anaconda are free python distributions that include all the relevant packages.
 
-This page was recreated from the course assignments document located [[https://docs.google.com/document/d/1nwsfta3loT3paoXA4uGUK9RXSAi4mGz7QE24DuXlrgs/edit?usp=sharing][here]].
+This page was recreated from the course assignments document located [here](https://docs.google.com/document/d/1nwsfta3loT3paoXA4uGUK9RXSAi4mGz7QE24DuXlrgs/edit?usp=sharing).
