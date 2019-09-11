@@ -6,7 +6,7 @@
 |------|----------| 
 |Week 1 | [Introduction](#week-1-introduction) | 
 |Week 2 | [Problem Setup and Nearest Neighbors](#week-2-problem-setup-and-nearest-neighbors) |  
-|Week 3 | [Quantifying uncertainty](#week-3-quantifying-uncertainty) |
+|Week 3 | [Supervised Learning I: Naive Bayes](#week-3-Supervised-Learning-I-Naive-Bayes) |
 |Week 4 | [Blocking and Clustering](#week-4-blocking-and-clustering) |
 |Week 5 | [Covariates and Regression](#week-5-covariates-and-regression) |
 |Week 6 | [Regression; Multi-Factor Experiments](#week-6-regression-multi-factor-experiments) |
@@ -18,7 +18,6 @@
 |Week 12 | [Attrition, Mediation, Generalizability](#week-12---attrition-mediation-generalizability) |
 |Week 13 | [Examples of Experiments](#week-13---examples-of-experiments) |
 |Week 14 | [Student Presentations](#student-presentations-plan-on-15-20-min-plus-time-for-questions) |
-
 
 
 # Week 1: Introduction
