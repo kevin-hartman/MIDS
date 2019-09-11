@@ -7,17 +7,17 @@
 |Week 1 | [Introduction](#week-1-introduction) | 
 |Week 2 | [Problem Setup and Nearest Neighbors](#week-2-problem-setup-and-nearest-neighbors) |  
 |Week 3 | [Supervised Learning I: Naive Bayes](#week-3-Supervised-Learning-I-Naive-Bayes) |
-|Week 4 | [Blocking and Clustering](#week-4-blocking-and-clustering) |
-|Week 5 | [Covariates and Regression](#week-5-covariates-and-regression) |
-|Week 6 | [Regression; Multi-Factor Experiments](#week-6-regression-multi-factor-experiments) |
-|Week 7 | [Heterogeneous Treatment Effects ](#week-7-heterogeneous-treatment-effects) |
-|Week 8 | [Noncompliance](#week-8-noncompliance) |
-|Week 9 | [Spillovers](#week-9-spillovers) |
-|Week 10 | [Common problems and diagnostics](#week-10-common-problems-and-diagnostics) |
-|Week 11 | [Causality from Observational Data (IV, RD)](#week-11---causality-from-observational-data-iv-rd) | 
-|Week 12 | [Attrition, Mediation, Generalizability](#week-12---attrition-mediation-generalizability) |
-|Week 13 | [Examples of Experiments](#week-13---examples-of-experiments) |
-|Week 14 | [Student Presentations](#student-presentations-plan-on-15-20-min-plus-time-for-questions) |
+|Week 4 | [Supervised Learning II: Decision Trees](#week-4-Supervised-Learning-II-Decision-Trees) |
+|Week 5 | [Supervised Learning III: Regression](#week-5-Supervised-Learning-III-Regression) |
+|Week 6 | [Supervised Learning IV: More Linear Models](#week-6-Supervised-Learning-IV-More-Linear-Models) |
+|Week 7 | [Supervised Learning V: Neural Networks](#week-7-Supervised-Learning-V-Neural-Networks) |
+|Week 8 | [Supervised Learning VI: SVMs, Choosing Classifiers, Speech Recognition](#week-8-Supervised-learning-VI-SVMs-Choosing-Classifiers-Speech-Recognition) |
+|Week 9 | [Unsupervised Learning I: Cluster Analysis](#week-9-Unsupervised-learning-I-Cluster-Analysis) |
+|Week 10 | [Unsupervised Learning II: Expectation Maximization](#week-10-Unsupervised-Learning-II-Expectation-Maximization) |
+|Week 11 | [Unsupervised Learning III: Dimensionality Reduction](#week-11-Unsupervised-learning-III-Dimensionality-Reduction) | 
+|Week 12 | [Network Analysis](#week-12-Network-Analysis) |
+|Week 13 | [Recommender Systems](#week-13-Recommender-systems) |
+|Week 14 | [Wrap-Up](#week-14-Wrap-Up) |
 
 
 # Week 1: Introduction
@@ -89,7 +89,7 @@
  * Network link predictions.
  * Scaling and other challenges.
 
-# Week 13: Recommender systems
+# Week 13: Recommender Systems
  * Motivation
  * The Netflix challenge
  * Content-based methods
