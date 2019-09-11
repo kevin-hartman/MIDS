@@ -38,7 +38,7 @@ Machine learning is a rapidly growing field at the intersection of computer scie
 Course grades will be based mostly on three guided programming projects designed to synthesize concepts introduced in the lectures and one more open-ended final project. Please see [[./Assignments][this page]] for more details.
 
 * Live Sessions
-Live sessions for Section 8, Clarence Chio, are on Tuesdays at 8:30pm CST.  Please see [[./LiveSessions][this page]] for more details.
+Live sessions for Section 8, Clarence Chio, are on Tuesdays at 8:30pm CST.  Please see [[./LiveSession][this page]] for more details.
 
 * Course Resources
 Most textbooks on machine learning are written with considerable technical detail. As a result, there is no one textbook that aligns with this course. We will list readings that correspond to each week, including some general philosophy and landmark research papers, as well as few chapters from [[http://ciml.info/][Hal Daume’s unfinished textbook]].
