@@ -39,7 +39,7 @@ The reference notebooks used during live session are located [here](https://driv
  * Generalization and overfitting: linear models vs. nearest neighbors
  * K-nearest neighbors, distance metrics
  * Case study: real estate value, digit classification
- * [Link to Week 2-3 Presentation](https://drive.google.com/open?id=1qsTtoJuvp3oonVZx6S5iLa9iyfm7TVHn)
+ * *No Live Session due to Labor Day week*
 
 # Week 3: Supervised Learning I: Naive Bayes
  * Probability review: Random variables, Independence, Bayes rule
