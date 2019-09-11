@@ -55,4 +55,4 @@ Most textbooks on machine learning are written with considerable technical detai
 - Final project: 35%
 - Participation: 5%
 
-This page was created from the course syllabus located here: https://docs.google.com/document/d/1nwsfta3loT3paoXA4uGUK9RXSAi4mGz7QE24DuXlrgs/edit?usp=sharing
+This page was created from the course syllabus located [[https://docs.google.com/document/d/1nwsfta3loT3paoXA4uGUK9RXSAi4mGz7QE24DuXlrgs/edit?usp=sharing][here]]: 
