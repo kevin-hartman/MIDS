@@ -1,5 +1,9 @@
 # Preparing for Live Sessions 
 
+The live session presentation content is located [[https://drive.google.com/drive/u/0/folders/1Kcy7uKLwSJYqlXDWRz3rlfVXc88fbn7R][here]].
+
+The reference notebooks used during live session are located [[https://drive.google.com/drive/u/0/folders/1aoxZxDQa_uGEV4D2EyuUj-2van70wvKo][here]].
+
 *Topics for class*
 
 | Week  | Topic |
@@ -20,10 +24,12 @@
 |Week 14 | [Wrap-Up](#week-14-Wrap-Up) |
 
 
+
 # Week 1: Introduction
  * Overview of machine-learning applications
  * Brief history
  * Fundamentals of machine learning
+ * [[https://drive.google.com/open?id=1Nbk3T4Mn879M6FPxn2BUcYx_K7hPGFZm][Link to Week 1 Presentation]]
 
 # Week 2: Problem Setup and Nearest Neighbors
  * Why prediction?
@@ -32,12 +38,14 @@
  * Generalization and overfitting: linear models vs. nearest neighbors
  * K-nearest neighbors, distance metrics
  * Case study: real estate value, digit classification
+ * [[https://drive.google.com/open?id=1qsTtoJuvp3oonVZx6S5iLa9iyfm7TVHn][Link to Week 2-3 Presentation]]
 
 # Week 3: Supervised Learning I: Naive Bayes
  * Probability review: Random variables, Independence, Bayes rule
  * Generative models and Naive Bayes
  * Maximum likelihood estimation and smoothing
  * Case study: spam classification
+ * [[https://drive.google.com/open?id=1qsTtoJuvp3oonVZx6S5iLa9iyfm7TVHn][Link to Week 2-3 Presentation]]
 
 # Week 4: Supervised Learning II: Decision Trees
  * Decision Trees
