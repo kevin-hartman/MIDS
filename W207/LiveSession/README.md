@@ -1,8 +1,8 @@
 # Preparing for Live Sessions 
 
-The live session presentation content is located [[https://drive.google.com/drive/u/0/folders/1Kcy7uKLwSJYqlXDWRz3rlfVXc88fbn7R][here]].
+The live session presentation content is located [here](https://drive.google.com/drive/u/0/folders/1Kcy7uKLwSJYqlXDWRz3rlfVXc88fbn7R).
 
-The reference notebooks used during live session are located [[https://drive.google.com/drive/u/0/folders/1aoxZxDQa_uGEV4D2EyuUj-2van70wvKo][here]].
+The reference notebooks used during live session are located [here](https://drive.google.com/drive/u/0/folders/1aoxZxDQa_uGEV4D2EyuUj-2van70wvKo).
 
 *Topics for class*
 
@@ -29,7 +29,7 @@ The reference notebooks used during live session are located [[https://drive.goo
  * Overview of machine-learning applications
  * Brief history
  * Fundamentals of machine learning
- * [[https://drive.google.com/open?id=1Nbk3T4Mn879M6FPxn2BUcYx_K7hPGFZm][Link to Week 1 Presentation]]
+ * [Link to Week 1 Presentation](https://drive.google.com/open?id=1Nbk3T4Mn879M6FPxn2BUcYx_K7hPGFZm])
 
 # Week 2: Problem Setup and Nearest Neighbors
  * Why prediction?
@@ -38,14 +38,14 @@ The reference notebooks used during live session are located [[https://drive.goo
  * Generalization and overfitting: linear models vs. nearest neighbors
  * K-nearest neighbors, distance metrics
  * Case study: real estate value, digit classification
- * [[https://drive.google.com/open?id=1qsTtoJuvp3oonVZx6S5iLa9iyfm7TVHn][Link to Week 2-3 Presentation]]
+ * [Link to Week 2-3 Presentation](https://drive.google.com/open?id=1qsTtoJuvp3oonVZx6S5iLa9iyfm7TVHn)
 
 # Week 3: Supervised Learning I: Naive Bayes
  * Probability review: Random variables, Independence, Bayes rule
  * Generative models and Naive Bayes
  * Maximum likelihood estimation and smoothing
  * Case study: spam classification
- * [[https://drive.google.com/open?id=1qsTtoJuvp3oonVZx6S5iLa9iyfm7TVHn][Link to Week 2-3 Presentation]]
+ * [Link to Week 2-3 Presentation](https://drive.google.com/open?id=1qsTtoJuvp3oonVZx6S5iLa9iyfm7TVHn)
 
 # Week 4: Supervised Learning II: Decision Trees
  * Decision Trees
