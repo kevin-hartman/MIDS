@@ -29,7 +29,7 @@ The reference notebooks used during live session are located [here](https://driv
  * Overview of machine-learning applications
  * Brief history
  * Fundamentals of machine learning
- * [Link to Week 1 Presentation](https://drive.google.com/open?id=1Nbk3T4Mn879M6FPxn2BUcYx_K7hPGFZm])
+ * [Link to Week 1 Presentation](https://drive.google.com/open?id=1Nbk3T4Mn879M6FPxn2BUcYx_K7hPGFZm)
  * [Link to Live Session recording](https://api.zoom.us/recording/play/J5nkN2AnYfnSTnVzGD6CytTLX2MW8m7XpPSgk3ajDqqfj4MznP62vOa7d-vN3yCY)
 
 # Week 2: Problem Setup and Nearest Neighbors
