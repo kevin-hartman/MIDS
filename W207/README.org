@@ -16,10 +16,10 @@
 |    9 | Unsupervised Learning I: Cluster Analysis |   | [[./Week09/220451867_Hierarchical_Clustering_Algorithms_for_Document_Datasets.pdf][Zhao and Karypis, Hierarchical clustering algorithms for document datasets]], [[./Week09/MIT_genomics_eisen_reading.pdf][Eisen et al., Cluster analysis and display of genome-wide expression patterns]]  | [[https://drive.google.com/open?id=1zV7oqDLmLAuaMVK3NHd_Zdk2UnRPrU_u][Project #2 Due]] |
 |   10 | Unsupervised Learning II: Expectation Maximization    | [[./Week10/em.pdf][Tibshirani lecture notes on EM]] | [[./Week10/ReynoldsRose.pdf][Doug Reynolds original paper on GMMs for speaker identification]] | -- |
 |   11 | Unsupervised Learning III: Dimensionality Reduction |  | [[./Week11/ciml-v0_9-ch13.pdf][Hal Daume, Unsupervised Learning (chapter 13)]], [[./Week11/Eigenface.pdf][Turk and Pentland, Eigenfaces for Recognition]] | -- |
-|   12 | Immersion - no class                         |   | -- |
+|   12 | Immersion - no class                         |  |  | -- |
 |   13 | Network Analysis                          | [[http://infolab.stanford.edu/~backrub/google.html][Page and Brin, The Anatomy of a Large-Scale Hypertextual Web Search Engine]]| [[./Week12/623.pdf][Barabasi, The Scale-Free Property]]  | [[https://drive.google.com/open?id=1sGgKHCZQc2soiWh4znXTwm6xRd21ZBGN][Project #3 Due]] |
 |   14 | Recommender Systems                       | |  [[./Week13/a13-gomez-uribe.pdf][Gomez and Hunt, The Netflix Recommender System: Algorithms, Business Value, and Innovation]], [[./Week13/p447-koren.pdf][Koren, Collaborative Filtering with Temporal Dynamics]] | -- |
-|   15 | Thanksgiving week - review                          |   | -- |
+|   15 | Thanksgiving week - review                          |   |   | -- |
 |   16 | Final Project Presentations                         |                                                 |                                                                          | [[./FinalProject][Final Project]] |
 |      |                                           |                                                 |                                                                          |    |
 
