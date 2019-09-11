@@ -1,0 +1,57 @@
+#+TITLE: Applied Machine Learning 
+#+OPTIONS: toc:nil 
+
+* Schedule
+
+| Week | Topics                                    | Async Reading                                   | Sync Reading                                                            | Assignment Due           |
+|------+-------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+--------------------------|
+|    1 | Introduction                              | [[http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/35179.pdf][ Halevy, Norvig, Pereira, The unreasonable effectiveness of data]] |    | -- |
+|    2 | Problem Setup and Nearest Neighbors       | [[][]], [[][]], O: [[][]] |  | -- |
+|    3 | Supervised Learning I: Naive Bayes        | [[][]], [[][]], O: [[][]] |  | -- |
+|    4 | Supervised Learning II: Decision Tree     | [[][]], [[][]], O: [[][]] |  | -- |
+|    5 | Supervised Learning III: Regression       | [[][]], [[][]], O: [[][]] |  | -- |
+|    6 | Supervised Learning IV: Linear Models     | [[][]], [[][]], O: [[][]] |  | -- |
+|    7 | Supervised Learning V: Neural Networks    | [[][]], [[][]], O: [[][]] |  | -- |
+|    8 | Supervised Learning VI: SVMs, Choosing Classifiers, Speech Recognition     | [[][]], [[][]], O: [[][]] |  | -- |
+|    9 | Unsupervised Learning I: Cluster Analysis | [[][]], [[][]], O: [[][]] |  | -- |
+|   10 | Unsupervised Learning II: Expectation Maximization    | [[][]], [[][]], O: [[][]] |  | -- |
+|   11 | Unsupervised Learning III: Dimensionality Reduction | [[][]], [[][]], O: [[][]] |  | -- |
+|   12 | Network Analysis                          | [[][]], [[][]], O: [[][]] |  | -- |
+|   13 | Recommender systems.                      | [[][]], [[][]], O: [[][]] |  | -- |
+|   14 | Wrap-Up                                   |                                                 |                                                                          | -- |
+|      |                                           |                                                 |                                                                          |    |
+
+* Description 
+Machine learning is a rapidly growing field at the intersection of computer science and statistics and concerned with finding patterns in data. It is responsible for tremendous advances in technology, from personalized product recommendations to speech recognition in cell phones. The goal of this course is to provide a broad introduction to the key ideas in machine learning. The emphasis will be on intuition and practical examples rather than theoretical results, though some experience with probability, statistics, and linear algebra will be important. Through a variety of lecture examples and programming projects, students will learn how to apply powerful machine-learning techniques to new problems, how to run evaluations and interpret results, and how to think about scaling up from thousands of data points to billions.
+
+* Prerequisites
+  1. Students must have completed the following core data science courses prior to enrollment:
+    1. Research Design
+    2. Storing and Retrieving Data
+    3. Exploring and Analyzing Data
+  2. Undergraduate-level probability and statistics. Linear algebra is recommended.
+  3. Programming experience in Python. Homework will often require students to consult the [[http://scikit-learn.org/stable/index.html][scikit-learn]] library documentation.
+
+* Assignments and Grading
+Course grades will be based mostly on three guided programming projects designed to synthesize concepts introduced in the lectures and one more open-ended final project. Please see [[./assignments][this document]] for more details.
+
+
+Course Resources
+Most textbooks on machine learning are written with considerable technical detail. As a result, there is no one textbook that aligns with this course. We will list readings that correspond to each week, including some general philosophy and landmark research papers, as well as few chapters from [[http://ciml.info/][Hal Daume’s unfinished textbook]].
+
+
+* Office Hours 
+
+| *Day*     | *Time*      | *Instructor* | 
+|-----------+-------------+--------------|
+| Monday    |   | [[https://zoom.us/j/757560269][Alex]]         |
+| Tuesday   |   |        |
+| Wednesday |   |        |
+| Wednesday |   | [[https://zoom.us/j/385112665][Alex]]         |
+| Thursday  |   |         |
+ 
+* Grading 
+- 3 Projects: 60%
+- Final project: 35%
+- Participation: 5%
+
