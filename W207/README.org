@@ -44,11 +44,14 @@ Most textbooks on machine learning are written with considerable technical detai
 
 | *Day*     | *Time*      | *Instructor* | 
 |-----------+-------------+--------------|
-| Monday    |   | [[https://zoom.us/j/757560269][Alex]]         |
-| Tuesday   |   |        |
-| Wednesday |   |        |
-| Wednesday |   | [[https://zoom.us/j/385112665][Alex]]         |
+| Monday    |   |         |
+| Tuesday   |   |         |
+| Wednesday |   |         |
+| Wednesday |   |         |
 | Thursday  |   |         |
+| Friday    |   |         |
+| Saturday  | 1:00PM CDT |  Richard Huntsinger  |
+| Sunday    |   |         |
  
 * Grading 
 - 3 Projects: 60%
