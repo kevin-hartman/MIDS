@@ -6,9 +6,9 @@
 | Week | Topics                                    | Async Reading                                   | Sync Reading                                                            | Assignment Due           |
 |------+-------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+--------------------------|
 |    1 | Introduction                              | [[http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/35179.pdf][ Halevy, Norvig, Pereira, The unreasonable effectiveness of data]] |    | -- |
-|    2 | Problem Setup and Nearest Neighbors       | [[./Week02/Feynman.1974.pdf][Feynman, R. (1974, June). Cargo cult science. Engineering and Science 37(7).]], [[./Week02/cacm12.pdf][Domingos, A few useful things to know about machine learning]], O: [[./Week2/ci0342472.pdf][ Hawkins, The problem of overfitting]] |  | -- |
-|    3 | Supervised Learning I: Naive Bayes        | [[][]], [[][]], O: [[][]] |  | -- |
-|    4 | Supervised Learning II: Decision Tree     | [[][]], [[][]], O: [[][]] |  | -- |
+|    2 | Problem Setup and Nearest Neighbors       | [[./Week02/Feynman.1974.pdf][Feynman, R. (1974, June). Cargo cult science. Engineering and Science 37(7).]], [[./Week02/cacm12.pdf][Domingos, A few useful things to know about machine learning]], O: [[./Week02/ci0342472.pdf][ Hawkins, The problem of overfitting]] |  | -- |
+|    3 | Supervised Learning I: Naive Bayes        | [[http://www.paulgraham.com/spam.html][Paul Graham on Naive Bayes (2002)]], O: [[./Week03/em.pdf][Michael Collins tutorial on Naive Bayes (with math), see pages 1–4]], O: [[http://norvig.com/spell-correct.html][Norvig, How to write a spelling corrector]] |  | -- |
+|    4 | Supervised Learning II: Decision Tree     | [[blog post from yhat about predicting churn][http://blog.yhat.com/posts/predicting-customer-churn-with-sklearn.html]], O: [[./Week04/info-lec.pdf][Carter, An introduction to information theory and entropy]], [[./Week04/IntroToBoosting.pdf][Freund and Schapire, A Short introduction to Adaboost]], [[./Week04/delgado14a.pdf][Delgado, et al, Do we need hundreds of classifiers to solve real-world problems?]] |  | -- |
 |    5 | Supervised Learning III: Regression       | [[][]], [[][]], O: [[][]] |  | -- |
 |    6 | Supervised Learning IV: Linear Models     | [[][]], [[][]], O: [[][]] |  | -- |
 |    7 | Supervised Learning V: Neural Networks    | [[][]], [[][]], O: [[][]] |  | -- |
