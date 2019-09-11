@@ -27,3 +27,5 @@ Final grades will be based on
 All the projects should run fine on your personal computer. Install python, ipython notebook, numpy, matplotlib, and scikit-learn. A number of other useful packages will be introduced during the semester.
 
 Both Enthought and Anaconda are free python distributions that include all the relevant packages.
+
+This page was recreated from the course assignments document located [[https://docs.google.com/document/d/1nwsfta3loT3paoXA4uGUK9RXSAi4mGz7QE24DuXlrgs/edit?usp=sharing][here]].
