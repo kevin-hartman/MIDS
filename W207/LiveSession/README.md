@@ -30,6 +30,7 @@ The reference notebooks used during live session are located [here](https://driv
  * Brief history
  * Fundamentals of machine learning
  * [Link to Week 1 Presentation](https://drive.google.com/open?id=1Nbk3T4Mn879M6FPxn2BUcYx_K7hPGFZm])
+ * [Link to Live Session recording](https://api.zoom.us/recording/play/J5nkN2AnYfnSTnVzGD6CytTLX2MW8m7XpPSgk3ajDqqfj4MznP62vOa7d-vN3yCY)
 
 # Week 2: Problem Setup and Nearest Neighbors
  * Why prediction?
@@ -46,6 +47,7 @@ The reference notebooks used during live session are located [here](https://driv
  * Maximum likelihood estimation and smoothing
  * Case study: spam classification
  * [Link to Week 2-3 Presentation](https://drive.google.com/open?id=1qsTtoJuvp3oonVZx6S5iLa9iyfm7TVHn)
+ * [Link to Live Session recording](https://api.zoom.us/recording/play/gKkAXBuk0x1H6cxVl_XhRCjE99tP5W97VbadSdFyjv5bPxl_XyXD_lNBCY7dGRSB)
 
 # Week 4: Supervised Learning II: Decision Trees
  * Decision Trees
