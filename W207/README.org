@@ -54,8 +54,8 @@ Most textbooks on machine learning are written with considerable technical detai
 | Wednesday |   |         |
 | Thursday  |   |         |
 | Friday    |   |         |
-| Saturday  | 1:00PM CDT |  Richard Huntsinger  |
-| Sunday    |   |         |
+| Saturday  | 1:00PM CDT | Richard Huntsinger |
+| Sunday    | 7:00PM CDT | Amit Bhattacharyya |
  
 * Grading 
 - 3 Projects: 60%
