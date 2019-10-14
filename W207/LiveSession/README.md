@@ -55,20 +55,30 @@ The reference notebooks used during live session are located [here](https://driv
  * Overfitting and pruning
  * Ensemble methods
  * Case study: customer churn, fuel efficiency
+ * [Link to Week 4 Presentation](https://drive.google.com/open?id=1oFjsvYfXW3JfVI50X7pqfzYG2eA2FTZL)
+ * [Link to Live Session](https://api.zoom.us/recording/play/DcNI38mz81WDzopoKXpj7tfR6uMCEF_CLK29kEh68wDtw-0ibEYWGxt--qRFLvD8)
 
 # Week 5: Supervised Learning III: Regression
  * Review of linear regression
  * Inference and prediction
  * Logistic regression and classification
  * Extensions and advanced topics
+ * [Link to Week 5 Presentation](https://drive.google.com/open?id=1jBbvOUekukb4CkPytqJdINDwsfqqY52K)
+ * [Link to Live Session](https://api.zoom.us/recording/play/pBpPdEDF_nssMSmYDmCBl0jiiN9q9SD0zHwvCOdHQphY0t9hw12OtoD4k03M7Mk-)
+ * [Walk through of additional solution notebooks for Naive Bayes](https://api.zoom.us/recording/play/H4mjbaEPUqr2itHqMRaW79jJMMxxVSCbv7w9fwUyk8RmPtSKuoa2a67dXJfdz58b)
 
 # Week 6: Supervised Learning IV: More Linear Models
  * Gradient descent for regression
  * Regularization
+ * [Link to Week 6 Presentation](https://drive.google.com/open?id=1PQfzAyicVinNQvzOO3vJVAYUhxxjm6tN)
+ * [Link to Live Session](https://api.zoom.us/recording/play/DP3yq_oTOKSK8evWYmFxc9sBQhnM6ec8a5-nfMogn8xOGwQRLQ4RH_Rd0fPcDx2v)
 
 # Week 7: Supervised Learning V: Neural Networks
  * The perceptron
  * State of the art: neural networks for speech recognition
+ * [Neural Network Playground with Tensorflow](https://playground.tensorflow.org)
+ * [Link to Week 7 Presentation](https://drive.google.com/open?id=1lXuy0qCP-HEVsjlsA9a7nPznYcUxdSCd)
+ * [Link to Live Session](https://api.zoom.us/recording/play/varXQZRlo3vHiIIeYuE1VuTVeJJOk9lgQkzKEiaRVIgB2L6ncp4cK_UPtaFdfFC6)
 
 # Week 8: Supervised Learning VI: SVMs, Choosing Classifiers, Speech Recognition
  * Support Vector Machines
