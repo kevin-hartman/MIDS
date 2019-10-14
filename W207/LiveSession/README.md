@@ -76,6 +76,7 @@ The reference notebooks used during live session are located [here](https://driv
 # Week 7: Supervised Learning V: Neural Networks
  * The perceptron
  * State of the art: neural networks for speech recognition
+ * [Neural Network Intro](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
  * [Neural Network Playground with Tensorflow](https://playground.tensorflow.org)
  * [Link to Week 7 Presentation](https://drive.google.com/open?id=1lXuy0qCP-HEVsjlsA9a7nPznYcUxdSCd)
  * [Link to Live Session](https://api.zoom.us/recording/play/varXQZRlo3vHiIIeYuE1VuTVeJJOk9lgQkzKEiaRVIgB2L6ncp4cK_UPtaFdfFC6)
