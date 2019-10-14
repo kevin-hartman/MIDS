@@ -43,6 +43,8 @@ Live sessions for Section 8, Clarence Chio, are on Tuesdays at 8:30pm CST.  Plea
 * Course Resources
 Most textbooks on machine learning are written with considerable technical detail. As a result, there is no one textbook that aligns with this course. We will list readings that correspond to each week, including some general philosophy and landmark research papers, as well as few chapters from [[http://ciml.info/][Hal Daume’s unfinished textbook]].
 
+Also useful is [[http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf][An Introduction to Statistical Learning]].
+
 
 * Office Hours 
 
