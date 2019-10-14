@@ -7,6 +7,7 @@ Late submissions will be accepted up to 1 week past the deadline with a 10% pena
 You may work alone or in groups but you need to write your own code. Discussion, especially about programming issues, on the wall is encouraged.
 
 * Project 1 Due: Week 5
+  * [Solution walkthrough](https://drive.google.com/open?id=1sQsTtNiEvENWv9HwBPSpk3Vv1azTb8cq)
 * Project 2 Due: Week 9
 * Project 3 Due: Week 13
 
