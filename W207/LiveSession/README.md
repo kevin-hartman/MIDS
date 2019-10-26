@@ -86,12 +86,17 @@ The reference notebooks used during live session are located [here](https://driv
  * Comparing classifiers: performance, training speed, model size, interpretability
  * Feature engineering tips
  * Speech recognition overview
+ * [Link to Week 8 Presentation](https://drive.google.com/open?id=1W1X6jqlHjRbSXE9lVgNvf4J0ijDXmt_5)
+ * [Link to Live Session]()
 
 # Week 9: Unsupervised Learning I: Cluster Analysis
  * What if our data don’t have labels?
  * Distance metrics (Hamming, Euclidean, Cosine, Mahalanobis)
  * K-means clustering
  * Hierarchical clustering
+ * [Visualizing K-means clustering](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/)
+ * [Link to Week 9 Presentation](https://drive.google.com/open?id=1v0PLcoadk34iurmlWRC6SeLuKPxs1Vkh)
+ * [Link to Live Session](https://api.zoom.us/recording/play/90AYI_rTrDrT296nritHbSM0ocPgaOpRxTg_w-XGAmUuIuIzH1g5ruxgoHqaS-Gj)
 
 # Week 10: Unsupervised Learning II: Expectation Maximization
  * Expectation-Maximization and the idea of hidden variables
