@@ -102,6 +102,7 @@ The reference notebooks used during live session are located [here](https://driv
  * Expectation-Maximization and the idea of hidden variables
  * Basics of Gaussian Mixture Models
  * Case study: speaker identification
+ * [Link to Week 10 Presentation](https://drive.google.com/open?id=1_CvVJ6oXeLwZESARCMv1NQh6WN_c-LSG)
 
 # Week 11: Unsupervised Learning III: Dimensionality Reduction
  * Motivation
