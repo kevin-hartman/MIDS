@@ -102,6 +102,7 @@ The reference notebooks used during live session are located [here](https://driv
  * Expectation-Maximization and the idea of hidden variables
  * Basics of Gaussian Mixture Models
  * Case study: speaker identification
+ * Network attack classification
  * [Link to Week 10 Presentation](https://drive.google.com/open?id=1_CvVJ6oXeLwZESARCMv1NQh6WN_c-LSG)
 
 # Week 11: Unsupervised Learning III: Dimensionality Reduction
@@ -110,19 +111,33 @@ The reference notebooks used during live session are located [here](https://driv
  * Principal Component Analysis
  * Case study: Eigenfaces
  * Other methods for dimensionality reduction: SVD, NNMF, LDA
+ * Continuation of network attack classification
+ * [Link to Week 11 Presentation](https://drive.google.com/open?id=1qRBByKbit8u87jdJZKUcgKTLLeACEWX7)
 
-# Week 12: Network Analysis
+# Week 12: MIDS Immersion Week
+ *No Live Session due to Immersion week*
+ 
+# Week 13: Network Analysis
  * Graph algorithms (pagerank).
+ * Feature generation from graph datasets
  * Network link predictions.
  * Scaling and other challenges.
+ * P2P-BTC marketplace fraud detection
+ * [Link to Week 13 Presentation](https://drive.google.com/open?id=17mbYhS-5W8BdZWeT3KcgC1oY0kiuMjh3)
 
-# Week 13: Recommender Systems
+# Week 14: Recommender Systems
  * Motivation
  * The Netflix challenge
  * Content-based methods
  * Learning features and parameters
  * Nearest-neighbor CF
+ * [Link to Week 14 Presentation](https://drive.google.com/open?id=1Xl_9x8gfvZFcsdguqfHvvBHdgCKAGeKO)
 
-# Week 14: Wrap-Up
- * Topics beyond the scope of this course
- * What your instructors do
+# Week 15: Wrap-Up
+ * Course Review
+ * Generative Adversarial Networks
+ * [Link to Week 15 Presentation](https://drive.google.com/open?id=1sNn7blvTOHahpXBAxXsy9OzJiyiul_ck)
+ 
+# Week 16: In-class Presentations
+ * [Link to Presentation](https://drive.google.com/open?id=1zT501rfS9KXs16xpmQjQRu9ViWKgAsq4EioBfDqsuuE)
+ * [Link to Jupyter Notebook](https://github.com/kevin-hartman/207-final-project/blob/master/W207_Hartman_Mein_Morris.ipynb)
